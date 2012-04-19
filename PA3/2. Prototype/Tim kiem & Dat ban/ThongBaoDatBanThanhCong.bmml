@@ -1,8 +1,8 @@
-<mockup version="1.0" skin="sketch" measuredW="737" measuredH="296" mockupW="339" mockupH="139">
+<mockup version="1.0" skin="sketch" measuredW="737" measuredH="296" mockupW="339" mockupH="164">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="398" y="157" w="339" h="139" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
-        <color>13421772</color>
+        <color>16777215</color>
         <size>14</size>
         <text>Yeu%20cau%20dat%20ban%20cua%20ban%20thanh%20cong.%0ANhan%20vien%20cua%20chung%20toi%20se%20lien%20he%20som%20nhat%20co%20the%20de%20xac%20nhan%20yeu%20cau%20cua%20ban.</text>
       </controlProperties>
@@ -17,6 +17,14 @@
     <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="621" y="268" w="-1" h="-1" measuredW="101" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Tro%20ve%20trang%20chu</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Canvas" x="398" y="132" w="339" h="32" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="405" y="138" w="-1" h="-1" measuredW="142" measuredH="24" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Thong%20bao%20dat%20ban</text>
       </controlProperties>
     </control>
   </controls>
