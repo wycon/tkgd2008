@@ -250,6 +250,7 @@
         <italic>false</italic>
         <size>32</size>
         <text>NHA%20HANG%20WARM</text>
+        <underline>true</underline>
       </controlProperties>
     </control>
     <control controlID="140" controlTypeID="com.balsamiq.mockups::Link" x="943" y="467" w="-1" h="-1" measuredW="82" measuredH="24" zOrder="47" locked="false" isInGroup="-1">
