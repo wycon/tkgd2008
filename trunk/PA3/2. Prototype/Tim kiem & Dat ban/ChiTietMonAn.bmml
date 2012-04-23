@@ -53,6 +53,7 @@
       <controlProperties>
         <size>16</size>
         <text>Pho%20Bac%20Hai</text>
+        <underline>true</underline>
       </controlProperties>
     </control>
     <control controlID="27" controlTypeID="com.balsamiq.mockups::Label" x="215" y="320" w="-1" h="-1" measuredW="78" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
@@ -126,6 +127,8 @@
     </control>
     <control controlID="117" controlTypeID="com.balsamiq.mockups::Accordion" x="41" y="223" w="154" h="1148" measuredW="150" measuredH="390" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
+        <hrefs>%2C%2C%2CTimKiem%26bm%3BTimKiem.bmml%26bm%3BTimKiem.bmml%26bm%3BTimKiem.bmml%2C%2C%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C298%2C154%2C328%22%20href%3D%22TimKiem.bmml%22%20alt%3D%22TimKiem%22%20id%3D%22117_0%22/%3E%0A</map>
         <selectedIndex>-1</selectedIndex>
         <text>Lau%0ADo%20nuong%0ADo%20chay%0ADo%20man%0ABuffet%0ANuoc%20ngot%0ABia%0ARuou</text>
         <verticalScrollbar>false</verticalScrollbar>
@@ -181,7 +184,7 @@
         <borderColor>0</borderColor>
         <hrefs>TrangChu%26bm%3BTrangChu.bmml%26bm%3BTrangChu.bmml%26bm%3BTrangChu.bmml%2C%2C%2CDangNhap_DangKy%26bm%3BDangNhap_DangKy.bmml%26bm%3BDangNhap_DangKy.bmml%26bm%3BDangNhap_DangKy.bmml%2C%2C</hrefs>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2211%2C165%2C90%2C189%22%20href%3D%22TrangChu.bmml%22%20alt%3D%22TrangChu%22%20id%3D%22144_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22275%2C165%2C337%2C189%22%20href%3D%22DangNhap_DangKy.bmml%22%20alt%3D%22DangNhap_DangKy%22%20id%3D%22144_1%22/%3E%0A</map>
-        <selectedIndex>0</selectedIndex>
+        <selectedIndex>-1</selectedIndex>
         <size>16</size>
         <text>Trang%20chu%2C%20Gioi%20thieu%2C%20Ban%20an%2C%20Dang%20ky%2C%20Tim%20kiem%20nang%20cao%2C%20Lien%20he</text>
       </controlProperties>

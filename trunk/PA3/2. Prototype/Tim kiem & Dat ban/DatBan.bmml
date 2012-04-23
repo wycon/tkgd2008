@@ -32,6 +32,8 @@
     </control>
     <control controlID="73" controlTypeID="com.balsamiq.mockups::Accordion" x="41" y="223" w="154" h="585" measuredW="150" measuredH="390" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
+        <hrefs>%2C%2C%2CDatBan%26bm%3BDatBan.bmml%26bm%3BDatBan.bmml%26bm%3BDatBan.bmml%2C%2C%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C292%2C154%2C322%22%20href%3D%22DatBan.bmml%22%20alt%3D%22DatBan%22%20id%3D%2273_0%22/%3E%0A</map>
         <selectedIndex>-1</selectedIndex>
         <text>Lau%0ADo%20nuong%0ADo%20chay%0ADo%20man%0ABuffet%0ANuoc%20ngot%0ABia%0ARuou</text>
         <verticalScrollbar>false</verticalScrollbar>
@@ -63,6 +65,7 @@
     </control>
     <control controlID="82" controlTypeID="com.balsamiq.mockups::TextInput" x="837" y="79" w="-1" h="-1" measuredW="97" measuredH="27" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
         <text>Ten%20dang%20nhap</text>
       </controlProperties>
     </control>
@@ -587,7 +590,6 @@
     <control controlID="224" controlTypeID="com.balsamiq.mockups::HRule" x="735" y="457" w="330" h="-1" measuredW="100" measuredH="5" zOrder="105" locked="false" isInGroup="-1"/>
     <control controlID="225" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="195" y="197" w="-1" h="-1" measuredW="125" measuredH="24" zOrder="106" locked="false" isInGroup="-1">
       <controlProperties>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22154%2C194%2C219%2C215%22%20href%3D%22TrangChu.bmml%22%20alt%3D%22TrangChu%22%20id%3D%22225_0%22/%3E%0A</map>
         <text>Trang%20chu%2C%20Dat%20ban</text>
       </controlProperties>
     </control>
@@ -608,7 +610,7 @@
         <borderColor>0</borderColor>
         <hrefs>TrangChu%26bm%3BTrangChu.bmml%26bm%3BTrangChu.bmml%26bm%3BTrangChu.bmml%2C%2C%2CDangNhap_DangKy%26bm%3BDangNhap_DangKy.bmml%26bm%3BDangNhap_DangKy.bmml%26bm%3BDangNhap_DangKy.bmml%2C%2C</hrefs>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2211%2C159%2C90%2C183%22%20href%3D%22TrangChu.bmml%22%20alt%3D%22TrangChu%22%20id%3D%22228_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22275%2C159%2C337%2C183%22%20href%3D%22DangNhap_DangKy.bmml%22%20alt%3D%22DangNhap_DangKy%22%20id%3D%22228_1%22/%3E%0A</map>
-        <selectedIndex>0</selectedIndex>
+        <selectedIndex>2</selectedIndex>
         <size>16</size>
         <text>Trang%20chu%2C%20Gioi%20thieu%2C%20Ban%20an%2C%20Dang%20ky%2C%20Tim%20kiem%20nang%20cao%2C%20Lien%20he</text>
       </controlProperties>
