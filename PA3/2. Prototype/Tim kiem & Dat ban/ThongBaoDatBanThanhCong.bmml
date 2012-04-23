@@ -10,7 +10,9 @@
     <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="642" y="238" w="65" h="30" measuredW="48" measuredH="30" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <color>3355443</color>
+        <href>TrangChu%26bm%3BTrangChu.bmml%26bm%3BTrangChu.bmml%26bm%3BTrangChu.bmml</href>
         <icon>JumpBackIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22244%2C106%2C309%2C136%22%20href%3D%22TrangChu.bmml%22%20alt%3D%22TrangChu%22%20id%3D%223%22/%3E</map>
         <text/>
       </controlProperties>
     </control>

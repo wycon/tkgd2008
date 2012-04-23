@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" measuredW="1211" measuredH="838" mockupW="1170" mockupH="838">
+<mockup version="1.0" skin="sketch" measuredW="1212" measuredH="838" mockupW="1171" mockupH="838">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="41" y="0" w="1024" h="838" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -342,6 +342,8 @@
       <controlProperties>
         <bold>true</bold>
         <color>2848996</color>
+        <href>DatBan%26bm%3BDatBan.bmml%26bm%3BDatBan.bmml%26bm%3BDatBan.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22894%2C297%2C1016%2C324%22%20href%3D%22DatBan.bmml%22%20alt%3D%22DatBan%22%20id%3D%22101%22/%3E</map>
         <text>Hoan%20tat%20dat%20mon</text>
       </controlProperties>
     </control>
@@ -801,7 +803,7 @@
         <icon>ForwardIcon%7Csmall</icon>
       </controlProperties>
     </control>
-    <control controlID="189" controlTypeID="com.balsamiq.mockups::Tooltip" x="1049" y="285" w="-1" h="-1" measuredW="162" measuredH="33.1" zOrder="137" locked="false" isInGroup="-1">
+    <control controlID="189" controlTypeID="com.balsamiq.mockups::Tooltip" x="1049" y="285" w="163" h="27" measuredW="162" measuredH="33.1" zOrder="137" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Thu%20nho%20phieu%20dat%20mon</text>
       </controlProperties>

@@ -32,6 +32,8 @@
     </control>
     <control controlID="73" controlTypeID="com.balsamiq.mockups::Accordion" x="41" y="223" w="154" h="585" measuredW="150" measuredH="390" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
+        <hrefs>%2C%2C%2CDanhSachMonAn%26bm%3BDanhSachMonAn.bmml%26bm%3BDanhSachMonAn.bmml%26bm%3BDanhSachMonAn.bmml%2C%2C%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C298%2C154%2C328%22%20href%3D%22DanhSachMonAn.bmml%22%20alt%3D%22DanhSachMonAn%22%20id%3D%2273_0%22/%3E%0A</map>
         <selectedIndex>-1</selectedIndex>
         <text>Lau%0ADo%20nuong%0ADo%20chay%0ADo%20man%0ABuffet%0ANuoc%20ngot%0ABia%0ARuou</text>
         <verticalScrollbar>false</verticalScrollbar>
@@ -114,6 +116,8 @@
     </control>
     <control controlID="91" controlTypeID="com.balsamiq.mockups::Link" x="332" y="531" w="-1" h="-1" measuredW="90" measuredH="24" zOrder="22" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>ChiTietMonAn%26bm%3BChiTietMonAn.bmml%26bm%3BChiTietMonAn.bmml%26bm%3BChiTietMonAn.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22291%2C531%2C381%2C555%22%20href%3D%22ChiTietMonAn.bmml%22%20alt%3D%22ChiTietMonAn%22%20id%3D%2291%22/%3E</map>
         <size>16</size>
         <text>Pho%20Bac%20Hai</text>
       </controlProperties>
@@ -250,7 +254,7 @@
         <italic>false</italic>
         <size>32</size>
         <text>NHA%20HANG%20WARM</text>
-        <underline>true</underline>
+        <underline>false</underline>
       </controlProperties>
     </control>
     <control controlID="140" controlTypeID="com.balsamiq.mockups::Link" x="943" y="467" w="-1" h="-1" measuredW="82" measuredH="24" zOrder="47" locked="false" isInGroup="-1">
