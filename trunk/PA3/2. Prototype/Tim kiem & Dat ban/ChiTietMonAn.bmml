@@ -186,9 +186,9 @@
         <text>Trang%20chu%2C%20Gioi%20thieu%2C%20Ban%20an%2C%20Dang%20ky%2C%20Tim%20kiem%20nang%20cao%2C%20Lien%20he</text>
       </controlProperties>
     </control>
-    <control controlID="145" controlTypeID="com.balsamiq.mockups::TextInput" x="634" y="164" w="372" h="-1" measuredW="79" measuredH="27" zOrder="34" locked="false" isInGroup="-1">
+    <control controlID="145" controlTypeID="com.balsamiq.mockups::TextInput" x="634" y="164" w="372" h="-1" measuredW="156" measuredH="27" zOrder="34" locked="false" isInGroup="-1">
       <controlProperties>
-        <text/>
+        <text>Ten%20mon%20an%20can%20tim%20kiem</text>
       </controlProperties>
     </control>
     <control controlID="146" controlTypeID="com.balsamiq.mockups::Button" x="1006" y="164" w="59" h="27" measuredW="24" measuredH="27" zOrder="35" locked="false" isInGroup="-1">
@@ -380,6 +380,7 @@
     </control>
     <control controlID="193" controlTypeID="com.balsamiq.mockups::Button" x="201" y="1323" w="-1" h="-1" measuredW="94" measuredH="27" zOrder="69" locked="false" isInGroup="-1">
       <controlProperties>
+        <color>2848996</color>
         <text>Dang%20loi%20binh</text>
       </controlProperties>
     </control>
