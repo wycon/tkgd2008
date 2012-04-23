@@ -139,7 +139,7 @@
         <text>Dang%20ky</text>
       </controlProperties>
     </control>
-    <control controlID="101" controlTypeID="com.balsamiq.mockups::Tooltip" x="420" y="461" w="149" h="34" measuredW="149" measuredH="33.1" zOrder="29" locked="false" isInGroup="-1">
+    <control controlID="101" controlTypeID="com.balsamiq.mockups::Tooltip" x="423" y="456" w="149" h="31" measuredW="149" measuredH="33.1" zOrder="29" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <text>do%20dai%20tu%207%20-14%20ky%20tu</text>
@@ -481,9 +481,9 @@
     </control>
     <control controlID="165" controlTypeID="com.balsamiq.mockups::HRule" x="736" y="441" w="330" h="-1" measuredW="100" measuredH="5" zOrder="89" locked="false" isInGroup="-1"/>
     <control controlID="166" controlTypeID="com.balsamiq.mockups::HRule" x="729" y="223" w="330" h="-1" measuredW="100" measuredH="5" zOrder="90" locked="false" isInGroup="-1"/>
-    <control controlID="167" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="195" y="197" w="-1" h="-1" measuredW="140" measuredH="24" zOrder="91" locked="false" isInGroup="-1">
+    <control controlID="167" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="195" y="197" w="-1" h="-1" measuredW="127" measuredH="24" zOrder="91" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Trang%20chu%2C%20Dang%20nhap</text>
+        <text>Trang%20chu%2C%20Dang%20ky</text>
       </controlProperties>
     </control>
     <control controlID="168" controlTypeID="com.balsamiq.mockups::Icon" x="1034" y="197" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="92" locked="false" isInGroup="-1">
