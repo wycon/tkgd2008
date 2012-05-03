@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WARM", "WARM\WARM.csproj", "{0A56B323-FC47-4461-A0D0-A519C0301FFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{86644501-9BE9-4849-9BCF-2F92B2B14500}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A56B323-FC47-4461-A0D0-A519C0301FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A56B323-FC47-4461-A0D0-A519C0301FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A56B323-FC47-4461-A0D0-A519C0301FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A56B323-FC47-4461-A0D0-A519C0301FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86644501-9BE9-4849-9BCF-2F92B2B14500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86644501-9BE9-4849-9BCF-2F92B2B14500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86644501-9BE9-4849-9BCF-2F92B2B14500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86644501-9BE9-4849-9BCF-2F92B2B14500}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
