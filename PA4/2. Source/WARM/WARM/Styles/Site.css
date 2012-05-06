@@ -94,9 +94,11 @@ first child of the left and right table columns */
     border: 1px solid #496077;
 }
 
+/* HEADER */
+
 .header
 {
-    position: relative;
+    /*position: relative;*/
     margin: 0px;
     padding: 0px;
     background: #4b6c9e;
@@ -114,12 +116,69 @@ first child of the left and right table columns */
     font-size: 2em;
 }
 
+/* LOGO */
+.logo
+{
+    float:left;
+    width:70%;
+    height:132px;
+}
+
+/* END LOGO */
+
+/* LOGIN */
+
+.loginDisplay
+{
+    float: right;
+    width:30%;
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding-top:10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+/* END LOGIN */
+
+/* END HEADER */
+
+/* MAIN */
 .main
 {
     padding: 0px 12px;
     margin: 12px 8px 8px 8px;
     min-height: 420px;
 }
+
+.main-left
+{
+    float:left;
+    width:20%;
+}
+
+.main-right
+{
+    float:right;
+    width:75%;
+}
+
+/* END MAIN */
 
 .leftCol
 {
@@ -244,37 +303,13 @@ div.accountInfo
     clear: both;
 }
 
-.title
+/*.title
 {
     display: block;
     float: left;
     text-align: left;
     width: auto;
-}
-
-.loginDisplay
-{
-    font-size: 1.1em;
-    display: block;
-    text-align: right;
-    padding: 10px;
-    color: White;
-}
-
-.loginDisplay a:link
-{
-    color: white;
-}
-
-.loginDisplay a:visited
-{
-    color: white;
-}
-
-.loginDisplay a:hover
-{
-    color: white;
-}
+}*/
 
 .failureNotification
 {

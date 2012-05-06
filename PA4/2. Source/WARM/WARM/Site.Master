@@ -12,15 +12,20 @@
     <form runat="server">
     <div class="page">
         <div class="header">
-            <div class="title">
-                <h1>
-                    My ASP.NET Application
-                </h1>
+            <div class="logo">
+                <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" 
+                    Height="100%" Width="100%" />
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                        <asp:Login ID="Login1" runat="server" LoginButtonText="Đăng Nhập" 
+                            PasswordLabelText="Mật Khẩu:" RememberMeText="Ghi Nhớ." 
+                            TitleText="Đăng Nhập" FailureText="Đăng nhập thất bại, xin thử lại." 
+                            PasswordRequiredErrorMessage="Mật Khẩu bắt buộc." 
+                            UserNameLabelText="Tên Đăng Nhập:" 
+                            UserNameRequiredErrorMessage="Tên Đăng Nhập bắt buộc.">
+                        </asp:Login>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
@@ -28,17 +33,47 @@
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
-            <div class="clear hideSkiplink">
+            <div class="clear hideSkiplink" style="Height:35px;">
+                <div style="width: 65%; float: left;">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bàn Ăn"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đăng Kí"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Liên Hệ"/>
                     </Items>
                 </asp:Menu>
+                </div>
+                <div style="width:35%; float:right;">
+                <table>
+                    <tr>
+                      <td>
+                        <input type="hidden" name="dff_view" value="grid"/>
+                        Search:<input type="text" name="dff_keyword" size="30" maxlength="50"/><input type="submit" value="Find"/>
+                      </td>
+                    </tr>
+                  </table>
+                  </div>
             </div>
         </div>
         <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <div class="main-left">
+                <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bàn Ăn"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đăng Kí"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Liên Hệ"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+            <div class="main-right">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            </div>
         </div>
         <div class="clear">
         </div>
