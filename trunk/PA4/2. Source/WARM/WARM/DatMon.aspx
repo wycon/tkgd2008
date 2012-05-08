@@ -2,19 +2,23 @@
     CodeBehind="DatMon.aspx.cs" Inherits="WARM.DatMon" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-<link href="../Styles/MyStyle.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
+    <script type="text/javascript" src="../Scripts/MyScript.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table width="100%">
         <tr>
             <td colspan="3">
-                Sitemap
             </td>
         </tr>
         <tr>
             <td>
-                Sắp theo tên: <a href="#">tăng</a>/<a href="#">giảm</a>&nbsp;&nbsp;&nbsp;
-                Sắp theo giá: <a href="#">tăng</a>/<a href="#">giảm</a>
+                Sắp theo tên: <a href="#">tăng</a>/<a href="#">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo
+                giá: <a href="#">tăng</a>/<a href="#">giảm</a>
             </td>
             <td>
                 <b>Số lượng hiển thị:</b>
@@ -26,8 +30,9 @@
                     <asp:ListItem>15</asp:ListItem>
                     <asp:ListItem>20</asp:ListItem>
                 </asp:DropDownList>
-            </td></tr>
-            <tr>
+            </td>
+        </tr>
+        <tr>
             <td>
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
@@ -47,7 +52,7 @@
                         </td> </tr> </table>
                     </FooterTemplate>
                 </asp:Repeater>
-            </td>            
+            </td>
         </tr>
         <tr>
             <td colspan="3" width="100%">
@@ -67,14 +72,41 @@
                                             <td valign="top" width="50%">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
+                                                Giá:
                                                 <%# Eval("Gia", "{0:0,000}")%>
-                                                VND
+                                                VND<br />
+                                                <div>
+                                                    <%--<% for (int i = 0; i < int.Parse(Eval("DanhGia").ToString()); ++i)
+                                                       {
+                                                           if (i != int.Parse(Eval("DanhGia").ToString()))                                                               
+                                                               //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled'/>");
+                                                           //else
+                                                               //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled' checked='checked'/>");
+                                                       }
+                                                    %>--%>
+       <%--                                             <% 
+                                                        int r = new Random().Next();
+                                                            
+                                                        for (int i = 0; i < 4; i++)
+                                                       {
+                                                           if (i != 4)
+                                                               Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled'/>");
+                                                           else
+                                                               Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled' checked='checked'/>");
+
+                                                       }%>--%>
+                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
+                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
+                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
+                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
+                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled' checked='checked'/>
+                                                </div>
                                             </td>
                                             <td valign="top" width="30%">
                                                 Số lượng món/bàn:&nbsp;&nbsp;&nbsp;<asp:TextBox ID="tbSoLuong" runat="server" Width="20px"
                                                     Text="1"></asp:TextBox>
-                                                <br/>
-                                                <asp:Button ID="Button1" runat="server" Text="Đặt món" />
+                                                <br />
+                                                <input id="bt1" type="button" value="Đặt món" onclick="datMon('<%# Eval("MaMonAn")%>', '<%# Eval("TenMonAn")%>', '<%# Eval("Gia")%>')" />
                                             </td>
                                         </tr>
                                     </ItemTemplate>
@@ -87,13 +119,16 @@
                         <td valign="top">
                             <table width="100%" height="100%" class="phieudat">
                                 <tr>
-                                    <td><p class="fontred">Phiếu đặt món</p>
-                                    </td>
-                                    <td>
-
+                                    <td align="center">
+                                        <font class="fontred">Phiếu đặt món</font>
                                     </td>
                                 </tr>
-
+                                <tr>
+                                    <td>
+                                        <div id="phieudatmon">
+                                        </div>
+                                    </td>
+                                </tr>
                             </table>
                         </td>
                     </tr>

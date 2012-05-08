@@ -1457,6 +1457,8 @@ namespace DAO
 		
 		private string _Anh;
 		
+		private System.Nullable<int> _DanhGia;
+		
 		private System.Nullable<bool> _DaXoa;
 		
 		private System.Nullable<bool> _ConMon;
@@ -1483,6 +1485,8 @@ namespace DAO
     partial void OnMaDMMonAnChanged();
     partial void OnAnhChanging(string value);
     partial void OnAnhChanged();
+    partial void OnDanhGiaChanging(System.Nullable<int> value);
+    partial void OnDanhGiaChanged();
     partial void OnDaXoaChanging(System.Nullable<bool> value);
     partial void OnDaXoaChanged();
     partial void OnConMonChanging(System.Nullable<bool> value);
@@ -1617,6 +1621,26 @@ namespace DAO
 					this._Anh = value;
 					this.SendPropertyChanged("Anh");
 					this.OnAnhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DanhGia", DbType="Int")]
+		public System.Nullable<int> DanhGia
+		{
+			get
+			{
+				return this._DanhGia;
+			}
+			set
+			{
+				if ((this._DanhGia != value))
+				{
+					this.OnDanhGiaChanging(value);
+					this.SendPropertyChanging();
+					this._DanhGia = value;
+					this.SendPropertyChanged("DanhGia");
+					this.OnDanhGiaChanged();
 				}
 			}
 		}
