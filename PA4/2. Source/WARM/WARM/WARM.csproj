@@ -55,7 +55,23 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="images\DanhMucBan\BanNgoaiTroi.jpg" />
+    <Content Include="images\DanhMucBan\BanThuong.jpg" />
+    <Content Include="images\DanhMucBan\VipA.jpg" />
+    <Content Include="images\DanhMucBan\VipB.jpg" />
+    <Content Include="images\DanhMucBan\VipC.jpg" />
     <Content Include="images\Logo\1.jpg" />
+    <Content Include="images\MonAn\BanhNuongSotThit.jpg" />
+    <Content Include="images\MonAn\ChaGioTom.jpg" />
+    <Content Include="images\MonAn\ComChienDuongChau.jpg" />
+    <Content Include="images\MonAn\PhoBacHai.jpg" />
+    <Content Include="images\MonAn\ThitNguoiXatLat.jpg" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.rating.js" />
+    <Content Include="Scripts\MyScript.js" />
+    <Content Include="Scripts\star.gif" />
+    <Content Include="Styles\jquery.rating.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -136,9 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\DanhMucBan\" />
     <Folder Include="images\DanhMucMon\" />
-    <Folder Include="images\MonAn\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
