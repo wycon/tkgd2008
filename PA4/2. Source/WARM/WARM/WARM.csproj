@@ -55,6 +55,10 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+<<<<<<< .mine
+    <Content Include="ChiTietMonAn.aspx" />
+    <Content Include="TimKiem.aspx" />
+=======
     <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner01.jpg" />
     <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner02.jpg" />
     <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner03.jpg" />
@@ -183,12 +187,21 @@
     <Content Include="images\ThamQuan\ChonTang\slice_6_1.jpg" />
     <Content Include="images\ThamQuan\ChonTang\slice_6_2.jpg" />
     <Content Include="images\ThamQuan\ChonTang\struct.jpg" />
+>>>>>>> .r113
     <Content Include="images\DanhMucBan\BanNgoaiTroi.jpg" />
     <Content Include="images\DanhMucBan\BanThuong.jpg" />
     <Content Include="images\DanhMucBan\VipA.jpg" />
     <Content Include="images\DanhMucBan\VipB.jpg" />
     <Content Include="images\DanhMucBan\VipC.jpg" />
     <Content Include="images\Logo\1.jpg" />
+    <Content Include="images\MonAn\BanhNuongSotThit.jpg" />
+    <Content Include="images\MonAn\ChaGioTom.jpg" />
+    <Content Include="images\MonAn\ComChienDuongChau.jpg" />
+    <Content Include="images\MonAn\PhoBacHai.jpg" />
+    <Content Include="images\MonAn\ThitNguoiXatLat.jpg" />
+    <Content Include="images\TrangChu\Banner2.jpg" />
+    <Content Include="images\TrangChu\Coffee.jpg" />
+    <Content Include="images\TrangChu\NhaHang.jpg" />
     <Content Include="images\MonAn\BanhNuongSotThit.jpg" />
     <Content Include="images\MonAn\ChaGioTom.jpg" />
     <Content Include="images\MonAn\ComChienDuongChau.jpg" />
@@ -261,6 +274,22 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+<<<<<<< .mine
+    <Compile Include="ChiTietMonAn.aspx.cs">
+      <DependentUpon>ChiTietMonAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTietMonAn.aspx.designer.cs">
+      <DependentUpon>ChiTietMonAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem.aspx.cs">
+      <DependentUpon>TimKiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem.aspx.designer.cs">
+      <DependentUpon>TimKiem.aspx</DependentUpon>
+    </Compile>
+=======
     <Compile Include="ThamQuan\ChonTang.aspx.cs">
       <DependentUpon>ChonTang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,6 +297,7 @@
     <Compile Include="ThamQuan\ChonTang.aspx.designer.cs">
       <DependentUpon>ChonTang.aspx</DependentUpon>
     </Compile>
+>>>>>>> .r113
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
