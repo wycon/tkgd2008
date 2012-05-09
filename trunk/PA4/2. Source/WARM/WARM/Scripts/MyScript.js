@@ -12,7 +12,7 @@ function onClick(id) {
     document.forms["frmManageOrder"].submit();
     //alert(id + "   " + maTinhTrang)
 }
-function datMon(ma, ten, gia) {
+function DatMon(ma, ten, gia) {
     var e = document.getElementById("phieudatmon");
     var monan = document.createElement('a');
     //monan.setAttribute("id", "DDtemp");
@@ -21,5 +21,17 @@ function datMon(ma, ten, gia) {
     var _text = document.createTextNode(ten);
     monan.appendChild(_text);
     monan.appendChild(document.createElement('br'));    
-    e.appendChild(monan);    
+    e.appendChild(monan);
 }
+//function SapTenTang() {
+//    
+//}
+//function SapTenGiam() {
+
+//}
+//function SapGiaTang() {
+
+//}
+//function SapGiaGiam() {
+
+//}
