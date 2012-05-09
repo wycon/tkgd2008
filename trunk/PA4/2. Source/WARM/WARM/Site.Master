@@ -5,6 +5,7 @@
 <head runat="server">
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/basic-jquery-slider.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -34,7 +35,7 @@
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink" style="Height:35px;">
-                <div style="width: 65%; float: left;">
+                <div style="width: 70%; float: left;">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ"/>
@@ -42,16 +43,16 @@
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bàn Ăn"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đăng Kí"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Liên Hệ"/>
+                        <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan"/>
                     </Items>
                 </asp:Menu>
                 </div>
-                <div style="width:35%; float:right;">
+                <div style="width:30%; float:right;">
                 <table>
                     <tr>
                       <td>
                         <input type="hidden" name="dff_view" value="grid"/>
-                        Search:<input type="text" name="dff_keyword" size="30" maxlength="50"/><input type="submit" value="Find"/>
+                        Search:<input type="text" name="dff_keyword" size="25" maxlength="50"/><input type="submit" value="Find"/>
                       </td>
                     </tr>
                   </table>
@@ -67,7 +68,7 @@
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bàn Ăn"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đăng Kí"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Liên Hệ"/>
+                        <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan"/>
                     </Items>
                 </asp:Menu>
             </div>

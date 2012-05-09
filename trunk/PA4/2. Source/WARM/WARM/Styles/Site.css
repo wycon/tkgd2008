@@ -171,13 +171,13 @@ first child of the left and right table columns */
 .main-left
 {
     float:left;
-    width:20%;
+    width:12%;
 }
 
 .main-right
 {
     float:right;
-    width:75%;
+    width:85%;
 }
 
 /* END MAIN */

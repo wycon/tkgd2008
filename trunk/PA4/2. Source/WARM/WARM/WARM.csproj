@@ -55,6 +55,134 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh1\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\navigate\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh2\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\navigate\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang1\Sanh3\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\navigate\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh1\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\navigate\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh2\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\navigate\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh3\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\navigate\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\navigate\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\struct\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\Tang2\Sanh4\struct\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh1\struct\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\img\banner01.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\img\banner02.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\img\banner03.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\navigate\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\navigate\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_1.jpg" />
+    <Content Include="Scripts\basic-jquery-slider.js" />
+    <Content Include="Scripts\basic-jquery-slider.min.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Styles\basic-jquery-slider.css" />
+    <Content Include="ThamQuan\ChonTang.aspx" />
+    <Content Include="images\ThamQuan\ChonTang\1_1_struct.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\3_1_struct.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\5_1_struct.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_0_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_0_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_0_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_1_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_1_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_1_1_hover.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_1_1_hover_tt.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_1_1_tt.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_1_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_2_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_2_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_2_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_3_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_3_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_3_1_hover.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_3_1_hover_tt.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_3_1_tt.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_3_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_4_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_4_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_4_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_5_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_5_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_5_1_hover.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_5_1_hover_tt.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_5_1_tt.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_5_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_6_0.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_6_1.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\slice_6_2.jpg" />
+    <Content Include="images\ThamQuan\ChonTang\struct.jpg" />
     <Content Include="images\DanhMucBan\BanNgoaiTroi.jpg" />
     <Content Include="images\DanhMucBan\BanThuong.jpg" />
     <Content Include="images\DanhMucBan\VipA.jpg" />
@@ -87,6 +215,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="DatMon.aspx" />
+    <Content Include="ThamQuan\TangTret\Sanh1.aspx" />
+    <Content Include="ThamQuan\Tang1\Sanh1.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh1.aspx" />
+    <Content Include="ThamQuan\TangTret\Sanh2.aspx" />
+    <Content Include="ThamQuan\Tang1\Sanh2.aspx" />
+    <Content Include="ThamQuan\Tang1\Sanh3.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh2.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh3.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh4.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -124,6 +261,13 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ThamQuan\ChonTang.aspx.cs">
+      <DependentUpon>ChonTang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\ChonTang.aspx.designer.cs">
+      <DependentUpon>ChonTang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +293,69 @@
     <Compile Include="DatMon.aspx.designer.cs">
       <DependentUpon>DatMon.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ThamQuan\TangTret\Sanh1.aspx.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\TangTret\Sanh1.aspx.designer.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang1\Sanh1.aspx.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang1\Sanh1.aspx.designer.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh1.aspx.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh1.aspx.designer.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\TangTret\Sanh2.aspx.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\TangTret\Sanh2.aspx.designer.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang1\Sanh2.aspx.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang1\Sanh2.aspx.designer.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang1\Sanh3.aspx.cs">
+      <DependentUpon>Sanh3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang1\Sanh3.aspx.designer.cs">
+      <DependentUpon>Sanh3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh2.aspx.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh2.aspx.designer.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh3.aspx.cs">
+      <DependentUpon>Sanh3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh3.aspx.designer.cs">
+      <DependentUpon>Sanh3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh4.aspx.cs">
+      <DependentUpon>Sanh4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh4.aspx.designer.cs">
+      <DependentUpon>Sanh4.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -163,6 +370,17 @@
       <Project>{86644501-9BE9-4849-9BCF-2F92B2B14500}</Project>
       <Name>DAO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ThamQuan\Tang1\Sanh1\img\.gitignore" />
+    <None Include="images\ThamQuan\Tang1\Sanh2\img\.gitignore" />
+    <None Include="images\ThamQuan\Tang1\Sanh3\img\.gitignore" />
+    <None Include="images\ThamQuan\Tang2\Sanh1\img\.gitignore" />
+    <None Include="images\ThamQuan\Tang2\Sanh2\img\.gitignore" />
+    <None Include="images\ThamQuan\Tang2\Sanh3\img\.gitignore" />
+    <None Include="images\ThamQuan\Tang2\Sanh4\img\.gitignore" />
+    <None Include="images\ThamQuan\TangTret\Sanh1\img\.gitignore" />
+    <None Include="images\ThamQuan\TangTret\Sanh2\img\.gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
