@@ -26,13 +26,13 @@
         </style>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-        <table style="width: 103%; background-color: #EAFFFF;">
+        <table style="width: 103%;">
                 
                 <tr>
                     <td align="left" class="style1" valign="top" colspan="2">
-                        <asp:Image ID="Image1" runat="server" Height="237px" 
+                        <asp:Image ID="Image1" runat="server" Height="274px" 
                             ImageUrl="~/images/TrangChu/NhaHang.jpg" 
-                            style="text-align: left; margin-left: 0px" Width="346px" />
+                            style="text-align: left; margin-left: 0px" Width="444px" />
                     </td>
                     <td class="style2" valign="top" colspan="2">
                         <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CC0000" Height="40px" 
@@ -46,14 +46,12 @@
                 </tr>
                 <tr>
                     <td align="left" valign="top" colspan="2">
-                        <asp:Label ID="Label2" runat="server" Text="Món Ngon:" ForeColor="#CC0000" 
-                            meta:resourceKey="Label2Resource1" 
-                            style="font-weight: 700; font-size: large"></asp:Label>
+                        <asp:HyperLink ID="HyperLink12" runat="server" ForeColor="#CC0000" 
+                            style="font-weight: 700; font-size: large">Món Ngon:</asp:HyperLink>
                     </td>
                     <td style="width: 301px" colspan="2">
-                        <asp:Label ID="Label4" runat="server" Text="Bàn Vip:" ForeColor="#CC0000" 
-                            meta:resourceKey="Label2Resource1" 
-                            style="font-weight: 700; font-size: large"></asp:Label>
+                        <asp:HyperLink ID="HyperLink13" runat="server" ForeColor="#CC0000" 
+                            style="font-weight: 700; font-size: large">Bàn Vip:</asp:HyperLink>
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +88,7 @@
                                 <br />
                                 <br /></li>
                             <li style="height: 17px">
-                                <asp:HyperLink ID="HyperLink3" runat="server">Chả giò luộcc</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink3" runat="server">Chả giò luộc</asp:HyperLink>
                                 <br />
                                 <br /></li>
                             <li style="height: 17px">
@@ -118,4 +116,5 @@
                                 <br /></li>
                         </ul>
                 </td>
+            </table>
     </asp:Content>
