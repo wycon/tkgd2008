@@ -10,6 +10,8 @@
     <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
+    </asp:ScriptManager>    
     <table width="100%">
         <tr>
             <td colspan="3">
@@ -17,8 +19,13 @@
         </tr>
         <tr>
             <td>
-                Sắp theo tên: <a href="#">tăng</a>/<a href="#">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo
-                giá: <a href="#">tăng</a>/<a href="#">giảm</a>
+                <%--Sắp theo tên: <a href="javascript:void(0);" onclick="SapTenTang()">tăng</a>/ <a href="javascript:void(0);"
+                            onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
+                                onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
+                Sắp theo tên:
+                <a href="DatMon.aspx?s=aname">tăng</a>
+                / <a href="DatMon.aspx?s=dname">giảm</a>&nbsp;&nbsp;&nbsp;
+                Sắp theo giá: <a href="DatMon.aspx?s=aprice">tăng</a> / <a href="DatMon.aspx?s=dprice">giảm</a>
             </td>
             <td>
                 <b>Số lượng hiển thị:</b>
@@ -84,7 +91,7 @@
                                                                //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled' checked='checked'/>");
                                                        }
                                                     %>--%>
-       <%--                                             <% 
+                                                    <%--                                             <% 
                                                         int r = new Random().Next();
                                                             
                                                         for (int i = 0; i < 4; i++)
@@ -95,18 +102,19 @@
                                                                Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled' checked='checked'/>");
 
                                                        }%>--%>
-                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
-                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
-                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
-                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled'/>
-                                                       <input name='star0<%# Eval("TenMonAn") %>' type='radio' class='star' disabled='disabled' checked='checked'/>
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled'
+                                                        checked='checked' />
                                                 </div>
                                             </td>
                                             <td valign="top" width="30%">
                                                 Số lượng món/bàn:&nbsp;&nbsp;&nbsp;<asp:TextBox ID="tbSoLuong" runat="server" Width="20px"
                                                     Text="1"></asp:TextBox>
                                                 <br />
-                                                <input id="bt1" type="button" value="Đặt món" onclick="datMon('<%# Eval("MaMonAn")%>', '<%# Eval("TenMonAn")%>', '<%# Eval("Gia")%>')" />
+                                                <input id="bt1" type="button" value="Đặt món" onclick="DatMon('<%# Eval("MaMonAn")%>', '<%# Eval("TenMonAn")%>', '<%# Eval("Gia")%>')" />
                                             </td>
                                         </tr>
                                     </ItemTemplate>

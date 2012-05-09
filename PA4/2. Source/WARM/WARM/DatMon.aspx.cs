@@ -30,19 +30,33 @@ namespace WARM
         {
             base.OnInit(e);
             rptPages.ItemCommand += new RepeaterCommandEventHandler(rptPages_ItemCommand);
+            if (Session["nResult"] == null)
+                Session["nResult"] = 3;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                LoadData(int.Parse(ddlSoKetQua.SelectedItem.Value));
+                string req = string.Empty;
+                if (Request.QueryString["s"] != null)
+                    req = Request.QueryString["s"].ToString();
+                if(req == "aname")
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(4, true));
+                else if (req == "dname")
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(4, false));
+                else if (req == "aprice")
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(4, true));
+                else if (req == "dprice")
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(4, false));
+                else
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSach(4));
             }
         }
-        private void LoadData(int nResult)
+        private void LoadData(int nResult, List<MONAN> dsMon)
         {
             PagedDataSource pgitems = new PagedDataSource();
             DataView dv = new DataView();
-            pgitems.DataSource = MonAnDAO.LayDanhSach(4);
+            pgitems.DataSource = dsMon;
             pgitems.AllowPaging = true;
             pgitems.PageSize = nResult;
             pgitems.CurrentPageIndex = PageNumber;
@@ -63,13 +77,15 @@ namespace WARM
         public void rptPages_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             PageNumber = Convert.ToInt32(e.CommandArgument) - 1;
-            LoadData(int.Parse(ddlSoKetQua.SelectedItem.Value));
+            LoadData(int.Parse(ddlSoKetQua.SelectedItem.Value),  MonAnDAO.LayDanhSach(4));
         }
 
         protected void ddlSoKetQua_SelectedIndexChanged(object sender, EventArgs e)
         {
             PageNumber = 0;
-            LoadData(int.Parse(ddlSoKetQua.SelectedItem.Value));
+            int nResult = int.Parse(ddlSoKetQua.SelectedItem.Value);
+            Session["nResult"] = nResult;
+            LoadData(nResult, MonAnDAO.LayDanhSach(4));
         }
     }
 }
