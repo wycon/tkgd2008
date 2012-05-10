@@ -56,6 +56,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="ChiTietMonAn.aspx" />
+    <Content Include="DangKy.aspx" />
     <Content Include="images\ThamQuan\ChonTang\slice_0_0_menu.png" />
     <Content Include="images\ThamQuan\ChonTang\slice_1_0_menu.png" />
     <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner01.jpg" />
@@ -280,6 +281,13 @@
     </Compile>
     <Compile Include="ChiTietMonAn.aspx.designer.cs">
       <DependentUpon>ChiTietMonAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKy.aspx.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKy.aspx.designer.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
     </Compile>
     <Compile Include="ThamQuan\ChonTang.aspx.cs">
       <DependentUpon>ChonTang.aspx</DependentUpon>

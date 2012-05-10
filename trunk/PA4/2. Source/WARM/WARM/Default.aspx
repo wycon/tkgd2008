@@ -26,7 +26,7 @@
         </style>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-        <table style="width: 103%;">
+        <table style="width: 100%;">
                 
                 <tr>
                     <td align="left" class="style1" valign="top" colspan="2">
