@@ -11,6 +11,7 @@
 </head>
 <body>
     <form runat="server">
+                        <input type="hidden" name="dff_view" value="grid"/>
     <div class="page">
         <div class="header">
             <div class="logo">
@@ -51,8 +52,9 @@
                 <table>
                     <tr>
                       <td>
-                        <input type="hidden" name="dff_view" value="grid"/>
-                        Search:<input type="text" name="dff_keyword" size="25" maxlength="50"/><input type="submit" value="Find"/>
+                          <asp:TextBox ID="TextBox1" runat="server" Width="186px"></asp:TextBox>
+                          <asp:Button  ID="Find" runat="server" onclick="Find_Click" Text="Find" 
+                              style="margin-left: 0px" Width="49px" />
                       </td>
                     </tr>
                   </table>
