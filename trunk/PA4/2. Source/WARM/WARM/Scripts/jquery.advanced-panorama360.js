@@ -36,7 +36,6 @@
 				                areaclass = " " + areaclass;
 				            var areahref = $(this).attr("href");
 				            var areacoordArray = coords_fill(areacoord);
-				            alert(areacoordArray[2] + "-" + areacoordArray[0]);
 				            panoContainer.append("<a class='panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + areacoordArray[0] + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'>&nbsp;</a>");
 				            panoContainer.append("<a class='panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + (panoImgWidth + parseInt(areacoordArray[0])) + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'>&nbsp;</a>");
 				            areaId++;

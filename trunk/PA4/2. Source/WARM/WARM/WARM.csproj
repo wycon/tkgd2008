@@ -60,6 +60,12 @@
     <Content Include="images\closedhand.cur" />
     <Content Include="images\openhand.cur" />
     <Content Include="images\ThamQuan\3D\Tang1\Sanh1\BOCA_restaurant_panorama2.jpg" />
+    <Content Include="images\ThamQuan\3D\Tang1\Sanh2\envImg.jpg" />
+    <Content Include="images\ThamQuan\3D\Tang1\Sanh3\Hanoi_skyline_panorama_1.jpg" />
+    <Content Include="images\ThamQuan\3D\Tang2\Sanh1\1280px-Panorama_Centrul_Vechi_2.jpg" />
+    <Content Include="images\ThamQuan\3D\Tang2\Sanh2\1280px-360_Panorama_Saulakopf.jpg" />
+    <Content Include="images\ThamQuan\3D\Tang2\Sanh3\1280px-360_Schalzbachvors_Panorama_1.jpg" />
+    <Content Include="images\ThamQuan\3D\Tang2\Sanh4\1280.jpg" />
     <Content Include="images\ThamQuan\3D\TangTret\Sanh1\gouges.jpg" />
     <Content Include="images\ThamQuan\3D\TangTret\Sanh1\sculpteur.jpg" />
     <Content Include="images\ThamQuan\3D\TangTret\Sanh1\statue1.jpg" />
@@ -494,12 +500,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\DanhMucMon\" />
-    <Folder Include="images\ThamQuan\3D\Tang1\Sanh2\" />
-    <Folder Include="images\ThamQuan\3D\Tang1\Sanh3\" />
-    <Folder Include="images\ThamQuan\3D\Tang2\Sanh1\" />
-    <Folder Include="images\ThamQuan\3D\Tang2\Sanh2\" />
-    <Folder Include="images\ThamQuan\3D\Tang2\Sanh3\" />
-    <Folder Include="images\ThamQuan\3D\Tang2\Sanh4\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
