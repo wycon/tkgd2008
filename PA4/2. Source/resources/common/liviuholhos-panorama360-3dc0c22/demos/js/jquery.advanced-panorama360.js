@@ -8,14 +8,7 @@
 ========================================================= */
 (function($) {
 	$.fn.advancedpanorama = function(options) {
-		this.each(function(){ 
-			var settings = {
-				viewport_width: 600,
-				speed: 20000,
-				direction: 'left',
-				control_display: 'auto',
-				start_position: 0
-			};
+		this.each(function(){
 			var panoViewport = $(this);
 			var panoContainer = panoViewport.find('.panorama-container');
 			var panoImg = panoContainer.find('img');
@@ -23,7 +16,7 @@
 			if (!imgTitle)
 				imgTitle = panoImg.attr('alt');
 			
-			var panoImgWidth = parseInt(panoImg.attr('width'));
+			var panoImgWidth = parseInt(panoImg.attr('data-width'));
 			var mapId = panoImg.attr('usemap');
 			var areaId = 0;
 						
@@ -60,13 +53,6 @@
 			
 		});
 	};
-
-
-$(document).ready(function(){
-	$(".panorama-viewport").advancedpanorama();
-});
-
-
 })(jQuery);
 
 function coords_fill(mycoords) {
