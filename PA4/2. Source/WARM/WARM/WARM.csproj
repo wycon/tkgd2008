@@ -55,6 +55,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="ChiTietMonAn.aspx" />
     <Content Include="images\ThamQuan\ChonTang\slice_0_0_menu.png" />
     <Content Include="images\ThamQuan\ChonTang\slice_1_0_menu.png" />
     <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner01.jpg" />
@@ -209,6 +210,7 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Styles\MyStyle.css" />
+    <Content Include="TimKiem.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -265,6 +267,12 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietMonAn.aspx.cs">
+      <DependentUpon>ChiTietMonAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietMonAn.aspx.designer.cs">
+      <DependentUpon>ChiTietMonAn.aspx</DependentUpon>
     </Compile>
     <Compile Include="ThamQuan\ChonTang.aspx.cs">
       <DependentUpon>ChonTang.aspx</DependentUpon>
@@ -381,6 +389,12 @@
     </Compile>
     <Compile Include="ThamQuan\3D\Tang2.aspx.designer.cs">
       <DependentUpon>Tang2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem.aspx.cs">
+      <DependentUpon>TimKiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem.aspx.designer.cs">
+      <DependentUpon>TimKiem.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
