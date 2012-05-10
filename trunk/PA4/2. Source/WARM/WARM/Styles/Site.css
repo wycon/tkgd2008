@@ -248,6 +248,13 @@ div.menu ul li a:active
     text-decoration: none;
 }
 
+/* POPUP MENU 
+----------------------------------------------------------*/
+.popupMenu {
+    position: absolute;
+    /*visibility: hidden;*/
+}
+
 /* FORM ELEMENTS   
 ----------------------------------------------------------*/
 
