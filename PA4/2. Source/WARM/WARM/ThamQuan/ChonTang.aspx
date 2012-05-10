@@ -13,11 +13,41 @@ as a menu.
  -->
 <table cellpadding="0" border="0" cellspacing="0">
   <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0.jpg" style="width: 272px;  height: 200px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_1.jpg" style="width: 356px;  height: 200px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_2.jpg" style="width: 172px;  height: 200px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0.jpg" style="width: 272px;  height: 80px; border-width: 0px;"/></td><td><a href="Tang2/Sanh1.aspx"><img onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" alt="" src="../images/ThamQuan/ChonTang/slice_1_1.jpg" style="width: 356px; height: 80px; border-width: 0px" name="1_1" /></a></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_2.jpg" style="width: 172px;  height: 80px; border-width: 0px;"/></td></tr>
+  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0.jpg" style="width: 272px;  height: 80px; border-width: 0px;"/></td><td><a><img onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" onClick="exchange(this,images_slice,explains,2);" alt="" src="../images/ThamQuan/ChonTang/slice_1_1.jpg" style="width: 356px; height: 80px; border-width: 0px" name="1_1"/></a>
+    <div class="popupMenu" id="1_1_PopupMenu" 
+          
+          
+          style="position: absolute; visibility: hidden; left: 948px; top: 398px; z-index: 1000;">
+    <div style="border:1px outset white;padding:2px;">
+    <div><a href="Tang2/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0_menu.png"  style="width: 124px; height: 42px; border-width: 0px;"></a></div>
+    <div><a href="#"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
+    </div>                           
+  </div>
+  </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_2.jpg" style="width: 172px;  height: 80px; border-width: 0px;"/></td></tr>
   <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_2_0.jpg" style="width: 272px;  height: 38px; border-width: 0px;"/></td><td><img alt="" src="../images/ThamQuan/ChonTang/slice_2_1.jpg" style="width: 356px; height: 38px; border-width: 0px" name="2_1" /></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_2_2.jpg" style="width: 172px;  height: 38px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_0.jpg" style="width: 272px;  height: 74px; border-width: 0px;"/></td><td><a href="Tang1/Sanh1.aspx"><img  onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" alt="" src="../images/ThamQuan/ChonTang/slice_3_1.jpg" style="width: 356px; height: 74px; border-width: 0px" name="3_1" /></a></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_2.jpg" style="width: 172px;  height: 74px; border-width: 0px;"/></td></tr>
+  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_0.jpg" style="width: 272px;  height: 74px; border-width: 0px;"/></td><td><a><img  onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);"  onClick="exchange(this,images_slice,explains,2);" alt="" src="../images/ThamQuan/ChonTang/slice_3_1.jpg" style="width: 356px; height: 74px; border-width: 0px" name="3_1"/></a>
+    <div class="popupMenu" id="3_1_PopupMenu" 
+          
+          
+          style="position: absolute; visibility: hidden; left: 947px; top: 517px; z-index: 1000;">
+    <div style="border:1px outset white;padding:2px;">
+    <div><a href="Tang1/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0_menu.png"  style="width: 124px; height: 42px; border-width: 0px;"></a></div>
+    <div><a href="#"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
+    </div>                           
+  </div>
+  </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_2.jpg" style="width: 172px;  height: 74px; border-width: 0px;"/></td></tr>
   <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_4_0.jpg" style="width: 272px;  height: 36px; border-width: 0px;"/></td><td><img alt="" src="../images/ThamQuan/ChonTang/slice_4_1.jpg" style="width: 356px; height: 36px; border-width: 0px" name="4_1" /></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_4_2.jpg" style="width: 172px;  height: 36px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_0.jpg" style="width: 272px;  height: 96px; border-width: 0px;"/></td><td><a href="TangTret/Sanh1.aspx"><img  onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" alt="" src="../images/ThamQuan/ChonTang/slice_5_1.jpg" style="width: 356px; height: 96px; border-width: 0px" name="5_1" /></a></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_2.jpg" style="width: 172px;  height: 96px; border-width: 0px;"/></td></tr>
+  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_0.jpg" style="width: 272px;  height: 96px; border-width: 0px;"/></td><td><a><img  onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" onClick="exchange(this,images_slice,explains,2);" alt="" src="../images/ThamQuan/ChonTang/slice_5_1.jpg" style="width: 356px; height: 96px; border-width: 0px" name="5_1"/></a>
+  <div class="popupMenu" id="5_1_PopupMenu" 
+          
+          
+          style="position: absolute; visibility: hidden; left: 948px; top: 645px; z-index: 1000;">
+    <div style="border:1px outset white;padding:2px;">
+    <div><a href="TangTret/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0_menu.png"  style="width: 124px; height: 42px; border-width: 0px;"></a></div>
+    <div><a href="#"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
+    </div>                           
+  </div>
+  </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_2.jpg" style="width: 172px;  height: 96px; border-width: 0px;"/></td></tr>
   <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_6_0.jpg" style="width: 272px;  height: 76px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_6_1.jpg" style="width: 356px;  height: 76px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_6_2.jpg" style="width: 172px;  height: 76px; border-width: 0px;"/></td></tr>
 </table>
 
@@ -30,6 +60,8 @@ as a menu.
     </td>
 </tr>
 </table>
+
+<script type="text/javascript" src="../../Scripts/jquery-1.6.2.min.js"></script>
 
 
 <script language="javascript" type="text/javascript">
@@ -88,6 +120,7 @@ as a menu.
                 image.src = images[name + "_plain"].src;
                 document.struct_image.src = "../images/ThamQuan/ChonTang/struct.jpg";
                 document.getElementById("explain").innerHTML = explains["empty"];
+                //$("#"+name+"_PopupMenu").css("visibility", "hidden"); 
                 break;
             case 1:
                 image.src = images[name + "_hover"].src;
@@ -95,7 +128,11 @@ as a menu.
                 document.getElementById("explain").innerHTML = explains[name];
                 break;
             case 2:
-                image.src = images[name + "_clicked"].src;
+                //image.src = images[name + "_clicked"].src;
+                if ($("#" + name + "_PopupMenu").css("visibility") == "hidden")
+                    $("#" + name + "_PopupMenu").css("visibility", "visible");
+                else
+                    $("#" + name + "_PopupMenu").css("visibility", "hidden");
                 break;
             case 3:
                 image.src = images[name + "_hover"].src;
