@@ -20,7 +20,7 @@ as a menu.
           style="position: absolute; visibility: hidden; left: 948px; top: 398px; z-index: 1000;">
     <div style="border:1px outset white;padding:2px;">
     <div><a href="Tang2/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0_menu.png"  style="width: 124px; height: 42px; border-width: 0px;"></a></div>
-    <div><a href="#"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
+    <div><a href="3D/Tang2/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
     </div>                           
   </div>
   </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_2.jpg" style="width: 172px;  height: 80px; border-width: 0px;"/></td></tr>
@@ -32,7 +32,7 @@ as a menu.
           style="position: absolute; visibility: hidden; left: 947px; top: 517px; z-index: 1000;">
     <div style="border:1px outset white;padding:2px;">
     <div><a href="Tang1/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0_menu.png"  style="width: 124px; height: 42px; border-width: 0px;"></a></div>
-    <div><a href="#"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
+    <div><a href="3D/Tang1/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
     </div>                           
   </div>
   </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_2.jpg" style="width: 172px;  height: 74px; border-width: 0px;"/></td></tr>
@@ -44,7 +44,7 @@ as a menu.
           style="position: absolute; visibility: hidden; left: 948px; top: 645px; z-index: 1000;">
     <div style="border:1px outset white;padding:2px;">
     <div><a href="TangTret/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0_menu.png"  style="width: 124px; height: 42px; border-width: 0px;"></a></div>
-    <div><a href="#"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
+    <div><a href="3D/TangTret/Sanh1.aspx"><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0_menu.png"  style="width: 124px; height: 44px; border-width: 0px;"></a></div>
     </div>                           
   </div>
   </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_2.jpg" style="width: 172px;  height: 96px; border-width: 0px;"/></td></tr>

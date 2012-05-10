@@ -57,6 +57,13 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="ChiTietMonAn.aspx" />
     <Content Include="DangKy.aspx" />
+    <Content Include="images\closedhand.cur" />
+    <Content Include="images\openhand.cur" />
+    <Content Include="images\ThamQuan\3D\Tang1\Sanh1\BOCA_restaurant_panorama2.jpg" />
+    <Content Include="images\ThamQuan\3D\TangTret\Sanh1\gouges.jpg" />
+    <Content Include="images\ThamQuan\3D\TangTret\Sanh1\sculpteur.jpg" />
+    <Content Include="images\ThamQuan\3D\TangTret\Sanh1\statue1.jpg" />
+    <Content Include="images\ThamQuan\3D\TangTret\Sanh2\atelier.jpg" />
     <Content Include="images\ThamQuan\ChonTang\slice_0_0_menu.png" />
     <Content Include="images\ThamQuan\ChonTang\slice_1_0_menu.png" />
     <Content Include="images\ThamQuan\Tang1\Sanh1\img\banner01.jpg" />
@@ -150,8 +157,37 @@
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_1.jpg" />
     <Content Include="Scripts\basic-jquery-slider.js" />
     <Content Include="Scripts\basic-jquery-slider.min.js" />
+    <Content Include="Scripts\cvi_text_lib.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery.advanced-panorama360.js" />
+    <Content Include="Scripts\jquery.fancybox-1.3.1.pack.js" />
+    <Content Include="Scripts\jquery.flipv.js" />
+    <Content Include="Scripts\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\jquery.panorama360.js" />
     <Content Include="Styles\basic-jquery-slider.css" />
+    <Content Include="Styles\fancybox-x.png" />
+    <Content Include="Styles\fancybox-y.png" />
+    <Content Include="Styles\fancybox.png" />
+    <Content Include="Styles\fancy_close.png" />
+    <Content Include="Styles\fancy_loading.png" />
+    <Content Include="Styles\fancy_nav_left.png" />
+    <Content Include="Styles\fancy_nav_right.png" />
+    <Content Include="Styles\fancy_shadow_e.png" />
+    <Content Include="Styles\fancy_shadow_n.png" />
+    <Content Include="Styles\fancy_shadow_ne.png" />
+    <Content Include="Styles\fancy_shadow_nw.png" />
+    <Content Include="Styles\fancy_shadow_s.png" />
+    <Content Include="Styles\fancy_shadow_se.png" />
+    <Content Include="Styles\fancy_shadow_sw.png" />
+    <Content Include="Styles\fancy_shadow_w.png" />
+    <Content Include="Styles\fancy_title_left.png" />
+    <Content Include="Styles\fancy_title_main.png" />
+    <Content Include="Styles\fancy_title_over.png" />
+    <Content Include="Styles\fancy_title_right.png" />
+    <Content Include="Styles\jquery.fancybox-1.3.1.css" />
+    <Content Include="Styles\loadingAnimation.gif" />
+    <Content Include="Styles\panorama.css" />
+    <Content Include="Styles\panorama360.css" />
     <Content Include="ThamQuan\ChonTang.aspx" />
     <Content Include="images\ThamQuan\ChonTang\1_1_struct.jpg" />
     <Content Include="images\ThamQuan\ChonTang\3_1_struct.jpg" />
@@ -229,10 +265,10 @@
     <Content Include="ThamQuan\Tang2\Sanh2.aspx" />
     <Content Include="ThamQuan\Tang2\Sanh3.aspx" />
     <Content Include="ThamQuan\Tang2\Sanh4.aspx" />
-    <Content Include="ThamQuan\3D\TangTret\Sanh1.aspx" />
-    <Content Include="ThamQuan\3D\TangTret\Sanh2.aspx" />
     <Content Include="ThamQuan\3D\Tang1\Sanh1.aspx" />
     <Content Include="ThamQuan\3D\Tang1\Sanh2.aspx" />
+    <Content Include="ThamQuan\3D\TangTret\Sanh1.aspx" />
+    <Content Include="ThamQuan\3D\TangTret\Sanh2.aspx" />
     <Content Include="ThamQuan\3D\Tang1\Sanh3.aspx" />
     <Content Include="ThamQuan\3D\Tang2\Sanh1.aspx" />
     <Content Include="ThamQuan\3D\Tang2\Sanh2.aspx" />
@@ -384,25 +420,25 @@
     <Compile Include="ThamQuan\Tang2\Sanh4.aspx.designer.cs">
       <DependentUpon>Sanh4.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ThamQuan\3D\TangTret\Sanh1.aspx.cs">
-      <DependentUpon>Sanh1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThamQuan\3D\TangTret\Sanh1.aspx.designer.cs">
-      <DependentUpon>Sanh1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ThamQuan\3D\TangTret\Sanh2.aspx.cs">
-      <DependentUpon>Sanh2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThamQuan\3D\TangTret\Sanh2.aspx.designer.cs">
-      <DependentUpon>Sanh2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ThamQuan\3D\Tang1\Sanh1.aspx.cs">
       <DependentUpon>Sanh1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ThamQuan\3D\Tang1\Sanh1.aspx.designer.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\3D\Tang1\Sanh2.aspx.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\3D\Tang1\Sanh2.aspx.designer.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\3D\TangTret\Sanh1.aspx.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\3D\TangTret\Sanh1.aspx.designer.cs">
       <DependentUpon>Sanh1.aspx</DependentUpon>
     </Compile>
     <Compile Include="TimKiem.aspx.cs">
@@ -412,11 +448,11 @@
     <Compile Include="TimKiem.aspx.designer.cs">
       <DependentUpon>TimKiem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ThamQuan\3D\Tang1\Sanh2.aspx.cs">
+    <Compile Include="ThamQuan\3D\TangTret\Sanh2.aspx.cs">
       <DependentUpon>Sanh2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ThamQuan\3D\Tang1\Sanh2.aspx.designer.cs">
+    <Compile Include="ThamQuan\3D\TangTret\Sanh2.aspx.designer.cs">
       <DependentUpon>Sanh2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ThamQuan\3D\Tang1\Sanh3.aspx.cs">
@@ -458,15 +494,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\DanhMucMon\" />
-    <Folder Include="images\ThamQuan\3D\Tang1\Sanh1\" />
     <Folder Include="images\ThamQuan\3D\Tang1\Sanh2\" />
     <Folder Include="images\ThamQuan\3D\Tang1\Sanh3\" />
     <Folder Include="images\ThamQuan\3D\Tang2\Sanh1\" />
     <Folder Include="images\ThamQuan\3D\Tang2\Sanh2\" />
     <Folder Include="images\ThamQuan\3D\Tang2\Sanh3\" />
     <Folder Include="images\ThamQuan\3D\Tang2\Sanh4\" />
-    <Folder Include="images\ThamQuan\3D\TangTret\Sanh1\" />
-    <Folder Include="images\ThamQuan\3D\TangTret\Sanh2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
