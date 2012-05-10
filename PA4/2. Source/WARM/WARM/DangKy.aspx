@@ -8,14 +8,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
-    </asp:ScriptManager>
     <table width="100%">
         <tr>
             <td colspan="3">
-                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
-
-                </asp:SiteMapPath>
             </td>
         </tr>
         <tr>
