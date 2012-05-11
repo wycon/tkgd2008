@@ -57,6 +57,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="ChiTietMonAn.aspx" />
     <Content Include="DangKy.aspx" />
+    <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
     <Content Include="images\openhand.cur" />
     <Content Include="images\remove.gif" />
@@ -281,7 +282,6 @@
     <Content Include="ThamQuan\3D\Tang2\Sanh2.aspx" />
     <Content Include="ThamQuan\3D\Tang2\Sanh3.aspx" />
     <Content Include="ThamQuan\3D\Tang2\Sanh4.aspx" />
-    <Content Include="WebForm20.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -497,13 +497,6 @@
     </Compile>
     <Compile Include="ThamQuan\3D\Tang2\Sanh4.aspx.designer.cs">
       <DependentUpon>Sanh4.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm20.aspx.cs">
-      <DependentUpon>WebForm20.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm20.aspx.designer.cs">
-      <DependentUpon>WebForm20.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

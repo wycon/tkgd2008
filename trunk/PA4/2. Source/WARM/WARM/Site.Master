@@ -53,7 +53,7 @@
                     <tr>
                       <td>
                           <asp:TextBox ID="TextBox1" runat="server" Width="186px"></asp:TextBox>
-                          <asp:Button  ID="Find" runat="server" onclick="Find_Click" Text="Find" 
+                          <asp:Button  ID="Find" runat="server" onclick="Find_Click" Text="Tìm" 
                               style="margin-left: 0px" Width="49px" />
                       </td>
                     </tr>

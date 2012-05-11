@@ -23,9 +23,9 @@
                             onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
                                 onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
                 Sắp theo tên:
-                <a href="DatMon.aspx?s=aname">tăng</a>
-                / <a href="DatMon.aspx?s=dname">giảm</a>&nbsp;&nbsp;&nbsp;
-                Sắp theo giá: <a href="DatMon.aspx?s=aprice">tăng</a> / <a href="DatMon.aspx?s=dprice">giảm</a>
+                <a href="TimKiem.aspx?s=aname">tăng</a>
+                / <a href="TimKiem.aspx?s=dname">giảm</a>&nbsp;&nbsp;&nbsp;
+                Sắp theo giá: <a href="TimKiem.aspx?s=aprice">tăng</a> / <a href="TimKiem.aspx?s=dprice">giảm</a>
             </td>
             <td>
                 <b>Số lượng hiển thị:</b>

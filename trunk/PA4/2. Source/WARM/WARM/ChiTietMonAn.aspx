@@ -8,18 +8,19 @@
     <script type="text/javascript" src="../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
+    <style type="text/css">
+        .style1
+        {
+            font-size: medium;
+            font-weight: bold;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
     </asp:ScriptManager>    
     <table width="100%">
-        <tr>
-            <td colspan="3">
-            </td>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
+       <tr>
             <td>
                 <asp:Repeater ID="rptPages" runat="server">                    
                     <FooterTemplate>
@@ -29,7 +30,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="3" width="100%">
+            <td width="100%">
                 <table width="100%">
                     <tr>
                         <td width="60%">
@@ -60,25 +61,6 @@
                                             <td valign="top" width="30%">
                                                 <br />
                                                 <div>
-                                                    <%--<% for (int i = 0; i < int.Parse(Eval("DanhGia").ToString()); ++i)
-                                                       {
-                                                           if (i != int.Parse(Eval("DanhGia").ToString()))                                                               
-                                                               //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled'/>");
-                                                           //else
-                                                               //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled' checked='checked'/>");
-                                                       }
-                                                    %>--%>
-                                                    <%--                                             <% 
-                                                        int r = new Random().Next();
-                                                            
-                                                        for (int i = 0; i < 4; i++)
-                                                       {
-                                                           if (i != 4)
-                                                               Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled'/>");
-                                                           else
-                                                               Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled' checked='checked'/>");
-
-                                                       }%>--%>
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
@@ -101,8 +83,72 @@
                     </tr>
                 </table>
             </td>
-            <td>
-            </td>
         </tr>
     </table>
+    <hr />
+    <td valign="top" width="50%" align="left" 
+        style="color: #FF0000; font-size: large;"><span class="style1" 
+        style="color: #FF0000">Lời bình:</span>
+    </td>
+    <br />
+        <asp:Image ID="Image1" runat="server" Height="21px" 
+        ImageUrl="~/images/binhluan.jpg" />
+        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue" 
+            style="font-size: small; text-decoration: underline">Thêm lời bình</asp:HyperLink>
+        <br />
+        <table width="100%">
+        <tr>
+            <td>
+                <asp:Repeater ID="rptPages1" runat="server">                    
+                    <FooterTemplate>
+                        </td> </tr> </table>
+                    </FooterTemplate>
+                </asp:Repeater>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%">
+                <table width="100%">
+
+                    <tr>
+                        <td width="60%">
+                            <table width="100%">
+                                <asp:Repeater ID="rptItems2" runat="server">
+                                    <HeaderTemplate>
+                                        <ul>
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <tr>
+                                            <td style="padding-right: 10px"> 
+                                            </td>
+                                            <td valign="top" width="50%">
+                                            <hr />
+                                            <strong>
+                                                <%# Eval("NguoiBinhLuan") %></a>
+                                            </strong>
+                                            <br />
+                                                <%# Eval("NoiDung") %></a>
+                                            <br />
+                                                Đánh giá: 
+                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' checked='checked' />                                               
+                                            </td>
+                                            <td valign="top" width="30%">     
+                                            </td>                                                   
+                                        </tr>
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                        </ul>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </table>
+                         </td>
+                     </tr>
+                   </table>
+                </td>
+            </tr>
+        </table>
 </asp:Content>
