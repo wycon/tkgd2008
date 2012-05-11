@@ -65,9 +65,9 @@
 				mouseXprev = e.clientX;
 				scrollView(panoramaContainer, elem_width, scrollDelta,settings);
 				return false;
-			}).mouseout(function(e){
+			})/*.mouseout(function(e){
 				isDragged = false;
-			}).bind("mousewheel",function(e,distance){
+			})*/.bind("mousewheel",function(e,distance){
 				var delta=Math.ceil(Math.sqrt(Math.abs(distance)));
 				delta=distance<0 ? -delta : delta;
 				scrollDelta = scrollDelta + delta * 5;

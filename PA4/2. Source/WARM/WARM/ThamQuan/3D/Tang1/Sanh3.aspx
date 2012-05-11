@@ -36,8 +36,8 @@
 			<div class="panorama-container">
 				<img src="../../../images/ThamQuan/3D/Tang1/Sanh3/Hanoi_skyline_panorama_1.jpg" data-width="1704" data-height="375" alt="Panorama" usemap="testmap"/>
 				<map id="testmap" name="testmap"> 
-					<area shape="rect" coords="1000,72,700,255" href="Sanh2.aspx" alt="vers la salle de formation" /> 
-					<area shape="rect" coords="800,114,500,210" href="Sanh1.aspx" alt="statues" /> 
+					<area shape="rect" coords="700,72,1000,255" href="Sanh2.aspx" alt="vers la salle de formation" /> 
+					<area shape="rect" coords="500,114,800,210" href="Sanh1.aspx" alt="statues" /> 
 				</map>
 			</div>
 		</div>
