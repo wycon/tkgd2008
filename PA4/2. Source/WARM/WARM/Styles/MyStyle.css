@@ -9,5 +9,14 @@
 }
 .phieudat
 {
-    border: 1px solid #496077;
+    border-color: Silver;
+    border-style: solid;
+    border-width: 1px;
+}
+.monan
+{
+    border-color: Black;
+    border-style: solid;
+    border-width: 1px;
+    
 }

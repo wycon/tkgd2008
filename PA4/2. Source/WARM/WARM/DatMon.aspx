@@ -7,11 +7,11 @@
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
-    </asp:ScriptManager>    
+    </asp:ScriptManager>
     <table width="100%">
         <tr>
             <td colspan="3">
@@ -22,16 +22,14 @@
                 <%--Sắp theo tên: <a href="javascript:void(0);" onclick="SapTenTang()">tăng</a>/ <a href="javascript:void(0);"
                             onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
                                 onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
-                Sắp theo tên:
-                <a href="DatMon.aspx?s=aname">tăng</a>
-                / <a href="DatMon.aspx?s=dname">giảm</a>&nbsp;&nbsp;&nbsp;
-                Sắp theo giá: <a href="DatMon.aspx?s=aprice">tăng</a> / <a href="DatMon.aspx?s=dprice">giảm</a>
+                Sắp theo tên: <a href="DatMon.aspx?s=aname">tăng</a> / <a href="DatMon.aspx?s=dname">
+                    giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="DatMon.aspx?s=aprice">tăng</a>
+                / <a href="DatMon.aspx?s=dprice">giảm</a>
             </td>
             <td>
                 <b>Số lượng hiển thị:</b>
                 <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
                     AutoPostBack="True">
-                    <asp:ListItem>3</asp:ListItem>
                     <asp:ListItem>5</asp:ListItem>
                     <asp:ListItem>10</asp:ListItem>
                     <asp:ListItem>15</asp:ListItem>
@@ -69,9 +67,13 @@
                             <table width="100%">
                                 <asp:Repeater ID="rptItems" runat="server">
                                     <HeaderTemplate>
-                                        <ul>
                                     </HeaderTemplate>
                                     <ItemTemplate>
+                                        <tr>
+                                            <td colspan="3">
+                                                <hr />
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td style="padding-right: 10px">
                                                 <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
@@ -125,16 +127,53 @@
                             </table>
                         </td>
                         <td valign="top">
-                            <table width="100%" height="100%" class="phieudat">
+                            <table width="100%" height="100%" class="">
+                                <tr>
+                                    <td colspan="3">
+                                        <hr />
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td align="center">
                                         <font class="fontred">Phiếu đặt món</font>
+                                        <hr />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <div id="phieudatmon">
-                                        </div>
+                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True"
+                                            OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                                            OnRowDeleting="GridView1_RowDeleting">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="STT">
+                                                    <ItemTemplate>
+                                                        <%# Container.DataItemIndex + 1 %>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Tên món">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Số lượng">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                    <EditItemTemplate>
+                                                        <asp:TextBox ID="tbSoLuong" runat="server" Width="50" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
+                                                    </EditItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Giá">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000} VND") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
+                                                    UpdateText="Sửa" HeaderText="Sửa"/>
+                                                <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
+                                                    ShowDeleteButton="True" HeaderText="Xóa"/>
+                                            </Columns>
+                                        </asp:GridView>
                                     </td>
                                 </tr>
                             </table>
