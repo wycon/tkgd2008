@@ -12,9 +12,9 @@
 			var panoViewport = $(this);
 			var panoContainer = panoViewport.find('.panorama-container');
 			var panoImg = panoContainer.find('img');
-			var imgTitle = panoImg.attr('title');
+			/*var imgTitle = panoImg.attr('title');
 			if (!imgTitle)
-				imgTitle = panoImg.attr('alt');
+				imgTitle = panoImg.attr('alt');*/
 			
 			var panoImgWidth = parseInt(panoImg.attr('data-width'));
 			var mapId = panoImg.attr('usemap');
@@ -31,25 +31,30 @@
 									areaalt = areaalt.replace('"', '&quot;');
 									
 								}
-								var areaclass = $(this).attr("class");
+								var areaclass;
+								if ($(this).attr("class"))
+									areaclass = $(this).attr("class");
+								else
+									areaclass = '';
 								if (areaclass != '')
 									areaclass = " "+areaclass;
 								var areahref = $(this).attr("href");
 								var areacoordArray = coords_fill(areacoord);
 								panoContainer.append("<a class='panorama-area area"+areaId+areaclass+"' style='position: absolute; left: "+areacoordArray[0]+"px; top: "+areacoordArray[1]+"px; width: "+(areacoordArray[2]-areacoordArray[0])+"px; height: "+(areacoordArray[3]-areacoordArray[1])+"px;' onmouseover='javascript:area_hover("+areaId+")' onmouseout='javascript:area_out("+areaId+")' href='"+areahref+"' title='"+areaalt+"'>&nbsp;</a>"); 
 								panoContainer.append("<a class='panorama-area area"+areaId+areaclass+"' style='position: absolute; left: "+(panoImgWidth+parseInt(areacoordArray[0]))+"px; top: "+areacoordArray[1]+"px; width: "+(areacoordArray[2]-areacoordArray[0])+"px; height: "+(areacoordArray[3]-areacoordArray[1])+"px;' onmouseover='javascript:area_hover("+areaId+")' onmouseout='javascript:area_out("+areaId+")' href='"+areahref+"' title='"+areaalt+"'>&nbsp;</a>"); 
+								panoContainer.append("<a class='panorama-area area"+areaId+areaclass+"' style='position: absolute; left: "+(parseInt(areacoordArray[0])-panoImgWidth)+"px; top: "+areacoordArray[1]+"px; width: "+(areacoordArray[2]-areacoordArray[0])+"px; height: "+(areacoordArray[3]-areacoordArray[1])+"px;' onmouseover='javascript:area_hover("+areaId+")' onmouseout='javascript:area_out("+areaId+")' href='"+areahref+"' title='"+areaalt+"'>&nbsp;</a>"); 
 								areaId++;
 								break;
 						case 'circle' :  break;
 						case 'poly' :  break;
 					}
 				}).remove();	
-			panoContainer.find('a.panorama-area').bind('click', function(){
+			/*panoContainer.find('a.panorama-area').bind('click', function(){
 				$(panoContainer).stop();
-			});
-			if (imgTitle) {
+			});*/
+			/*if (imgTitle) {
 				panoViewport.append("<p class='flipv panorama-title'>"+imgTitle+"</p>");
-			}		
+			}*/
 			
 		});
 	};
