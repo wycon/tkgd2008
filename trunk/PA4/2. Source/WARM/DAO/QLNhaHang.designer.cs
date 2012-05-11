@@ -63,7 +63,7 @@ namespace DAO
     #endregion
 		
 		public QLNhaHangDataContext() : 
-				base(global::DAO.Properties.Settings.Default.QLNhaHangConnectionString1, mappingSource)
+				base(global::DAO.Properties.Settings.Default.QLNhaHangConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
