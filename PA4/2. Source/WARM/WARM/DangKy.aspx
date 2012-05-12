@@ -6,6 +6,12 @@
             width: 50%;
         }
     </style>
+    <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
+    <script type="text/javascript" src="../Scripts/MyScript.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table width="100%">
@@ -43,12 +49,13 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DangKy.aspx">Quên mật khẩu?</asp:HyperLink>
                         </td>
                         <td>
-                            &nbsp;<asp:Button ID="Button1" runat="server" Height="21px" Text="Đăng nhập" Width="72px" />
+                            <asp:Button ID="Button1" runat="server" Height="29px" Text="Đăng nhập" 
+                                Width="89px" />
                         </td>
                     </tr>
                     <tr>
                     <td colspan="3">
-                        &nbsp;</td >
+                        <hr />&nbsp;</td >
                     </tr>
                     <tr>
                     <td colspan="3">
@@ -96,8 +103,8 @@
                     <td>
                     </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Height="21px" Text="Đăng ký" 
-                            Width="72px" />
+                        <asp:Button ID="Button2" runat="server" Height="29px" Text="Đăng ký" 
+                            Width="89px" />
                     </td>
                     </tr>
                     <tr>
