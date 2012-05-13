@@ -93,8 +93,7 @@
     <br />
         <asp:Image ID="Image1" runat="server" Height="21px" 
         ImageUrl="~/images/binhluan.jpg" />
-        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue" 
-            style="font-size: small; text-decoration: underline">Thêm lời bình</asp:HyperLink>
+        <a href="#top">Thêm lời bình</a> 
         <br />
         <table width="100%">
         <tr>
@@ -120,23 +119,25 @@
                                     <ItemTemplate>
                                         <tr>
                                             <td style="padding-right: 10px"> 
+                                                <asp:Image ID="Image2" runat="server" Height='80px' ImageUrl="~/images/Avatar.jpg" />
                                             </td>
                                             <td valign="top" width="50%">
                                             <hr />
                                             <strong>
-                                                <%# Eval("NguoiBinhLuan") %></a>
+                                                <%# Eval("NguoiBinhLuan") %>
                                             </strong>
                                             <br />
-                                                <%# Eval("NoiDung") %></a>
+                                                <%# Eval("NoiDung") %>
                                             <br />
                                                 Đánh giá: 
-                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' checked='checked' />                                               
+                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' checked='checked' />                                               
                                             </td>
-                                            <td valign="top" width="30%">     
+                                            <td valign="top" width="30%">  
+                                                Đăng lúc <%# Eval("ThoiGian") %>   
                                             </td>                                                   
                                         </tr>
                                     </ItemTemplate>
@@ -151,4 +152,25 @@
                 </td>
             </tr>
         </table>
+        <hr />
+        <a name="top"></a> 
+        <td valign="top" width="50%" align="left" 
+            style="color: #FF0000; font-size: large;"><span class="style1" 
+            style="color: #FF0000">Thêm lời bình:</span>
+         </td>
+
+    <br />
+    Họ tên(*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="textten" runat="server" Width="267px"></asp:TextBox>
+    <br />
+    Đánh giá&nbsp;&nbsp;&nbsp;
+    <br />
+    Nội dung(*)<br />
+    <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" 
+        style="text-align: left"></asp:TextBox>
+
+    <br />
+    <asp:Button ID="Button1" runat="server" Text="Đăng lời bình" Width="91px" 
+        onclick="Button1_Click" />
+
 </asp:Content>

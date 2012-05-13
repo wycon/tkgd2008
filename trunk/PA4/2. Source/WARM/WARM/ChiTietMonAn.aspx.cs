@@ -41,5 +41,20 @@ namespace WARM
                 rptItems2.DataBind();
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ChiTietMonAn.aspx");
+            if (!Page.IsPostBack)
+            {
+                BINHLUAN bl = new BINHLUAN();
+                bl.NguoiBinhLuan = textten.Text;
+                bl.DanhGia = 5;
+                bl.NoiDung = textnoidung.Text;
+                bl.DaXoa = false;
+                bl.MaMonAn = int.Parse(Request.QueryString["id"]);
+                BinhLuanDAO.ThemLoiBinh(bl);
+            }
+        }
     }
 }
