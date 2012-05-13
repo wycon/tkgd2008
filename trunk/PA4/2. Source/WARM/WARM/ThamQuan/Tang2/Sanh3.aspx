@@ -33,10 +33,11 @@ as a menu.
 <tr>
     <td>
 	<ul>
-	<li><a href="Sanh1.aspx">1: Sanh 1</a></li>
-	<li><a href="Sanh2.aspx">2: Sanh 2</a></li>
-	<li><a href="Sanh3.aspx">3: Sanh 3</a></li>
-	<li><a href="Sanh4.aspx">4: Sanh 4</a></li>
+    <h4 style="color:Black; font-weight:bold; margin-right:20px"> TẦNG 2</h4>
+	<li><a  style="text-decoration:none" href="Sanh1.aspx">1: Sảnh 1</a></li>
+	<li><a  style="text-decoration:none" href="Sanh2.aspx">2: Sảnh 2</a></li>
+	<li><a  style="text-decoration:none" href="Sanh3.aspx">3: Sảnh 3</a></li>
+	<li><a  style="text-decoration:none" href="Sanh4.aspx">4: Sảnh 4</a></li>
 	</ul>
     </td>
 </tr>
