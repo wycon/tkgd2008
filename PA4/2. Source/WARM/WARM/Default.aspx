@@ -1,5 +1,7 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+﻿<%@ Page  Title=" Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="WARM._Default" %>
+
+
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <style type="text/css">
@@ -36,8 +38,8 @@
                     </td>
                     <td class="style2" valign="top" colspan="2">
                         <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CC0000" Height="40px" 
-                            NavigateUrl="~/Default.aspx" 
-                            style="font-weight: 700; font-size: xx-large; text-align: left" Width="343px">NHÀ HÀNG WARM</asp:HyperLink>
+                            NavigateUrl="~/Default.aspx" Font-Underline="false"
+                            style="font-weight: 700; font-size: xx-large; text-align: left" Width="343px" >NHÀ HÀNG WARM</asp:HyperLink>
                         <br />
                         <br />
                         <asp:Label ID="Label9" runat="server" 
