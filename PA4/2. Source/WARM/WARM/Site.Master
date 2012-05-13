@@ -15,19 +15,57 @@
     <div class="page">
         <div class="header">
             <div class="logo">
-                <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" 
-                    Height="100%" Width="100%" />
+                 <a href="/Default.aspx" > <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Banner2.jpg" 
+                    Height="100%" Width="100%" /></a>
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        <asp:Login ID="Login1" runat="server" LoginButtonText="Đăng Nhập" 
-                            PasswordLabelText="Mật Khẩu:" RememberMeText="Ghi Nhớ." 
-                            TitleText="Đăng Nhập" FailureText="Đăng nhập thất bại, xin thử lại." 
-                            PasswordRequiredErrorMessage="Mật Khẩu bắt buộc." 
-                            UserNameLabelText="Tên Đăng Nhập:" 
-                            UserNameRequiredErrorMessage="Tên Đăng Nhập bắt buộc.">
-                        </asp:Login>
+                        <table cellpadding="0">
+                            <tr>
+                                <td align="center" colspan="2">
+                                    Đăng Nhập</td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Tên Đăng Nhập:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
+                                        ControlToValidate="UserName" ErrorMessage="Tên Đăng Nhập bắt buộc." 
+                                        ToolTip="Tên Đăng Nhập bắt buộc." ValidationGroup="ctl00$ctl20$Login1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Mật Khẩu:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
+                                        ControlToValidate="Password" ErrorMessage="Mật Khẩu bắt buộc." 
+                                        ToolTip="Mật Khẩu bắt buộc." ValidationGroup="ctl00$ctl20$Login1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                     <a style=" padding-right:20px ; text-decoration:none" href="About.aspx">Quên mật khẩu</a>
+                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Ghi Nhớ" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="2" style="color:Red;">
+                                    <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2">
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" 
+                                        Text="Đăng Nhập" ValidationGroup="ctl00$ctl20$Login1" />
+                                </td>
+                            </tr>
+                        </table>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
@@ -65,12 +103,14 @@
             <div class="main-left">
                 <asp:Menu ID="Menu1" runat="server">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bàn Ăn"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đăng Kí"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao"/>
-                        <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Lẩu" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đồ Nướng" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đồ Chay" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đồ Mặn" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Buffer" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Nước Ngọt" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bia" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Rượu" />
                     </Items>
                 </asp:Menu>
             </div>
