@@ -12,8 +12,10 @@ Replace the href targets in the anchor (<a >) for your URLS to have it working
 as a menu.
  -->
 <div style="width:800px;">
-<div style="width:100%; float:left;">
-<div style="float:left; width:33%;">
+<div style="width:70%; float:left;">
+<asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
+<br clear="all"/>
+<div style="float:left; width:27%;">
 <table cellpadding="0" border="0" cellspacing="0">
   <tr>
     <td><a href="Sanh3.aspx"><img alt=" " src="../../images/ThamQuan/Tang1/Sanh2/struct/slice_0_0.jpg"  style="width: 72px; height: 78px; border-width: 0px;"/></a></td>
@@ -28,7 +30,7 @@ as a menu.
 </table>
 </div>
 
-<div style="float:left; width:33%;">
+<div style="float:left; width:18%;">
 <table cellpadding="0" border="0" cellspacing="0">
 <tr>
     <td>
@@ -58,6 +60,29 @@ as a menu.
 </table>
 </div>
 
+</div>
+<div style="width:30%; float:left;">
+<asp:Label ID="lblOption" runat="server" Text="Tùy Chọn"></asp:Label>
+<br clear="all"/>
+<div style="float:left;">
+<asp:Menu ID="mnuTang" runat="server" CssClass="menu" EnableViewState="false" 
+        IncludeStyleBlock="false">
+    <Items>
+        <asp:MenuItem NavigateUrl="../Tang2/Sanh1.aspx" Text="Tầng 2"/>
+        <asp:MenuItem NavigateUrl="../Tang1/Sanh1.aspx" Text="Tầng 1"/>
+        <asp:MenuItem NavigateUrl="../TangTret/Sanh1.aspx" Text="Tầng Trệt"/>
+    </Items>
+</asp:Menu>
+</div>
+<div style="float:left;">
+<asp:Menu ID="mnuCheDo" runat="server" CssClass="menu" EnableViewState="false" 
+        IncludeStyleBlock="false">
+    <Items>
+        <asp:MenuItem NavigateUrl="../Tang1/Sanh2.aspx" Text="2D"/>
+        <asp:MenuItem NavigateUrl="../3D/Tang1/Sanh2.aspx" Text="3D"/>
+    </Items>
+</asp:Menu>
+</div>
 </div>
 
  <div id="container">
