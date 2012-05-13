@@ -16,6 +16,16 @@ namespace DAO
 
             return ds;
         }
+        public static bool ThemLoiBinh(BINHLUAN blThem)
+        {
+            BINHLUAN bl = new BINHLUAN();
+            QLNhaHangDataContext db = new QLNhaHangDataContext();
+            db.DeferredLoadingEnabled = false;
+            blThem.MaBinhLuan = default(int);
+            db.BINHLUANs.InsertOnSubmit(blThem);
+            db.SubmitChanges();
+            return true;
+        }
 
     }
 }
