@@ -31,7 +31,81 @@
 	</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<div class="panorama round" style="width:600px;height:375px;padding:10px;background-color:#444;">
+<div style="width:800px;">
+<div style="width:70%; float:left;">
+<asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
+<br clear="all"/>
+<div style="float:left; width:27%;">
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><a href="Sanh4.aspx"><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/struct/slice_0_0.jpg"  style="width: 72px; height: 75px; border-width: 0px;"/></a></td>
+    <td><a href="Sanh3.aspx"><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/struct/slice_0_1.jpg"  style="width: 78px; height: 75px; border-width: 0px;"/></a></td>
+</tr>
+
+  <tr>
+    <td><a href="Sanh1.aspx"><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/struct/slice_1_0.jpg"  style="width: 72px; height: 75px; border-width: 0px;"/></a></td>
+    <td><a href="Sanh2.aspx"><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/struct/slice_1_1.jpg"  style="width: 78px; height: 75px; border-width: 0px;"/></a></td>
+</tr>
+
+</table>
+</div>
+
+<div style="float:left; width:18%;">
+<table cellpadding="0" border="0" cellspacing="0">
+<tr>
+    <td>
+	<ul>
+	<li><a href="Sanh1.aspx">1: Sanh 1</a></li>
+	<li><a href="Sanh2.aspx">2: Sanh 2</a></li>
+	<li><a href="Sanh3.aspx">3: Sanh 3</a></li>
+	<li><a href="Sanh4.aspx">4: Sanh 4</a></li>
+	</ul>
+    </td>
+</tr>
+</table>
+</div>
+
+<div style="float:left; width:33%;">
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><a><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/navigate/slice_0_0.jpg"  style="width: 114px; height: 100px; border-width: 0px;"/></a></td>
+    <td><a href="Sanh3.aspx"><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/navigate/slice_0_1.jpg"  style="width: 115px; height: 100px; border-width: 0px;"/></a></td>
+</tr>
+
+  <tr>
+    <td><a href="Sanh1.aspx"><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/navigate/slice_1_0.jpg"  style="width: 114px; height: 115px; border-width: 0px;"/></a></td>
+    <td><a><img alt=" " src="../../../images/ThamQuan/Tang2/Sanh2/navigate/slice_1_1.jpg"  style="width: 115px; height: 115px; border-width: 0px;"/></a></td>
+</tr>
+
+</table>
+</div>
+
+</div>
+<div style="width:30%; float:left;">
+<asp:Label ID="lblOption" runat="server" Text="Tùy Chọn"></asp:Label>
+<br clear="all"/>
+<div style="float:left;">
+<asp:Menu ID="mnuTang" runat="server" CssClass="menu" EnableViewState="false" 
+        IncludeStyleBlock="false">
+    <Items>
+        <asp:MenuItem NavigateUrl="../Tang2/Sanh1.aspx" Text="Tầng 2"/>
+        <asp:MenuItem NavigateUrl="../Tang1/Sanh1.aspx" Text="Tầng 1"/>
+        <asp:MenuItem NavigateUrl="../TangTret/Sanh1.aspx" Text="Tầng Trệt"/>
+    </Items>
+</asp:Menu>
+</div>
+<div style="float:left;">
+<asp:Menu ID="mnuCheDo" runat="server" CssClass="menu" EnableViewState="false" 
+        IncludeStyleBlock="false">
+    <Items>
+        <asp:MenuItem NavigateUrl="../../Tang2/Sanh2.aspx" Text="2D"/>
+        <asp:MenuItem NavigateUrl="../Tang2/Sanh2.aspx" Text="3D"/>
+    </Items>
+</asp:Menu>
+</div>
+</div>
+
+<div class="panorama round" style="width:600px;height:375px;padding:10px;background-color:#444;float:left;">
 		<div class="panorama-view">
 			<div class="panorama-container">
 				<img src="../../../images/ThamQuan/3D/Tang2/Sanh2/1280px-360_Panorama_Saulakopf.jpg" data-width="1905" data-height="375" alt="Panorama" usemap="testmap"/>
@@ -44,4 +118,5 @@
 		</div>
 		<a class="info round" href="http://commons.wikimedia.org/wiki/File:View_from_Sky_Tower_Akl.jpg">Sky Tower Akl</a>
 	</div>
+    </div>
 </asp:Content>
