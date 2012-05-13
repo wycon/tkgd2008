@@ -12,39 +12,64 @@ Replace the href targets in the anchor (<a >) for your URLS to have it working
 as a menu.
  -->
 <table cellpadding="0" border="0" cellspacing="0">
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_0.jpg" style="width: 272px;  height: 200px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_1.jpg" style="width: 356px;  height: 200px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_0_2.jpg" style="width: 172px;  height: 200px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_0.jpg" style="width: 272px;  height: 80px; border-width: 0px;"/></td><td><a><img onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" onClick="exchange(this,images_slice,explains,2);" alt="" src="../images/ThamQuan/ChonTang/slice_1_1-new.jpg" style="width: 356px; height: 80px; border-width: 0px" name="1_1"/></a>
-  <div class="popupMenu" id="1_1_PopupMenu" style="position: absolute; visibility: hidden; left: 948px; top: 398px; z-index: 1000;">
-    <div style="border:1px outset white;padding:2px;">
-    <a href="Tang2/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_0_0_menu.png); height: 42px; width: 124px;"></div></a>
-    <a href="3D/Tang2/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_1_0_menu.png); width: 124px; height: 44px;"></div></a>
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_0_0.jpg); height: 100px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_0_1.jpg); height: 100px; width: 178px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_0_2.jpg); height: 100px; width: 76px;"></td></tr>
+
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_1_0.jpg); height: 40px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_1_1-new.jpg); height: 40px; width: 178px;" onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" onClick="exchange(this,images_slice,explains,2);" id="1_1">
+      <div class="popupMenu" id="1_1_PopupMenu" 
+          style="position: absolute; visibility: hidden; left: 652px; top: 275px; z-index: 1000;">
+        <div style="border:1px outset white;padding:2px;">
+        <a href="Tang2/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_0_0_menu.png); height: 42px; width: 124px;"></div></a>
+        <a href="3D/Tang2/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_1_0_menu.png); width: 124px; height: 44px;"></div></a>
+        </div>
+      </div>
+  </td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_1_2.jpg); height: 40px; width: 86px;"></td></tr>
+
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_2_0.jpg); height: 19px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_2_1.jpg); height: 19px; width: 178px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_2_2.jpg); height: 19px; width: 86px;"></td></tr>
+
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_3_0.jpg); height: 37px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_3_1-new.jpg); height: 37px; width: 178px;" onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);"  onClick="exchange(this,images_slice,explains,2);" id="3_1">
+    <div class="popupMenu" id="3_1_PopupMenu" 
+          style="position: absolute; visibility: hidden; left: 652px; top: 334px; z-index: 1000;">
+        <div style="border:1px outset white;padding:2px;">
+        <a href="Tang1/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_0_0_menu.png); height: 42px; width: 124px;"></div></a>
+        <a href="3D/Tang1/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_1_0_menu.png); width: 124px; height: 44px;"></div></a>
+        </div>                           
     </div>
-  </div>
-  </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_1_2.jpg" style="width: 172px;  height: 80px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_2_0.jpg" style="width: 272px;  height: 38px; border-width: 0px;"/></td><td><img alt="" src="../images/ThamQuan/ChonTang/slice_2_1.jpg" style="width: 356px; height: 38px; border-width: 0px" name="2_1" /></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_2_2.jpg" style="width: 172px;  height: 38px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_0.jpg" style="width: 272px;  height: 74px; border-width: 0px;"/></td><td><a><img  onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);"  onClick="exchange(this,images_slice,explains,2);" alt="" src="../images/ThamQuan/ChonTang/slice_3_1-new.jpg" style="width: 356px; height: 74px; border-width: 0px" name="3_1"/></a>
-    <div class="popupMenu" id="3_1_PopupMenu" style="position: absolute; visibility: hidden; left: 947px; top: 517px; z-index: 1000;">
-    <div style="border:1px outset white;padding:2px;">
-    <a href="Tang1/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_0_0_menu.png); height: 42px; width: 124px;"></div></a>
-    <a href="3D/Tang1/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_1_0_menu.png); width: 124px; height: 44px;"></div></a>
-    </div>                           
-  </div>
-  </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_3_2.jpg" style="width: 172px;  height: 74px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_4_0.jpg" style="width: 272px;  height: 36px; border-width: 0px;"/></td><td><img alt="" src="../images/ThamQuan/ChonTang/slice_4_1.jpg" style="width: 356px; height: 36px; border-width: 0px" name="4_1" /></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_4_2.jpg" style="width: 172px;  height: 36px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_0.jpg" style="width: 272px;  height: 96px; border-width: 0px;"/></td><td><a><img  onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" onClick="exchange(this,images_slice,explains,2);" alt="" src="../images/ThamQuan/ChonTang/slice_5_1-new.jpg" style="width: 356px; height: 96px; border-width: 0px" name="5_1"/></a>
-  <div class="popupMenu" id="5_1_PopupMenu" style="position: absolute; visibility: hidden; left: 948px; top: 645px; z-index: 1000;">
+  </td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_3_2.jpg); height: 37px; width: 86px;"></td></tr>
+
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_4_0.jpg); height: 18px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_4_1.jpg); height: 18px; width: 178px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_4_2.jpg); height: 18px; width: 86px;"></td></tr>
+
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_5_0.jpg); height: 48px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_5_1-new.jpg); height: 48px; width: 178px;" onMouseOver="exchange(this,images_slice,explains,1);" onMouseOut="exchange(this,images_slice,explains,0);" onClick="exchange(this,images_slice,explains,2);" id="5_1">
+  <div class="popupMenu" id="5_1_PopupMenu" 
+          
+          
+          style="position: absolute; visibility: hidden; left: 652px; top: 391px; z-index: 1000;">
     <div style="border:1px outset white;padding:2px;">
     <a href="TangTret/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_0_0_menu.png); height: 42px; width: 124px;"></div></a>
     <a href="3D/TangTret/Sanh1.aspx"><div style="background-image: url(../images/ThamQuan/ChonTang/slice_1_0_menu.png); width: 124px; height: 44px;"></div></a>
     </div>                           
   </div>
-  </td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_5_2.jpg" style="width: 172px;  height: 96px; border-width: 0px;"/></td></tr>
-  <tr><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_6_0.jpg" style="width: 272px;  height: 76px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_6_1.jpg" style="width: 356px;  height: 76px; border-width: 0px;"/></td><td><img alt=" " src="../images/ThamQuan/ChonTang/slice_6_2.jpg" style="width: 172px;  height: 76px; border-width: 0px;"/></td></tr>
+  </td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_5_2.jpg); height: 48px; width: 86px;"></td></tr>
+
+  <tr><td style="background-image: url(../images/ThamQuan/ChonTang/slice_6_0.jpg); height: 38px; width: 136px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_6_1.jpg); height: 38px; width: 178px;"></td>
+  <td style="background-image: url(../images/ThamQuan/ChonTang/slice_6_2.jpg); height: 38px; width: 86px;"></td></tr>
 </table>
 
 <table cellpadding="0" border="0" cellspacing="0">
 <tr>
-    <td>&nbsp;</td>
+    <td id="struct_image" style="background-image: url(../images/ThamQuan/ChonTang/struct.jpg); width:150px; height:150px;"></td>
     <td>
 	<ul id="explain">
 	</ul>
@@ -61,28 +86,19 @@ as a menu.
     /* Preload images: */
     images_slice = new Array();
 
-    images_slice["1_1_plain"] = new Image();
-    images_slice["1_1_plain"].src = "../images/ThamQuan/ChonTang/slice_1_1-new.jpg";
-    images_slice["3_1_plain"] = new Image();
-    images_slice["3_1_plain"].src = "../images/ThamQuan/ChonTang/slice_3_1-new.jpg";
-    images_slice["5_1_plain"] = new Image();
-    images_slice["5_1_plain"].src = "../images/ThamQuan/ChonTang/slice_5_1-new.jpg";
+    images_slice["1_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_1_1-new.jpg)";
+    images_slice["3_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_3_1-new.jpg)";
+    images_slice["5_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_5_1-new.jpg)";
 
-    images_slice["1_1_hover"] = new Image();
-    images_slice["1_1_hover"].src = "../images/ThamQuan/ChonTang/slice_1_1_hover.jpg";
+    images_slice["1_1_hover"] = "url(../images/ThamQuan/ChonTang/slice_1_1_hover.jpg)";
 
-    images_slice["3_1_hover"] = new Image();
-    images_slice["3_1_hover"].src = "../images/ThamQuan/ChonTang/slice_3_1_hover.jpg";
+    images_slice["3_1_hover"] = "url(../images/ThamQuan/ChonTang/slice_3_1_hover.jpg)";
 
-    images_slice["5_1_hover"] = new Image();
-    images_slice["5_1_hover"].src = "../images/ThamQuan/ChonTang/slice_5_1_hover.jpg";
+    images_slice["5_1_hover"] = "url(../images/ThamQuan/ChonTang/slice_5_1_hover.jpg)";
 
-    images_slice["1_1_struct"] = new Image();
-    images_slice["1_1_struct"].src = "../images/ThamQuan/ChonTang/1_1_struct.jpg";
-    images_slice["3_1_struct"] = new Image();
-    images_slice["3_1_struct"].src = "../images/ThamQuan/ChonTang/3_1_struct.jpg";
-    images_slice["5_1_struct"] = new Image();
-    images_slice["5_1_struct"].src = "../images/ThamQuan/ChonTang/5_1_struct.jpg";
+    images_slice["1_1_struct"] = "url(../images/ThamQuan/ChonTang/1_1_struct.jpg)";
+    images_slice["3_1_struct"] = "url(../images/ThamQuan/ChonTang/3_1_struct.jpg)";
+    images_slice["5_1_struct"] = "url(../images/ThamQuan/ChonTang/5_1_struct.jpg)";
 
     explains = new Array();
 
@@ -102,20 +118,20 @@ as a menu.
 	"";
 
     function exchange(image, images_array_name, explains_array, event) {
-        name = image.name;
+        name = image.id;
         images = eval(images_array_name);
         explains = eval(explains_array);
 
         switch (event) {
             case 0:
-                image.src = images[name + "_plain"].src;
-                document.struct_image.src = "../images/ThamQuan/ChonTang/struct.jpg";
+                image.style.backgroundImage = images[name + "_plain"];
+                document.getElementById("struct_image").style.backgroundImage = "url(../images/ThamQuan/ChonTang/struct.jpg)";
                 document.getElementById("explain").innerHTML = explains["empty"];
                 //$("#"+name+"_PopupMenu").css("visibility", "hidden"); 
                 break;
             case 1:
-                image.src = images[name + "_hover"].src;
-                document.struct_image.src = images[name + "_struct"].src;
+                image.style.backgroundImage = images[name + "_hover"];
+                document.getElementById("struct_image").style.backgroundImage = images[name + "_struct"];
                 document.getElementById("explain").innerHTML = explains[name];
                 break;
             case 2:
@@ -126,7 +142,7 @@ as a menu.
                     $("#" + name + "_PopupMenu").css("visibility", "hidden");
                 break;
             case 3:
-                image.src = images[name + "_hover"].src;
+                image.style.backgroundImage = images[name + "_hover"];
                 break;
         }
 
