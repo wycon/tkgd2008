@@ -8,6 +8,7 @@
     <link href="~/Styles/basic-jquery-slider.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
 </head>
 <body>
     <form runat="server">
