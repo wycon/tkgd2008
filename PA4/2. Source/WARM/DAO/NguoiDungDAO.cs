@@ -33,9 +33,14 @@ namespace DAO
         public static bool KiemTraTenDangNhapTonTai(string TenDangNhap)
         {
             QLNhaHangDataContext db = new QLNhaHangDataContext();
-            NGUOIDUNG ng = db.NGUOIDUNGs.Single(r => r.TenDangNhap == TenDangNhap);
-            if (ng == null)
+            try
+            {
+                NGUOIDUNG ng = db.NGUOIDUNGs.Single(r => r.TenDangNhap == TenDangNhap);
+            }
+            catch (Exception ex)
+            {
                 return false;
+            }
             return true;
         }
 

@@ -11,7 +11,8 @@
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>    
+    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table width="100%">
@@ -77,7 +78,9 @@
                             Tên đăng nhập
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtNTen" runat="server" AutoPostBack="True" 
+                                ontextchanged="TextBox4_TextChanged"></asp:TextBox>
+                            <asp:Label ID="LabelNTen" runat="server" ForeColor="#FF3300"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -85,7 +88,9 @@
                             Mật khầu
                         </td>
                         <td>
-                            <asp:TextBox ID="txtNPass" runat="server" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtNPass" runat="server" TextMode="Password" 
+                                ontextchanged="txtNPass_TextChanged"></asp:TextBox>
+                            <asp:Label ID="LabelNPass" runat="server" ForeColor="#FF3300"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -94,9 +99,9 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtNRePass" runat="server" TextMode="Password" 
-                                ontextchanged="TextBox6_TextChanged"></asp:TextBox>
+                                ontextchanged="TextBox6_TextChanged" AutoPostBack="True"></asp:TextBox>
                                 
-                            <asp:Label ID="LabelRePass" runat="server"></asp:Label>
+                            <asp:Label ID="LabelRePass" runat="server" ForeColor="#FF3300"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -132,7 +137,7 @@
                 </table>
             </td>
             <td valign="top">
-                <table width="100%" height="100%" border="0">
+                <table width="100%"  border="0">
                     <tr>
                         <td colspan="3">
                             <hr />
