@@ -13,5 +13,19 @@ namespace WARM
         {
 
         }
+
+        protected void TextBox6_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtNRePass.Equals(txtNPass))
+            {
+                LabelRePass.Text = " không trùng nhau.";
+                LabelRePass.DataBind();
+                
+
+            }
+
+        }
+
+       
     }
 }
