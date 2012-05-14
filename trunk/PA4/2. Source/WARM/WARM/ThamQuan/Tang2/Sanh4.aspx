@@ -15,7 +15,7 @@ as a menu.
 <div style="width:70%; float:left;">
 <asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
 <br clear="all"/>
-<div style="float:left; width:27%;">
+<div style="float:left; width:25%;">
 <table cellpadding="0" border="0" cellspacing="0">
   <tr>
     <td><a href="Sanh4.aspx"><img alt=" " src="../../images/ThamQuan/Tang2/Sanh4/struct/slice_0_0.jpg"  style="width: 72px; height: 75px; border-width: 0px;"/></a></td>
@@ -30,7 +30,7 @@ as a menu.
 </table>
 </div>
 
-<div style="float:left; width:18%;">
+<div style="float:left; width:20%;">
 <table cellpadding="0" border="0" cellspacing="0">
 <tr>
     <td>
@@ -39,7 +39,7 @@ as a menu.
 	<li><a  style="text-decoration:none" href="Sanh1.aspx">1: Sảnh 1</a></li>
 	<li><a  style="text-decoration:none" href="Sanh2.aspx">2: Sảnh 2</a></li>
 	<li><a  style="text-decoration:none" href="Sanh3.aspx">3: Sảnh 3</a></li>
-	<li><a  style="text-decoration:none" href="Sanh4.aspx">4: Sảnh 4</a></li>
+	<li style="color:Black">4: Sảnh 4</li>
 	</ul>
     </td>
 </tr>
