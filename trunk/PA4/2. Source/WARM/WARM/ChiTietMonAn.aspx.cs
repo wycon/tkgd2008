@@ -21,7 +21,6 @@ namespace WARM
             {          
                 if (Request.QueryString["id"] != null)
                     req = int.Parse(Request.QueryString["id"]);
-                req = 1;
                 List<MONAN> dsMon = new List<MONAN>();
                 List<BINHLUAN> dsBl = new List<BINHLUAN>();
                 mon = MonAnDAO.TimMon(req);
@@ -44,12 +43,17 @@ namespace WARM
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("~/ChiTietMonAn.aspx");
-            //if (!Page.IsPostBack)
+            if (textten.Text == "")
+                Literal1.Visible = true;
+            if(textnoidung.Text == "")
+                Literal3.Visible = true;
+            if(Request.Form["star2"] == null)
+                Literal2.Visible = true;
+            else
             {
                 BINHLUAN bl = new BINHLUAN();
                 bl.NguoiBinhLuan = textten.Text;
-                bl.DanhGia = 5;
+                bl.DanhGia = int.Parse(Request.Form["star2"]);
                 bl.NoiDung = textnoidung.Text;
                 bl.DaXoa = false;
                 bl.MaMonAn = req;

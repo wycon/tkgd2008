@@ -14,6 +14,39 @@
             font-size: medium;
             font-weight: bold;
         }
+        .style2
+        {
+            width: 14%;
+        }
+        .style3
+        {
+            width: 14%;
+            height: 22px;
+        }
+        .style4
+        {
+            height: 22px;
+        }
+        .style5
+        {
+            width: 44%;
+            color: #FF0000;
+        }
+        .style6
+        {
+            height: 22px;
+            width: 44%;
+            color: #FF0000;
+        }
+        .style7
+        {
+            width: 46%;
+        }
+        .style8
+        {
+            height: 22px;
+            width: 46%;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -61,12 +94,16 @@
                                             <td valign="top" width="30%">
                                                 <br />
                                                 <div>
+                                                    <%                                                         
+                                                        int nStar = 5;
+                                                        for (int i = 0; i < nStar; i++)
+                                                        {
+                                                            if (i != nStar-1)%>
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                    <% else %>
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled'
                                                         checked='checked' />
+                                                    <%}%>
                                                 </div>
                                                 <br />
                                                     <%# Eval("DanhGia") %></a> lời bình<br />
@@ -94,13 +131,12 @@
         <asp:Image ID="Image1" runat="server" Height="21px" 
         ImageUrl="~/images/binhluan.jpg" />
         <a href="#top">Thêm lời bình</a> 
-        <br />
         <table width="100%">
         <tr>
             <td>
                 <asp:Repeater ID="rptPages1" runat="server">                    
                     <FooterTemplate>
-                        </td> </tr> </table>
+                       
                     </FooterTemplate>
                 </asp:Repeater>
             </td>
@@ -108,7 +144,6 @@
         <tr>
             <td width="100%">
                 <table width="100%">
-
                     <tr>
                         <td width="60%">
                             <table width="100%">
@@ -118,11 +153,15 @@
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
-                                            <td style="padding-right: 10px"> 
+                                            <td colspan="3">
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="10%"> 
                                                 <asp:Image ID="Image2" runat="server" Height='80px' ImageUrl="~/images/Avatar.jpg" />
                                             </td>
-                                            <td valign="top" width="50%">
-                                            <hr />
+                                            <td valign="top" width="65%">
                                             <strong>
                                                 <%# Eval("NguoiBinhLuan") %>
                                             </strong>
@@ -130,15 +169,20 @@
                                                 <%# Eval("NoiDung") %>
                                             <br />
                                                 Đánh giá: 
-                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
-                                                <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' checked='checked' />                                               
+                                                <div>
+                                                    <%                                                         
+                                                        int nStar = 5;
+                                                        for (int i = 0; i < nStar; i++)
+                                                        {
+                                                            if (i != nStar-1)%>
+                                                    <input name='star1<%# Eval("MaBinhLuan") %>' type='radio' class='star' disabled='disabled' />
+                                                    <% else %>
+                                                    <input name='star1<%# Eval("MaBinhLuan") %>' type='radio' class='star' disabled='disabled'
+                                                        checked='checked' />
+                                                    <%}%>
+                                                </div>                                               
                                             </td>
-                                            <td valign="top" width="30%">
-                                            <hr />
-                                            <br />  
+                                            <td valign="top" width="25%">
                                                 Đăng lúc <%# Eval("ThoiGian") %>   
                                             </td>                                                   
                                         </tr>
@@ -155,29 +199,74 @@
             </tr>
         </table>
         <hr />
-        <a name="top"></a> 
-        <td valign="top" width="50%" align="left" 
-            style="color: #FF0000; font-size: large;"><span class="style1" 
-            style="color: #FF0000">Thêm lời bình:</span>
-         </td>
+    <table width="100%" style="height: 315px">
+        <tr>
+            <td valign="top" align="left" style="color: #FF0000; font-size: large;" class="style2">
+                <a name="top"></a>
+                <span class="style1" style="color: #FF0000">Thêm lời bình:</span>
+            </td>
+            
+            <td valign="top" align="left" class="style7">
+                &nbsp;</td>
+            
+            <td valign="top" align="left" class="style5">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" align="left" 
+                style="color: #000000; font-size: small;" class="style2">Họ tên(*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            
+            <td valign="top" align="left" class="style7">
+                &nbsp;&nbsp;&nbsp; <asp:TextBox ID="textten" runat="server" Width="343px"></asp:TextBox>
+                </td>
+            
+            <td valign="top" align="left" class="style5">
+                <asp:Literal ID="Literal1" runat="server" Text="Bạn chưa nhập họ tên" 
+                    Visible="False"></asp:Literal>
+            </td>
+        </tr>
+        <tr> 
+            <td valign="top" align="left" 
+                style="color: #000000; font-size: small;" class="style3">Đánh giá(*)
+            </td>
+            <td valign="top" align="left" class="style8">
+                <div style="width: 118px">
+                    <input name="star2" type="radio" class="star" value="1"/>
+                    <input name="star2" type="radio" class="star" value="2"/>
+                    <input name="star2" type="radio" class="star" value="3"/>
+                    <input name="star2" type="radio" class="star" value="4"/>
+                    <input name="star2" type="radio" class="star" value="5"/>
+                 </div>
+            </td>
+            
+            <td valign="top" align="left" class="style6">
+                <asp:Literal ID="Literal2" runat="server" Text="Bạn chưa đánh giá món ăn" 
+                    Visible="False"></asp:Literal>
+            </td>
+            <td valign="top" width="50%" align="left" class="style4">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" align="left" 
+                style="color: #000000; font-size: small;" class="style2">Nội dung(*)<br />
 
-    <br />
-    Họ tên(*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="textten" runat="server" Width="267px"></asp:TextBox>
-    <br />
-    Đánh giá(*)
-    <input name="star2" type="radio" class="star"/>
-    <input name="star2" type="radio" class="star"/>
-    <input name="star2" type="radio" class="star"/>
-    <input name="star2" type="radio" class="star"/>
-    <input name="star2" type="radio" class="star"/>
-    <br />
-    Nội dung(*)<br />
-    <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" 
-        style="text-align: left"></asp:TextBox>
+            <br />
+            </td>
+            <td valign="top" align="left" class="style7">
+                &nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" 
+                style="text-align: left" TextMode="MultiLine"></asp:TextBox>
 
-    <br />
-    <asp:Button ID="Button1" runat="server" Text="Đăng lời bình" Width="91px" 
-        onclick="Button1_Click" />
-
+            &nbsp;
+                &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" Text="Đăng lời bình" Width="91px" 
+                onclick="Button1_Click" />
+            </td>
+            
+            <td valign="top" align="left" class="style5">
+                <asp:Literal ID="Literal3" runat="server" Text="Bạn chưa nhập nội dung" 
+                    Visible="False"></asp:Literal>
+            </td>
+        </tr>
+    </table>
 </asp:Content>
