@@ -87,25 +87,6 @@
                                             <td valign="top" width="30%">
                                                 <br />
                                                 <div>
-                                                    <%--<% for (int i = 0; i < int.Parse(Eval("DanhGia").ToString()); ++i)
-                                                       {
-                                                           if (i != int.Parse(Eval("DanhGia").ToString()))                                                               
-                                                               //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled'/>");
-                                                           //else
-                                                               //Response.Write("<input name='star0" + Eval("MaMonAn") + " type='radio' class='star' disabled='disabled' checked='checked'/>");
-                                                       }
-                                                    %>--%>
-                                                    <%--                                             <% 
-                                                        int r = new Random().Next();
-                                                            
-                                                        for (int i = 0; i < 4; i++)
-                                                       {
-                                                           if (i != 4)
-                                                               Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled'/>");
-                                                           else
-                                                               Response.Write("<input name='star0" + r + "' type='radio' class='star' disabled='disabled' checked='checked'/>");
-
-                                                       }%>--%>
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />

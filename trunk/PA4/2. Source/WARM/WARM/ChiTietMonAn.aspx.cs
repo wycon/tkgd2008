@@ -12,7 +12,7 @@ namespace WARM
 {
     public partial class ChiTietMonAn : System.Web.UI.Page
     {
-        int req;
+        static int req;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -44,16 +44,18 @@ namespace WARM
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ChiTietMonAn.aspx");
-            if (!Page.IsPostBack)
+            //Response.Redirect("~/ChiTietMonAn.aspx");
+            //if (!Page.IsPostBack)
             {
                 BINHLUAN bl = new BINHLUAN();
                 bl.NguoiBinhLuan = textten.Text;
                 bl.DanhGia = 5;
                 bl.NoiDung = textnoidung.Text;
                 bl.DaXoa = false;
-                bl.MaMonAn = int.Parse(Request.QueryString["id"]);
+                bl.MaMonAn = req;
+                bl.ThoiGian = DateTime.Now;
                 BinhLuanDAO.ThemLoiBinh(bl);
+                Response.Redirect("~/ChiTietMonAn.aspx");
             }
         }
     }
