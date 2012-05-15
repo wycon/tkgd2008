@@ -57,6 +57,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="ChiTietMonAn.aspx" />
     <Content Include="DangKy.aspx" />
+    <Content Include="DatBan.aspx" />
     <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
     <Content Include="images\openhand.cur" />
@@ -332,6 +333,13 @@
     </Compile>
     <Compile Include="DangKy.aspx.designer.cs">
       <DependentUpon>DangKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatBan.aspx.cs">
+      <DependentUpon>DatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatBan.aspx.designer.cs">
+      <DependentUpon>DatBan.aspx</DependentUpon>
     </Compile>
     <Compile Include="ThamQuan\ChonTang.aspx.cs">
       <DependentUpon>ChonTang.aspx</DependentUpon>
