@@ -31,7 +31,7 @@
                     <tr>
                         <td colspan="3" height="30">
                             <asp:Label ID="Label3" runat="server" Text="Để đặt bàn thành công, bạn vui lòng đăng nhập"
-                                ForeColor="#FF3300"></asp:Label>
+                                ForeColor="Blue"></asp:Label>
                             .
                         </td>
                     </tr>
@@ -57,7 +57,8 @@
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 146px; margin-right: 29px">
-                                <asp:Button ID="Button1" runat="server" Height="29px" Text="Đăng nhập" Width="89px" />
+                                <asp:Button ID="btnDangNhap" runat="server" Height="29px" Text="Đăng nhập" 
+                                    Width="89px" />
                             </dir>
                         </td>
                     </tr>
@@ -69,7 +70,7 @@
                     <tr>
                     <td colspan="3" height="30">
                         <asp:Label ID="Label1" runat="server" Text="Nếu bạn chưa có tài khoản, bạn có thể đăng ký tại đây"
-                            ForeColor="#FF3300"></asp:Label>
+                            ForeColor="#3333FF"></asp:Label>
                         .
                     </td>
                     </tr>
@@ -90,8 +91,11 @@
                         <td>
                             <asp:TextBox ID="txtNPass" runat="server" TextMode="Password" 
                                 ontextchanged="txtNPass_TextChanged"></asp:TextBox>
-                            <asp:Label ID="LabelNPass" runat="server" ForeColor="#FF3300"></asp:Label>
-                        </td>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                                ControlToValidate="txtNPass" Display="Dynamic" 
+                                ErrorMessage="Mật khẩu phải có 6 - 12 ký tự" ForeColor="#FF3300" 
+                                ValidationExpression="\w{6,12}"></asp:RegularExpressionValidator>
+                            .</td>
                     </tr>
                     <tr>
                         <td>
@@ -99,9 +103,11 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtNRePass" runat="server" TextMode="Password" 
-                                ontextchanged="TextBox6_TextChanged" AutoPostBack="True"></asp:TextBox>
+                                ontextchanged="TextBox6_TextChanged"></asp:TextBox>
                                 
-                            <asp:Label ID="LabelRePass" runat="server" ForeColor="#FF3300"></asp:Label>
+                            <asp:CompareValidator ID="CompareValidator1" runat="server" 
+                                ControlToCompare="txtNPass" ControlToValidate="txtNRePass" Display="Dynamic" 
+                                ErrorMessage="Mật khẩu nhắc lại không trùng." ForeColor="#FF3300"></asp:CompareValidator>
                         </td>
                     </tr>
                     <tr>
@@ -125,7 +131,8 @@
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 148px">
-                                <asp:Button ID="Button2" runat="server" Height="29px" Text="Đăng ký" Width="89px" />
+                                <asp:Button ID="btnDangKy" runat="server" Height="29px" Text="Đăng ký" 
+                                    Width="89px" />
                             </dir>
                         </td>
                     </tr>
