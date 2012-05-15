@@ -13,10 +13,5 @@ namespace WARM
         {
 
         }
-
-        //protected void Find_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("~/TimKiem.aspx");
-        //}
     }
 }

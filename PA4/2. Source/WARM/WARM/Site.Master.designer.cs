@@ -49,13 +49,13 @@ namespace WARM {
         protected global::System.Web.UI.WebControls.Menu NavigationMenu;
         
         /// <summary>
-        /// TextBox1 control.
+        /// textTim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox textTim;
         
         /// <summary>
         /// Image1 control.

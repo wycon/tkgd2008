@@ -73,10 +73,15 @@
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
-                                            <td style="padding-right: 10px">
+                                            <td colspan="3">
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="15%">
                                                 <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
                                             </td>
-                                            <td valign="top" width="50%">
+                                            <td valign="top" width="70%">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
                                                 Giá:
@@ -84,15 +89,19 @@
                                                 VND<br />
                                                 <%# Eval("MoTa") %></a><br />
                                             </td>
+                                            
                                             <td valign="top" width="30%">
-                                                <br />
                                                 <div>
+                                                    <%                                                         
+                                                        int nStar = 5;
+                                                        for (int i = 0; i < nStar; i++)
+                                                        {
+                                                            if (i != nStar-1)%>
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                    <% else %>
                                                     <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled'
                                                         checked='checked' />
+                                                    <%}%>
                                                 </div>
                                                 <br />
                                                     <%# Eval("DanhGia") %></a> lời bình<br />
