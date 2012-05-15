@@ -62,8 +62,7 @@ namespace DAO
     partial void DeleteBINHLUAN(BINHLUAN instance);
     #endregion
 		
-		public QLNhaHangDataContext() : 
-				base(global::DAO.Properties.Settings.Default.QLNhaHangConnectionString1, mappingSource)
+		public QLNhaHangDataContext() : base(global::DAO.Properties.Settings.Default.QLNhaHangConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
