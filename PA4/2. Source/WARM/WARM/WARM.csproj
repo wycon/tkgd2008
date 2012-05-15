@@ -164,6 +164,7 @@
     <Content Include="images\ThamQuan\TangTret\Sanh2\navigate\slice_0_1.jpg" />
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_0.jpg" />
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_1.jpg" />
+    <Content Include="images\timkiem.png" />
     <Content Include="Scripts\basic-jquery-slider.js" />
     <Content Include="Scripts\basic-jquery-slider.min.js" />
     <Content Include="Scripts\cvi_text_lib.js" />

@@ -92,9 +92,11 @@
                     <tr>
                       <td>
                           <asp:TextBox ID="TextBox1" runat="server" Width="186px"></asp:TextBox>
-                          <asp:Button  ID="Find" runat="server" onclick="Find_Click" Text="Tìm" 
-                              style="margin-left: 0px" Width="89px" />
-                      </td>
+                     </td><td>
+                               <a href="/TimKiem.aspx" > <asp:Image ID="Image1" runat="server" ImageUrl="~/images/timkiem.png" 
+                   style="margin-left: 5px;margin-top: 3px" Height="22px" Width="75px" /></a>
+
+                     </td>
                     </tr>
                   </table>
                   </div>
