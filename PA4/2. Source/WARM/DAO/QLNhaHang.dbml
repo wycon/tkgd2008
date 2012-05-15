@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNhaHang" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=KID-PC\SQLEXPRESS;Initial Catalog=QLNhaHang;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="QLNhaHangConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNhaHang" Class="QLNhaHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=N_M_T178-PC;Initial Catalog=QLNhaHang;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="QLNhaHangConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BANAN" Member="BANANs">
     <Type Name="BANAN">
       <Column Name="MaBan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -17,17 +17,6 @@
       <Column Name="MaTinhTrangPhieu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="TINHTRANGPHIEU_PHIEUDATCHO" Member="PHIEUDATCHOs" ThisKey="MaTinhTrangPhieu" OtherKey="MaTinhTrangPhieu" Type="PHIEUDATCHO" />
-    </Type>
-  </Table>
-  <Table Name="dbo.BINHLUAN" Member="BINHLUANs">
-    <Type Name="BINHLUAN">
-      <Column Name="MaBinhLuan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
-      <Column Name="DanhGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NguoiBinhLuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DaXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="MaMonAn" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="MONAN_BINHLUAN" Member="MONAN" ThisKey="MaMonAn" OtherKey="MaMonAn" Type="MONAN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CHITIETPHIEU" Member="CHITIETPHIEUs">
@@ -77,8 +66,8 @@
       <Column Name="DanhGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DaXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="ConMon" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="MONAN_BINHLUAN" Member="BINHLUANs" ThisKey="MaMonAn" OtherKey="MaMonAn" Type="BINHLUAN" />
       <Association Name="MONAN_CHITIETPHIEU" Member="CHITIETPHIEUs" ThisKey="MaMonAn" OtherKey="MaMonAn" Type="CHITIETPHIEU" />
+      <Association Name="MONAN_BINHLUAN" Member="BINHLUANs" ThisKey="MaMonAn" OtherKey="MaMonAn" Type="BINHLUAN" />
       <Association Name="DANHMUCMONAN_MONAN" Member="DANHMUCMONAN" ThisKey="MaDMMonAn" OtherKey="MaDMMonAn" Type="DANHMUCMONAN" IsForeignKey="true" />
     </Type>
   </Table>
@@ -107,6 +96,18 @@
       <Association Name="BANAN_PHIEUDATCHO" Member="BANAN" ThisKey="MaBanAn" OtherKey="MaBan" Type="BANAN" IsForeignKey="true" />
       <Association Name="NGUOIDUNG_PHIEUDATCHO" Member="NGUOIDUNG" ThisKey="TenDangNhap" OtherKey="TenDangNhap" Type="NGUOIDUNG" IsForeignKey="true" />
       <Association Name="TINHTRANGPHIEU_PHIEUDATCHO" Member="TINHTRANGPHIEU" ThisKey="MaTinhTrangPhieu" OtherKey="MaTinhTrangPhieu" Type="TINHTRANGPHIEU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BINHLUAN" Member="BINHLUANs">
+    <Type Name="BINHLUAN">
+      <Column Name="MaBinhLuan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="DanhGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NguoiBinhLuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaMonAn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MONAN_BINHLUAN" Member="MONAN" ThisKey="MaMonAn" OtherKey="MaMonAn" Type="MONAN" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

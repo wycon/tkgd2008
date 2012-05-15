@@ -136,7 +136,9 @@
                                                 <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
                                                 <input name='star1<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' checked='checked' />                                               
                                             </td>
-                                            <td valign="top" width="30%">  
+                                            <td valign="top" width="30%">
+                                            <hr />
+                                            <br />  
                                                 Đăng lúc <%# Eval("ThoiGian") %>   
                                             </td>                                                   
                                         </tr>
@@ -163,7 +165,12 @@
     Họ tên(*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="textten" runat="server" Width="267px"></asp:TextBox>
     <br />
-    Đánh giá&nbsp;&nbsp;&nbsp;
+    Đánh giá(*)
+    <input name="star2" type="radio" class="star"/>
+    <input name="star2" type="radio" class="star"/>
+    <input name="star2" type="radio" class="star"/>
+    <input name="star2" type="radio" class="star"/>
+    <input name="star2" type="radio" class="star"/>
     <br />
     Nội dung(*)<br />
     <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" 
