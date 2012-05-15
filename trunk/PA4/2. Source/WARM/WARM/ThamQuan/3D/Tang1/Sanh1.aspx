@@ -50,14 +50,15 @@
 </table>
 </div>
 
-<div style="float:left; width:18%;">
+<div style="float:left; width:25%;">
 <table cellpadding="0" border="0" cellspacing="0">
 <tr>
     <td>
 	<ul>
-	<li><a href="Sanh1.aspx">1: Sanh 1</a></li>
-	<li><a href="Sanh2.aspx">2: Sanh 2</a></li>
-	<li><a href="Sanh3.aspx">3: Sanh 3</a></li>
+    <h4 style="color:Black; font-weight:bold; margin-right:20px"> TẦNG 1</h4>
+	<li style="color:Black">1: Sảnh 1</li>
+	<li><a style="text-decoration:none" href="Sanh2.aspx">2: Sảnh 2</a></li>
+	<li><a style="text-decoration:none" href="Sanh3.aspx">3: Sảnh 3</a></li>
 	</ul>
     </td>
 </tr>
