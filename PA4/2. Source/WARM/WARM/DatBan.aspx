@@ -97,7 +97,10 @@
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
                                                 <asp:HyperLink ID="hpHoanTatDatBan" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink><br />
-                                                Tổng tiền một bàn: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND<br />
+                                                Tổng tiền: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND<br /> 
+                                                Thời gian đặt bàn:<br />
+                                                <asp:Calendar ID="Calendar1" runat="server" EnableTheming="True"></asp:Calendar>
+                                                <br />
                                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True"
                                                     OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit"
                                                     OnRowDeleting="GridView1_RowDeleting">
@@ -123,7 +126,6 @@
                                                             <ControlStyle Width="30" />
                                                             <ItemStyle HorizontalAlign="Center" />
                                                         </asp:TemplateField>
-                                       
                                                         <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
                                                             UpdateText="Sửa" HeaderText="Sửa" />
                                                         <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
@@ -131,9 +133,62 @@
                                                     </Columns>
                                                 </asp:GridView>
                                             </ContentTemplate>
-
                                         </asp:UpdatePanel>
-                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <font class="fontred">Phiếu đặt món</font>
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                            <ContentTemplate>
+                        
+                                                Tổng tiền một bàn:
+                                                <asp:Label ID="Label1" runat="server" Text="0,000"></asp:Label>
+                                                VND<br />
+                                                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" AllowSorting="True"
+                                                    OnRowEditing="GridView2_RowEditing" OnRowUpdating="GridView2_RowUpdating" OnRowCancelingEdit="GridView2_RowCancelingEdit"
+                                                    OnRowDeleting="GridView2_RowDeleting">
+                                                    <Columns>
+                                                        <asp:TemplateField HeaderText="STT">
+                                                            <ItemTemplate>
+                                                                <%# Container.DataItemIndex + 1 %>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Tên món">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label>
+                                                            </ItemTemplate>
+                                                            <ControlStyle Width="120px" />
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Số<br/> lượng">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lbSoLuong2" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label>
+                                                            </ItemTemplate>
+                                                            <EditItemTemplate>
+                                                                <asp:TextBox ID="tbSoLuong2" runat="server" Width="30" Style="text-align: center;"
+                                                                    ForeColor="Red" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
+                                                            </EditItemTemplate>
+                                                            <ControlStyle Width="30" />
+                                                            <ItemStyle HorizontalAlign="Center" />
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Giá">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
+                                                            UpdateText="Sửa" HeaderText="Sửa" />
+                                                        <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
+                                                            ShowDeleteButton="True" HeaderText="Xóa" />
+                                                    </Columns>
+                                                </asp:GridView>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
                                     </td>
                                 </tr>
                             </table>
@@ -144,5 +199,5 @@
             <td>
             </td>
         </tr>
-    </table>
+        </table> 
 </asp:Content>
