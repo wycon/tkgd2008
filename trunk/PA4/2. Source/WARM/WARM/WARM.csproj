@@ -60,6 +60,7 @@
     <Content Include="DatBan.aspx" />
     <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
+    <Content Include="images\en.png" />
     <Content Include="images\openhand.cur" />
     <Content Include="images\remove.gif" />
     <Content Include="images\ThamQuan\3D\Tang1\Sanh1\BOCA_restaurant_panorama2.jpg" />
@@ -165,6 +166,7 @@
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_0.jpg" />
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_1.jpg" />
     <Content Include="images\timkiem.png" />
+    <Content Include="images\vi.png" />
     <Content Include="Scripts\basic-jquery-slider.js" />
     <Content Include="Scripts\basic-jquery-slider.min.js" />
     <Content Include="Scripts\cvi_text_lib.js" />
