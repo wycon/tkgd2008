@@ -1,0 +1,38 @@
+﻿.style1
+{
+    font-size: medium;
+    font-weight: bold;
+}
+.style2
+{
+    width: 14%;
+}
+.style3
+{
+    width: 14%;
+    height: 22px;
+}
+.style4
+{
+    height: 22px;
+}
+.style5
+{
+    width: 44%;
+    color: #FF0000;
+}
+.style6
+{
+    height: 22px;
+    width: 44%;
+    color: #FF0000;
+}
+.style7
+{
+    width: 46%;
+}
+.style8
+{
+    height: 22px;
+    width: 46%;
+}

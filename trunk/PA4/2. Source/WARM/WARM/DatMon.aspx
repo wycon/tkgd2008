@@ -22,9 +22,9 @@
                 <%--Sắp theo tên: <a href="javascript:void(0);" onclick="SapTenTang()">tăng</a>/ <a href="javascript:void(0);"
                             onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
                                 onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
-                Sắp theo tên: <a href="DatMon.aspx?s=aname">tăng</a> / <a href="DatMon.aspx?s=dname">
+                <font class="fontblack">Sắp theo tên: <a href="DatMon.aspx?s=aname">tăng</a> / <a href="DatMon.aspx?s=dname">
                     giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="DatMon.aspx?s=aprice">tăng</a>
-                / <a href="DatMon.aspx?s=dprice">giảm</a>
+                / <a href="DatMon.aspx?s=dprice">giảm</a></font>
             </td>
             <td>
                 <b>Số lượng hiển thị:</b>
@@ -81,9 +81,9 @@
                                             <td valign="top" width="50%">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
-                                                Giá:
+                                                <font class="fontblack">Giá:
                                                 <%# Eval("Gia", "{0:0,000}")%>
-                                                VND<br />
+                                                VND</font><br />
                                                 <div>
                                                     <%                                                         
                                                         int nStar = 5;
@@ -101,7 +101,7 @@
                                                 <%--<input id="bt1" type="button" value="Đặt món" onclick="DatMon('<%# Eval("MaMonAn")%>', '<%# Eval("TenMonAn")%>', '<%# Eval("Gia")%>')" />--%>
                                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                                     <ContentTemplate>
-                                                        Số lượng món/bàn:&nbsp;&nbsp;&nbsp;
+                                                        <font class="fontblack">Số lượng món/bàn:</font>&nbsp;&nbsp;&nbsp;
                                                         <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
                                                         <%--<input id="sl0<%# Eval("MaMonAn")%>" type="text" value="1" size="3" />--%>
                                                         <br />
@@ -136,7 +136,7 @@
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
                                                 <asp:HyperLink ID="hpHoanTatDatMon" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink><br />
-                                                Tổng tiền một bàn: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND<br />
+                                                <font class="fontblack">Tổng tiền một bàn: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND</font><br />
                                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True"
                                                     OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit"
                                                     OnRowDeleting="GridView1_RowDeleting">

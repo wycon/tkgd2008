@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
-    </asp:ScriptManager>    
+    </asp:ScriptManager>
     <table width="100%">
         <tr>
             <td colspan="3">
@@ -22,10 +22,9 @@
                 <%--Sắp theo tên: <a href="javascript:void(0);" onclick="SapTenTang()">tăng</a>/ <a href="javascript:void(0);"
                             onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
                                 onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
-                Sắp theo tên:
-                <a href="TimKiem.aspx?s=aname">tăng</a>
-                / <a href="TimKiem.aspx?s=dname">giảm</a>&nbsp;&nbsp;&nbsp;
-                Sắp theo giá: <a href="TimKiem.aspx?s=aprice">tăng</a> / <a href="TimKiem.aspx?s=dprice">giảm</a>
+                Sắp theo tên: <a href="TimKiem.aspx?s=aname">tăng</a> / <a href="TimKiem.aspx?s=dname">
+                    giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="TimKiem.aspx?s=aprice">tăng</a>
+                / <a href="TimKiem.aspx?s=dprice">giảm</a>
             </td>
             <td>
                 <b>Số lượng hiển thị:</b>
@@ -68,8 +67,7 @@
                         <td width="60%">
                             <table width="100%">
                                 <asp:Repeater ID="rptItems" runat="server">
-                                    <HeaderTemplate>
-                                        <ul>
+                                    <HeaderTemplate>                                        
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
@@ -81,16 +79,15 @@
                                             <td valign="top" width="15%">
                                                 <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
                                             </td>
-                                            <td valign="top" width="70%">
+                                            <td valign="top" width="65%" style="padding-left:20px">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
-                                                Giá:
+                                                <font class="fontblack">Giá:
                                                 <%# Eval("Gia", "{0:0,000}")%>
                                                 VND<br />
-                                                <%# Eval("MoTa") %></a><br />
+                                                <%# Eval("MoTa") %></a></font><br />
                                             </td>
-                                            
-                                            <td valign="top" width="30%">
+                                            <td valign="top" style="padding-left:20px">
                                                 <div>
                                                     <%                                                         
                                                         int nStar = 5;
@@ -104,7 +101,7 @@
                                                     <%}%>
                                                 </div>
                                                 <br />
-                                                    <%# Eval("DanhGia") %></a> lời bình<br />
+                                                <%# Eval("DanhGia") %></a> lời bình<br />
                                                 <br />
                                             </td>
                                         </tr>

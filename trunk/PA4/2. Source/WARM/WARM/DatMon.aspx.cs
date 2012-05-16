@@ -215,7 +215,7 @@ namespace WARM
             double TongTien = double.Parse(l.Text, NumberStyles.Number) + m.Gia.Value * SoLuongMon;
             l.Text = TongTien.ToString("0,000");
             //Gán phiếu lại cho session
-            Session["ChiTietPhieu"] = ChiTietPhieus;            
+            Session["ChiTietPhieu"] = ChiTietPhieus;
             
             bind();
 

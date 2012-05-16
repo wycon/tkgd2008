@@ -175,6 +175,7 @@
     <Content Include="Scripts\jquery.mousewheel.min.js" />
     <Content Include="Scripts\jquery.panorama360.js" />
     <Content Include="Styles\basic-jquery-slider.css" />
+    <Content Include="Styles\ChiTietMonAn.css" />
     <Content Include="Styles\fancy\fancybox-x.png" />
     <Content Include="Styles\fancy\fancybox-y.png" />
     <Content Include="Styles\fancy\fancybox.png" />

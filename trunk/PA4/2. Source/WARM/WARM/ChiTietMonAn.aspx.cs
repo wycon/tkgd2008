@@ -62,5 +62,41 @@ namespace WARM
                 Response.Redirect("~/ChiTietMonAn.aspx");
             }
         }
+        protected void DatMon_Click(object sender, EventArgs e)
+        {
+            List<CHITIETPHIEU> ChiTietPhieus;
+            //Xử lý khi người đặt món
+            TextBox t = (sender as Button).Parent.Controls[1] as TextBox;
+            HiddenField h = (sender as Button).Parent.Controls[5] as HiddenField;
+            int SoLuongMon = int.Parse(t.Text);
+            MONAN m = MonAnDAO.TimMon(int.Parse(h.Value));
+
+            if (Session["ChiTietPhieu"] != null)
+            {
+                ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
+            }
+            else
+            {
+                ChiTietPhieus = new List<CHITIETPHIEU>();
+            }
+            //Tăng số lượng nếu đã có
+            bool bAddNew = true;
+            foreach (CHITIETPHIEU c in ChiTietPhieus)
+            {
+                if (c.MONAN.TenMonAn == m.TenMonAn)
+                {
+                    c.SoLuong += SoLuongMon;
+                    bAddNew = false;
+                    break;
+                }
+
+            }
+            //Thêm món vào phiếu
+            if (bAddNew == true)
+                ChiTietPhieus.Add(new CHITIETPHIEU { MONAN = m, SoLuong = SoLuongMon });
+
+            //Gán phiếu lại cho session
+            Session["ChiTietPhieu"] = ChiTietPhieus;
+        }
     }
 }
