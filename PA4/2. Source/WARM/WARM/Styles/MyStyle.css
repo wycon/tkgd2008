@@ -1,11 +1,11 @@
-﻿body {
+﻿body
+{
 }
 .fontred
 {
-    font-size:25px;
-    color:Red;
-    text-align:center;
-    
+    font-size: 25px;
+    color: Red;
+    text-align: center;
 }
 .phieudat
 {
@@ -18,5 +18,13 @@
     border-color: Black;
     border-style: solid;
     border-width: 1px;
-    
+}
+.fontblack
+{
+    color: Black;
+}
+.fontblackjustify
+{
+    color: Black;
+    text-align:justify;
 }
