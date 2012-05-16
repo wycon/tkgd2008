@@ -75,7 +75,7 @@
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink" style="Height:35px;">
-                <div style="width: 70%; float: left;">
+                <div style="width: 66%; float: left;">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ"/>
@@ -87,7 +87,7 @@
                     </Items>
                 </asp:Menu>
                 </div>
-                <div style="width:30%; float:right;">
+                <div style="width:34%; float:right;">
                 <table>
                     <tr>
                       <td>
@@ -97,7 +97,13 @@
                                <a href="/TimKiem.aspx?id=<%= ten %>" > <asp:Image ID="Image1" runat="server" ImageUrl="~/images/timkiem.png" 
                    style="margin-left: 5px;margin-top: 3px" Height="22px" Width="75px" /></a>
 
-                     </td>
+                     </td><td>
+                             <a href="About.aspx" > <asp:Image ID="Image2" runat="server" ImageUrl="~/images/vi.png" 
+                   style="margin-left: 5px;margin-top: 3px" Height="13px" Width="20px" /></a>
+                     </td><td>
+                              <a href="About.aspx" > <asp:Image ID="Image3" runat="server" ImageUrl="~/images/en.png" 
+                   style="margin-left: 5px;margin-top: 3px" Height="13px" Width="20px" /></a>
+                               </td>
                     </tr>
                   </table>
                   </div>
