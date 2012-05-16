@@ -92,9 +92,9 @@ name="0_1"
       <div id="banner">
         <!-- start Basic Jquery Slider -->
         <ul class="bjqs">
-          <li><img src="../../images/ThamQuan/TangTret/Sanh1/img/banner01.jpg" title="Automatically generated caption"/></li>
-          <li><img src="../../images/ThamQuan/TangTret/Sanh1/img/banner02.jpg" title="Automatically generated caption"/></li>
-          <li><img src="../../images/ThamQuan/TangTret/Sanh1/img/banner03.jpg" title="Automatically generated caption"/></li>
+          <li><img src="../../images/ThamQuan/TangTret/Sanh1/img/banner01.jpg"/></li>
+          <li><img src="../../images/ThamQuan/TangTret/Sanh1/img/banner02.jpg"/></li>
+          <li><img src="../../images/ThamQuan/TangTret/Sanh1/img/banner03.jpg"/></li>
         </ul>
         <!-- end Basic jQuery Slider -->
       </div>

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Basic jQuery Slider plug-in v.1.1
  * 
  * http://www.basic-slider.com
@@ -38,8 +38,8 @@
 				// Center the controls vertically
                 centerControls: true,
 				// Text to display in next/prev buttons
-                nextText: 'Next',
-                prevText: 'Prev',
+                nextText: 'Tới',
+                prevText: 'Lùi',
 				// Show positional markers
                 showMarkers: true,
 				// Center the positional indicators
