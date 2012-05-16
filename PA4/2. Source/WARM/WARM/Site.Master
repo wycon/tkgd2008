@@ -91,7 +91,7 @@
                 <table>
                     <tr>
                       <td>
-                          <asp:TextBox ID="textTim" runat="server" Width="186px"></asp:TextBox>
+                          <asp:TextBox ID="textTim" runat="server" Width="186px" style="margin-left: 0px"></asp:TextBox>
                           <% string ten = textTim.Text; %>
                      </td><td>
                                <a href="/TimKiem.aspx?id=<%= ten %>" > <asp:Image ID="Image1" runat="server" ImageUrl="~/images/timkiem.png" 
