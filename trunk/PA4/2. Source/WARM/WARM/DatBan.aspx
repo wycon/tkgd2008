@@ -52,7 +52,7 @@
                                             <td valign="top" width="50%">
                                                 <a >
                                                     <%# Eval("Ten") %></a><br />
-                                               
+                                                    <%# Eval("MoTa") %>  
                                                 <div>
                                                   
                                                 </div>
@@ -65,7 +65,8 @@
                                                         <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
                                                         <%--<input id="sl0<%# Eval("MaMonAn")%>" type="text" value="1" size="3" />--%>
                                                         <br />
-                                                        <asp:Button ID="Button1" runat="server" Text="Đặt bàn" OnClick="Button1_Click" />
+                                                        <asp:Button ID="Button1" runat="server" Text="Đặt bàn" OnClick="DatBanClick" />
+                                                      
                                                         <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaDMBanAn") %>'/>                                                        
                                                     </ContentTemplate>
                                                 </asp:UpdatePanel>
@@ -89,7 +90,7 @@
                                 </tr>
                                 <tr>
                                     <td align="center">
-                                        <font class="fontred">Phiếu đặt món</font>
+                                        <font class="fontred">Phiếu đặt bàn</font>
                                         <hr />
                                     </td>
                                 </tr>
@@ -97,7 +98,7 @@
                                     <td>
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
-                                                <asp:HyperLink ID="hpHoanTatDatMon" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink><br />
+                                                <asp:HyperLink ID="hpHoanTatDatBan" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink><br />
                                                 Tổng tiền một bàn: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND<br />
                                                 
                                             </ContentTemplate>

@@ -18,9 +18,24 @@ namespace WARM
             rptItems.DataSource = DanhMucBanAnDAO.LayTatCa();
             rptItems.DataBind();
         }
-        protected void Button1_Click(object sender, EventArgs e)
+        public List<ChiTietPhieuDatBan> ListCTPhieuDatBan;
+        protected void DatBanClick(object sender, EventArgs e)
         {
-            
+            int i=new int();
+            i = 0;
+        }
+    }
+
+    public class ChiTietPhieuDatBan
+    {
+        public int MaDMBanAn;
+        public string Ten;
+        public int Soluong;
+        ChiTietPhieuDatBan()
+        {
+            MaDMBanAn = 0;
+            Ten = "";
+            Soluong = 0;
         }
     }
 }

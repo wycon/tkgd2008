@@ -40,13 +40,13 @@ namespace WARM {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// hpHoanTatDatMon control.
+        /// hpHoanTatDatBan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpHoanTatDatMon;
+        protected global::System.Web.UI.WebControls.HyperLink hpHoanTatDatBan;
         
         /// <summary>
         /// TongTien control.
