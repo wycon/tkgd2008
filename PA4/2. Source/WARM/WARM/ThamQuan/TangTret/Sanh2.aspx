@@ -49,7 +49,7 @@ name="0_1"
 <table cellpadding="0" border="0" cellspacing="0">
   <tr>
     <td><a href="Sanh1.aspx"><img alt=" " src="../../images/ThamQuan/TangTret/Sanh2/navigate/slice_0_0.jpg"  style="width: 110px; height: 119px; border-width: 0px;"/></a></td>
-    <td><a href="Sanh2.aspx"><img alt=" " src="../../images/ThamQuan/TangTret/Sanh2/navigate/slice_0_1.jpg"  style="width: 79px; height: 119px; border-width: 0px;"/></a></td>
+    <td><a><img alt=" " src="../../images/ThamQuan/TangTret/Sanh2/navigate/slice_0_1.jpg"  style="width: 79px; height: 119px; border-width: 0px;"/></a></td>
 </tr>
 
 </table>

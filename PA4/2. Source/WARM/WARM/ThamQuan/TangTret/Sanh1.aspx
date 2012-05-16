@@ -48,7 +48,7 @@ name="0_1"
 <div style="float:left; width:33%;">
 <table cellpadding="0" border="0" cellspacing="0">
   <tr>
-    <td><a href="Sanh1.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/navigate/slice_0_0.jpg" style="width: 82px; height: 116px; border-width: 0px" 
+    <td><a><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/navigate/slice_0_0.jpg" style="width: 82px; height: 116px; border-width: 0px" 
 name="0_0" 
 /></a></td>
 
