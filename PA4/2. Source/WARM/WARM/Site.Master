@@ -9,7 +9,7 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
-</head>
+    </head>
 <body>
     <form runat="server">
     <input type="hidden" name="dff_view" value="grid" />
@@ -93,31 +93,20 @@
                         </Items>
                     </asp:Menu>
                 </div>
-                <div style="width: 34%; float: right;">
-                    <table>
-                        <tr>
-                            <td>
-                                <asp:TextBox ID="textTim" runat="server" Width="186px" Style="margin-left: 0px"></asp:TextBox>
-                                <% string ten = textTim.Text; %>
-                            </td>
-                            <td>
-                                <a href="/TimKiem.aspx?id=<%= ten %>">
-                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/timkiem.png" Style="margin-left: 5px;
-                                        margin-top: 3px" Height="22px" Width="75px" /></a>
-                            </td>
-                            <td>
-                                <a href="About.aspx">
-                                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/vi.png" Style="margin-left: 5px;
-                                        margin-top: 3px" Height="13px" Width="20px" /></a>
-                            </td>
-                            <td>
-                                <a href="About.aspx">
-                                    <asp:Image ID="Image3" runat="server" ImageUrl="~/images/en.png" Style="margin-left: 5px;
-                                        margin-top: 3px" Height="13px" Width="20px" /></a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <tr>
+                      <td align="center" valign="top">
+                          <asp:TextBox ID="textTim" runat="server" Width="185px" Height="23px" 
+                              style="margin-top: 0px; margin-left: 0px; margin-bottom: 1px;"></asp:TextBox>
+                          <% string ten = textTim.Text; %>
+                      </td>                      
+                      <td align="center" valign="bottom">
+                          <asp:ImageButton ID="ImageButton1" runat="server" Height="23px" 
+                                   ImageUrl="~/images/timkiem.png" Width="51px" 
+                          style="margin-top: 6px; margin-bottom: 0px;" 
+                    onclick="ImageButton1_Click" />
+                       </td>                       
+                    
+                 </tr>
             </div>
         </div>
         <div class="main">
