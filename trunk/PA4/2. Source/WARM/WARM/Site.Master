@@ -8,34 +8,35 @@
     <link href="~/Styles/basic-jquery-slider.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
-     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
+    <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
 </head>
 <body>
     <form runat="server">
-                        <input type="hidden" name="dff_view" value="grid"/>
+    <input type="hidden" name="dff_view" value="grid" />
     <div class="page">
         <div class="header">
             <div class="logo">
-                 <a href="/Default.aspx" > <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Banner2.jpg" 
-                    Height="100%" Width="100%" /></a>
+                <a href="/Default.aspx">
+                    <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Banner2.jpg" Height="100%"
+                        Width="100%" /></a>
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
                         <table cellpadding="0">
-                            <tr>
+                            <%--<tr>
                                 <td align="center" colspan="2">
-                                    Đăng Nhập</td>
-                            </tr>
+                                    Đăng Nhập
+                                </td>
+                            </tr>--%>
                             <tr>
                                 <td align="right">
                                     <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Tên Đăng Nhập:</asp:Label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
-                                        ControlToValidate="UserName" ErrorMessage="Tên Đăng Nhập bắt buộc." 
-                                        ToolTip="Tên Đăng Nhập bắt buộc." ValidationGroup="ctl00$ctl20$Login1">*</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName"
+                                        ErrorMessage="Tên Đăng Nhập bắt buộc." ToolTip="Tên Đăng Nhập bắt buộc." ValidationGroup="ctl00$ctl20$Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -44,98 +45,118 @@
                                 </td>
                                 <td>
                                     <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
-                                        ControlToValidate="Password" ErrorMessage="Mật Khẩu bắt buộc." 
-                                        ToolTip="Mật Khẩu bắt buộc." ValidationGroup="ctl00$ctl20$Login1">*</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password"
+                                        ErrorMessage="Mật Khẩu bắt buộc." ToolTip="Mật Khẩu bắt buộc." ValidationGroup="ctl00$ctl20$Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                     <a style=" padding-right:20px ; text-decoration:none" href="About.aspx">Quên mật khẩu</a>
+                                    <a style="padding-right: 20px; text-decoration: underline" href="About.aspx">Quên mật
+                                        khẩu</a>
                                     <asp:CheckBox ID="RememberMe" runat="server" Text="Ghi Nhớ" />
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center" colspan="2" style="color:Red;">
+                                <td align="center" colspan="2" style="color: Red;">
                                     <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="right" colspan="2">
-                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" 
-                                        Text="Đăng Nhập" ValidationGroup="ctl00$ctl20$Login1" />
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Đăng Nhập"
+                                        ValidationGroup="ctl00$ctl20$Login1" OnClick="LoginButton_Click" />
                                 </td>
                             </tr>
                         </table>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
-            <div class="clear hideSkiplink" style="Height:35px;">
+            <div class="clear hideSkiplink" style="height: 35px;">
                 <div style="width: 66%; float: left;">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu"/>
-                        <asp:MenuItem NavigateUrl="~/DatBan.aspx" Text="Bàn Ăn"/>
-                        <asp:MenuItem NavigateUrl="~/DangKy.aspx" Text="Đăng Ký"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao"/>
-                        <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan"/>
-                    </Items>
-                </asp:Menu>
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                        IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu" />
+                            <asp:MenuItem NavigateUrl="~/DatBan.aspx" Text="Bàn Ăn" />
+                            <asp:MenuItem NavigateUrl="~/DangKy.aspx" Text="Đăng Ký" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao" />
+                            <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan" />
+                        </Items>
+                    </asp:Menu>
                 </div>
-                <div style="width:34%; float:right;">
-                <table>
-                    <tr>
-                      <td>
-                          <asp:TextBox ID="textTim" runat="server" Width="186px" style="margin-left: 0px"></asp:TextBox>
-                          <% string ten = textTim.Text; %>
-                     </td><td>
-                               <a href="/TimKiem.aspx?id=<%= ten %>" > <asp:Image ID="Image1" runat="server" ImageUrl="~/images/timkiem.png" 
-                   style="margin-left: 5px;margin-top: 3px" Height="22px" Width="75px" /></a>
-
-                     </td><td>
-                             <a href="About.aspx" > <asp:Image ID="Image2" runat="server" ImageUrl="~/images/vi.png" 
-                   style="margin-left: 5px;margin-top: 3px" Height="13px" Width="20px" /></a>
-                     </td><td>
-                              <a href="About.aspx" > <asp:Image ID="Image3" runat="server" ImageUrl="~/images/en.png" 
-                   style="margin-left: 5px;margin-top: 3px" Height="13px" Width="20px" /></a>
-                               </td>
-                    </tr>
-                  </table>
-                  </div>
+                <div style="width: 34%; float: right;">
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="textTim" runat="server" Width="186px" Style="margin-left: 0px"></asp:TextBox>
+                                <% string ten = textTim.Text; %>
+                            </td>
+                            <td>
+                                <a href="/TimKiem.aspx?id=<%= ten %>">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/timkiem.png" Style="margin-left: 5px;
+                                        margin-top: 3px" Height="22px" Width="75px" /></a>
+                            </td>
+                            <td>
+                                <a href="About.aspx">
+                                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/vi.png" Style="margin-left: 5px;
+                                        margin-top: 3px" Height="13px" Width="20px" /></a>
+                            </td>
+                            <td>
+                                <a href="About.aspx">
+                                    <asp:Image ID="Image3" runat="server" ImageUrl="~/images/en.png" Style="margin-left: 5px;
+                                        margin-top: 3px" Height="13px" Width="20px" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-
         <div class="main">
             <div class="main-left">
-                <asp:Menu ID="Menu1" runat="server">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Lẩu" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đồ Nướng" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đồ Chay" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Đồ Mặn" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Buffer" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Nước Ngọt" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Bia" />
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Rượu" />
+                <%--<asp:Menu ID="Menu1" runat="server">
+                    <Items>                    
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Lẩu" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=2" Text="Món mướng" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=3" Text="Món chay" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Món mặn" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=5" Text="Buffer" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=6" Text="Nước Ngọt" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=7" Text="Bia" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=8" Text="Rượu" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=9" Text="Kem" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=10" Text="Cocktail" />
                     </Items>
-                </asp:Menu>
+                </asp:Menu>--%>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DatMon.aspx?id=1">Lẩu</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DatMon.aspx?id=2">Món mướng</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DatMon.aspx?id=3">Món chay</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/DatMon.aspx?id=4">Món mặn</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/DatMon.aspx?id=5">Buffer</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/DatMon.aspx?id=6">Nước</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/DatMon.aspx?id=7">Bia</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/DatMon.aspx?id=8">Rượu</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/DatMon.aspx?id=9">Kem</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/DatMon.aspx?id=10">Cocktail</asp:HyperLink><br />
             </div>
             <div class="main-right">
-                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
         </div>
         <div class="clear">
         </div>
     </div>
     <div class="footer">
-        
-        Nhóm 25 - WARM<br />
-        Copyright © 2012 warm.com.vn. All rights reserved.</div>
+        [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved.
+    </div>
     </form>
 </body>
 </html>

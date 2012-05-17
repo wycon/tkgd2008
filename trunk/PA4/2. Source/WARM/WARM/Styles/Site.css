@@ -92,7 +92,7 @@ first child of the left and right table columns */
 {
     width: 1024px;
     background-color: #fff;
-    margin: 20px auto 0px auto;
+    margin: 0px auto 0px auto;
     border: 1px solid #496077;
 }
 
@@ -122,8 +122,8 @@ first child of the left and right table columns */
 .logo
 {
     float:left;
-    width:70%;
-    height:132px;
+    width:73%;
+    height:110px;
 }
 
 /* END LOGO */
@@ -133,11 +133,11 @@ first child of the left and right table columns */
 .loginDisplay
 {
     float: right;
-    width:30%;
+    width:26%;
     font-size: 1.1em;
     display: block;
     text-align: right;
-    padding-top:10px;
+    padding-top:5px;
     color: White;
 }
 
@@ -192,7 +192,8 @@ first child of the left and right table columns */
 
 .footer
 {
-    color: #4e5766;
+    color: Black;
+    background-color:transparent;
     padding: 8px 0px 0px 0px;
     margin: 0px auto;
     text-align: center;

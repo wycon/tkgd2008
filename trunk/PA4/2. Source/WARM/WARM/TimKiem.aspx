@@ -29,8 +29,7 @@
             <td>
                 <b>Số lượng hiển thị:</b>
                 <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
-                    AutoPostBack="True">
-                    <asp:ListItem>3</asp:ListItem>
+                    AutoPostBack="True">                    
                     <asp:ListItem>5</asp:ListItem>
                     <asp:ListItem>10</asp:ListItem>
                     <asp:ListItem>15</asp:ListItem>

@@ -114,6 +114,15 @@ namespace WARM
 
         private void bind()
         {
+            if (Session["ChiTietPhieu"] != null)
+            {
+                ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
+            }
+            else
+            {
+                ChiTietPhieus = new List<CHITIETPHIEU>();
+                Session["ChiTietPhieu"] = ChiTietPhieus;
+            }
             GridView1.DataSource = ChiTietPhieus;
             GridView1.DataBind();
         }
