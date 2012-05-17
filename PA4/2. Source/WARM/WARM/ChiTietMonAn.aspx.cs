@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using DAO;
 using System.Data;
 using System.Collections;
+using System.Text;
 
 namespace WARM
 {
@@ -15,10 +16,10 @@ namespace WARM
         static int req;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             MONAN mon = new MONAN();
             if (!Page.IsPostBack)
-            {          
+            {
                 if (Request.QueryString["id"] != null)
                     req = int.Parse(Request.QueryString["id"]);
                 List<MONAN> dsMon = new List<MONAN>();
@@ -33,7 +34,7 @@ namespace WARM
                 pgitems.AllowPaging = true;
                 pgitems1.DataSource = dsBl;
                 pgitems1.AllowPaging = true;
-                
+
                 rptItems.DataSource = pgitems;
                 rptItems.DataBind();
                 rptItems2.DataSource = pgitems1;
@@ -45,9 +46,9 @@ namespace WARM
         {
             if (textten.Text == "")
                 Literal1.Visible = true;
-            if(textnoidung.Text == "")
+            if (textnoidung.Text == "")
                 Literal3.Visible = true;
-            if(Request.Form["star2"] == null)
+            if (Request.Form["star2"] == null)
                 Literal2.Visible = true;
             else
             {
@@ -96,7 +97,7 @@ namespace WARM
                 ChiTietPhieus.Add(new CHITIETPHIEU { MONAN = m, SoLuong = SoLuongMon });
 
             //Gán phiếu lại cho session
-            Session["ChiTietPhieu"] = ChiTietPhieus;
+            Session["ChiTietPhieu"] = ChiTietPhieus;            
         }
     }
 }

@@ -31,7 +31,7 @@ namespace WARM
             base.OnInit(e);
             rptPages.ItemCommand += new RepeaterCommandEventHandler(rptPages_ItemCommand);
             if (Session["nResult"] == null)
-                Session["nResult"] = 3;
+                Session["nResult"] = 5;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -50,6 +50,8 @@ namespace WARM
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(4, false));
                 else
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSach(4));
+
+                ddlSoKetQua.SelectedValue = Session["nResult"].ToString();
             }
         }
         private void LoadData(int nResult, List<MONAN> dsMon)
