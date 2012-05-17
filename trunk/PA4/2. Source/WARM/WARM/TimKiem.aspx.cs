@@ -12,6 +12,8 @@ namespace WARM
 {
     public partial class TimKiem : System.Web.UI.Page
     {
+        public int yourvar { get; set; }
+
         public int PageNumber
         {
             get
@@ -56,6 +58,7 @@ namespace WARM
         }
         private void LoadData(int nResult, List<MONAN> dsMon)
         {
+            //List<BINHLUAN> dsBl = new List<BINHLUAN>();
             PagedDataSource pgitems = new PagedDataSource();
             DataView dv = new DataView();
             pgitems.DataSource = dsMon;

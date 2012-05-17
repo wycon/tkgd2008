@@ -28,7 +28,7 @@ namespace WARM
                 GridView2.DataSource = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
                 GridView2.DataBind();
                 ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
-                Label1.Text = Session["TongTien1Ban"].ToString();
+                this.TinhTongTien1Ban();
 
             }
         }
@@ -66,7 +66,7 @@ namespace WARM
             }
             catch (Exception ex)
             {
-                int i = 0;
+                
             }
             //Tính tổng tiền            
             Label l = GridView1.Parent.Controls[3] as Label;
@@ -169,7 +169,7 @@ namespace WARM
                 ChiTietPhieus = new List<CHITIETPHIEU>();
                 Session["ChiTietPhieu"] = ChiTietPhieus;
             }
-            Label l = GridView1.Parent.Controls[3] as Label;
+            Label l = GridView2.Parent.Controls[1] as Label;
             double TongTien = 0;
             foreach (CHITIETPHIEU c in ChiTietPhieus)
             {

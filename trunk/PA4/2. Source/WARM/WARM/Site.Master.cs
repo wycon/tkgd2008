@@ -14,7 +14,7 @@ namespace WARM
 
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
 
         }
