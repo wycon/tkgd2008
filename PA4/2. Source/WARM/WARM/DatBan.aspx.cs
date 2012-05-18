@@ -29,6 +29,8 @@ namespace WARM
                 TinhTongTien1Ban();
                 TinhTongTien();
             }
+            if (Session["ChiTietBans"] == null)
+                hpHoanTatDatBan.Visible = false;
         }
         //Xu ly phieu dat ban
         public static List<ChiTietBan> ListChiTietBan;
@@ -38,8 +40,6 @@ namespace WARM
             TextBox t = (sender as Button).Parent.Controls[1] as TextBox;
             HiddenField h = (sender as Button).Parent.Controls[5] as HiddenField;
             int SoLuongBan = int.Parse(t.Text);
-            
-
             if (Session["ChiTietBans"] != null)
             {
                 ListChiTietBan = (List<ChiTietBan>)Session["ChiTietBans"];
@@ -70,7 +70,7 @@ namespace WARM
             TinhTongTien();
 
             //Gán phiếu lại cho session
-            //Session["ChiTietBans"] = ListChiTietBan;
+            Session["ChiTietBans"] = ListChiTietBan;
             //Session["TongTien"] = l.Text;
             bind();
 
@@ -138,9 +138,11 @@ namespace WARM
             Label l = GridView1.Parent.Controls[3] as Label;
             double TongTien = double.Parse(l.Text, NumberStyles.Number);
             Label l2 = GridView2.Parent.Controls[1] as Label;
-            TongTien =TongTien - double.Parse(l2.Text) * ChiTietPhieus[e.RowIndex].SoLuong.Value;
+            TongTien =TongTien - (double.Parse(l2.Text) * ChiTietPhieus[e.RowIndex].SoLuong.Value);
+            if (TongTien < 0)
+                TongTien = 0;
             l.Text = TongTien.ToString("0,000");
-            Session["TongTien"] = l.Text;
+            //Session["TongTien"] = l.Text;
             ListChiTietBan.RemoveAt(e.RowIndex);
             bind();           
             if (TongTien == 0)
@@ -207,12 +209,11 @@ namespace WARM
             //Tính tổng tiền
             Label l = GridView2.Parent.Controls[1] as Label;
             double TongTien = double.Parse(l.Text, NumberStyles.Number);
-            TongTien -= ChiTietPhieus[e.RowIndex].MONAN.Gia.Value * ChiTietPhieus[e.RowIndex].SoLuong.Value;
-            l.Text = TongTien.ToString("0,000");
-            TinhTongTien();
-            //Session["TongTien1Ban"] = l.Text;
-            ChiTietPhieus.RemoveAt(e.RowIndex);
+            TongTien = TongTien- ChiTietPhieus[e.RowIndex].MONAN.Gia.Value * ChiTietPhieus[e.RowIndex].SoLuong.Value;
+            l.Text = TongTien.ToString("0,000"); 
+            ChiTietPhieus.RemoveAt(e.RowIndex);  
             bind2();
+            TinhTongTien();
         }
     }
 
