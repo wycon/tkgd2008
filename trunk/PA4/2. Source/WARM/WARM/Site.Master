@@ -63,8 +63,8 @@
                             </tr>
                             <tr>
                                 <td align="right" colspan="2">
-                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Đăng Nhập"
-                                        ValidationGroup="ctl00$ctl20$Login1" OnClick="LoginButton_Click" />
+                                    <%-- <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Đăng Nhập"
+                                        ValidationGroup="ctl00$ctl20$Login1" OnClick="LoginButton_Click" />--%>
                                 </td>
                             </tr>
                         </table>

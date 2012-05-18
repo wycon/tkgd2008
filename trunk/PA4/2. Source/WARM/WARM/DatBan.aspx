@@ -96,7 +96,7 @@
                                     <td>
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
-                                                <asp:HyperLink ID="hpHoanTatDatBan" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt bàn</asp:HyperLink><br />
+                                                <asp:HyperLink ID="hpHoanTatDatBan" runat="server" NavigateUrl="DangKy.aspx">Hoàn tất đặt bàn</asp:HyperLink><br />
                                                 Tổng tiền: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND<br /> 
                                                 Thời gian đặt bàn:<br />
                                                 <table>
@@ -151,7 +151,7 @@
                                                             </ItemTemplate>
                                                             <ControlStyle Width="120px" />
                                                         </asp:TemplateField>
-                                                        <asp:TemplateField HeaderText="Số lượng">
+                                                        <asp:TemplateField HeaderText="Số<br/> lượng">
                                                             <ItemTemplate>
                                                                 <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("Soluong") %>'></asp:Label>
                                                             </ItemTemplate>
@@ -173,7 +173,9 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                <td>
                                 <br />
+                                </td>
                                 </tr>
                                 <tr>
                                     <td align="center">
