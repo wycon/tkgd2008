@@ -1,7 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChonTang.aspx.cs" Inherits="WARM.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript" src="../../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+<ul id="nav">
+	<li><a href="..">Trang Chủ > </a></li>
+	<li><a href="#" class="arrow">Tham Quan > </a>
+		<ul>
+			<li><a href="#" class="sub">Đăng Ký</a></li>
+			<li><a href="#" class="sub">Đặt Bàn</a></li>
+			<li><a href="#" class="sub">Đặt Món</a></li>
+			<li><a href="#" class="sub">Chi Tiết Món</a></li>
+			<li><a href="#" class="sub">About</a></li>
+		</ul>
+		<div class="clear"></div>
+	</li>
+	<li><a class="arrow current">Chọn Tầng</a>
+	<ul>
+		<li><a href="TangTret/Sanh1.aspx" class="sub">Tầng Trệt</a></li>
+		<li><a href="Tang1/Sanh1.aspx" class="sub">Tầng 1</a></li>
+		<li><a href="Tang2/Sanh1.aspx" class="sub">Tầng 2</a></li>
+	</ul>
+		<div class="clear"></div>
+	</li>
+</ul>
 
 <asp:Wizard ID="Wizard1" runat="server" Width="835px" 
         onfinishbuttonclick="Wizard1_FinishButtonClick" StartNextButtonType="Button" FinishCompleteButtonText="Hoàn Tất" FinishPreviousButtonText="Lùi" StartNextButtonText="Tới" StepNextButtonText="Tới">
@@ -62,9 +89,6 @@
                 </tr>
                 </table>
             </div>
-
-            <script type="text/javascript" src="../../Scripts/jquery-1.6.2.min.js"></script>
-
 
             <script language="javascript" type="text/javascript">
                 /* Made with GIMP */
