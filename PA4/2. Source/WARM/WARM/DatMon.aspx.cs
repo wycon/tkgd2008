@@ -43,38 +43,56 @@ namespace WARM
                 if (Request.QueryString["s"] != null)
                     req = Request.QueryString["s"].ToString();
                 if (req == "aname")
+                {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+                    hpAName.Enabled = false;
+                    hpAName.ControlStyle.Font.Bold = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = true;
+                }
                 else if (req == "dname")
+                {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, false));
+                    hpAName.Enabled = true;
+                    hpDName.Enabled = false;
+                    hpDName.ControlStyle.Font.Bold = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = true;
+                }
                 else if (req == "aprice")
+                {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, true));
+                    hpAName.Enabled = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = false;
+                    hpAPrice.ControlStyle.Font.Bold = true;
+                    hpDPrice.Enabled = true;
+                }
                 else if (req == "dprice")
+                {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
+                    hpAName.Enabled = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = false;
+                    hpDPrice.ControlStyle.Font.Bold = true;
+                }
                 else
-                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSach(maDanhMucMonAn));
+                {
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+                    hpAName.Enabled = false;
+                    hpAName.ControlStyle.Font.Bold = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = true;
+                }
 
-                ddlSoKetQua.SelectedValue = Session["nResult"].ToString();
-                //GeneratePhieuDatMon();
+                ddlSoKetQua.SelectedValue = Session["nResult"].ToString();                
                 bind();
                 TinhTongTien();
             }
-        }
-        private void GeneratePhieuDatMon()
-        {
-            if (Session["ChiTietPhieu"] != null)
-            {
-                ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
-            }
-            else
-            {
-                ChiTietPhieus = new List<CHITIETPHIEU>();
-                ChiTietPhieus.Add(new CHITIETPHIEU { MONAN = new MONAN { TenMonAn = "Cùi bắp", Gia = 10000 }, SoLuong = 3 });
-                ChiTietPhieus.Add(new CHITIETPHIEU { MONAN = new MONAN { TenMonAn = "Bắp cải", Gia = 20000 }, SoLuong = 2 });
-                ChiTietPhieus.Add(new CHITIETPHIEU { MONAN = new MONAN { TenMonAn = "Cải xào", Gia = 30000 }, SoLuong = 1 });
-                Session["ChiTietPhieu"] = ChiTietPhieus;
-            }
-            bind();
-        }
+        }        
         private void LoadData(int nResult, List<MONAN> dsMon)
         {
             PagedDataSource pgitems = new PagedDataSource();
@@ -100,7 +118,8 @@ namespace WARM
         public void rptPages_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             PageNumber = Convert.ToInt32(e.CommandArgument) - 1;
-            LoadData(int.Parse(ddlSoKetQua.SelectedItem.Value), MonAnDAO.LayDanhSach(maDanhMucMonAn));
+            int nResult = int.Parse(ddlSoKetQua.SelectedItem.Value);
+            LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
         }
 
         protected void ddlSoKetQua_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,7 +127,15 @@ namespace WARM
             PageNumber = 0;
             int nResult = int.Parse(ddlSoKetQua.SelectedItem.Value);
             Session["nResult"] = nResult;
-            LoadData(nResult, MonAnDAO.LayDanhSach(maDanhMucMonAn));
+            if (!hpAName.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+            else if (!hpDName.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, false));
+            else if (!hpAPrice.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, true));
+            else if (!hpDPrice.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
+            //LoadData(nResult, MonAnDAO.LayDanhSach(maDanhMucMonAn));
         }
         private static List<CHITIETPHIEU> ChiTietPhieus;
 
@@ -134,7 +161,7 @@ namespace WARM
             }
             else
             {
-                ChiTietPhieus = new List<CHITIETPHIEU>();                
+                ChiTietPhieus = new List<CHITIETPHIEU>();
                 Session["ChiTietPhieu"] = ChiTietPhieus;
             }
             Label l = GridView1.Parent.Controls[3] as Label;
@@ -144,7 +171,7 @@ namespace WARM
                 TongTien += c.SoLuong.Value * c.MONAN.Gia.Value;
             }
 
-            if(TongTien == 0)
+            if (TongTien == 0)
                 hpHoanTatDatMon.Visible = false;
             else
                 hpHoanTatDatMon.Visible = true;
@@ -167,11 +194,11 @@ namespace WARM
             int SoLuongMoi = int.Parse(tbSoLuong.Text);
             ChiTietPhieus[e.RowIndex].SoLuong = SoLuongMoi;
             GridView1.EditIndex = -1;
-            
+
             TinhTongTien();
 
-            bind();            
-        }        
+            bind();
+        }
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             //Tính tổng tiền
@@ -191,8 +218,8 @@ namespace WARM
         protected void Button1_Click(object sender, EventArgs e)
         {
             //Xử lý khi người đặt món
-            TextBox t = (sender as Button).Parent.Controls[1] as TextBox;
-            HiddenField h = (sender as Button).Parent.Controls[5] as HiddenField;
+            TextBox t = (sender as Button).Parent.Controls[3] as TextBox;
+            HiddenField h = (sender as Button).Parent.Controls[9] as HiddenField;
             int SoLuongMon = int.Parse(t.Text);
             MONAN m = MonAnDAO.TimMon(int.Parse(h.Value));
 
@@ -225,13 +252,35 @@ namespace WARM
             l.Text = TongTien.ToString("0,000");
             //Gán phiếu lại cho session
             Session["ChiTietPhieu"] = ChiTietPhieus;
-            
+
             bind();
 
             if (TongTien == 0)
                 hpHoanTatDatMon.Visible = false;
             else
                 hpHoanTatDatMon.Visible = true;
+        }
+        protected void ButtonTang_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong == 99)
+                SoLuong = 98;
+            t.Text = (SoLuong + 1).ToString();
+            
+
+        }
+        protected void ButtonGiam_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong < 2)
+                SoLuong = 2;
+            t.Text = (SoLuong - 1).ToString();
+        }
+        protected void DatBan_Click(object sender, EventArgs e)
+        { 
+            Response.Redirect("DatBan.aspx");
         }
     }
 }

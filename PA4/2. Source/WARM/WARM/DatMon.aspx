@@ -15,46 +15,73 @@
     <table width="100%">
         <tr>
             <td colspan="3">
+                <ul class="breadcrumb">
+                    <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
+                    <li><a href="DatMon.aspx">Đặt món</a> <span class="divider">&gt;</span> </li>
+                    <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
+                        Món mặn</span></li>
+                </ul>
             </td>
         </tr>
         <tr>
-            <td>
-                <%--Sắp theo tên: <a href="javascript:void(0);" onclick="SapTenTang()">tăng</a>/ <a href="javascript:void(0);"
-                            onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
-                                onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
-                <font class="fontblack">Sắp theo tên: <a href="DatMon.aspx?s=aname">tăng</a> / <a href="DatMon.aspx?s=dname">
-                    giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="DatMon.aspx?s=aprice">tăng</a>
-                / <a href="DatMon.aspx?s=dprice">giảm</a></font>
-            </td>
-            <td>
-                <b>Số lượng hiển thị:</b>
-                <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
-                    AutoPostBack="True">
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                </asp:DropDownList>
+            <td style="padding-left: 5px;" colspan="2" width="100%">
+                <table>
+                    <tr>
+                        <td style="padding-right:30px;">
+                            <font class="fontblack">Sắp theo tên:
+                                <asp:HyperLink ID="hpAName" runat="server" NavigateUrl="DatMon.aspx?s=aname">A-Z</asp:HyperLink>
+                                /
+                                <asp:HyperLink ID="hpDName" runat="server" NavigateUrl="DatMon.aspx?s=dname">Z-A</asp:HyperLink>
+                                &nbsp;&nbsp;&nbsp; Sắp theo giá:
+                                <asp:HyperLink ID="hpAPrice" runat="server" NavigateUrl="DatMon.aspx?s=aprice">tăng</asp:HyperLink>
+                                /
+                                <asp:HyperLink ID="hpDPrice" runat="server" NavigateUrl="DatMon.aspx?s=dprice">giảm</asp:HyperLink>
+                        </td>
+                        
+                        <td>
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href="#">Đầu</a></li>
+                                    <li class="active"><a href="#">1</a> </li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">Cuối</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td align="right">
+                            </font><b>Số lượng hiển thị:</b>
+                            <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
+                                AutoPostBack="True" Width="50px">
+                                <asp:ListItem>5</asp:ListItem>
+                                <asp:ListItem>10</asp:ListItem>
+                                <asp:ListItem>15</asp:ListItem>
+                                <asp:ListItem>20</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="padding-left: 5px;">
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
-                        <table cellpadding="0" cellspacing="0" border="0">
+                        <%--<table cellpadding="0" cellspacing="0" border="0">
                             <tr class="text">
                                 <td>
                                     <b>Trang:</b>&nbsp;
                                 </td>
-                                <td>
+                                <td>--%>
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <asp:LinkButton ID="btnPage" CommandName="Page" CommandArgument="<%#
+                        <%--<asp:LinkButton ID="btnPage" CommandName="Page" CommandArgument="<%#
                          Container.DataItem %>" CssClass="text" runat="server"><%# Container.DataItem %>
-                        </asp:LinkButton>&nbsp;
+                        </asp:LinkButton>&nbsp;--%>
                     </ItemTemplate>
                     <FooterTemplate>
-                        </td> </tr> </table>
+                        <%--</td> </tr> </table>--%>
                     </FooterTemplate>
                 </asp:Repeater>
             </td>
@@ -70,50 +97,53 @@
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
-                                            <td colspan="3">
-                                                <hr />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="padding-right: 10px">
-                                                <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
-                                            </td>
-                                            <td valign="top" width="50%">
-                                                <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
-                                                    <%# Eval("TenMonAn") %></a><br />
-                                                <font class="fontblack">Giá:
-                                                <%# Eval("Gia", "{0:0,000}")%>
-                                                VND</font><br />
-                                                <div>
-                                                    <%                                                         
+                                            <td class="borderRound">
+                                                <table>
+                                                    <tr>
+                                                        <td style="padding-right: 10px;">
+                                                            <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
+                                                        </td>
+                                                        <td valign="top" width="50%">
+                                                            <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
+                                                                <%# Eval("TenMonAn") %></a><br />
+                                                            <font class="fontblack">Giá:
+                                                                <%# Eval("Gia", "{0:0,000}")%>
+                                                                VND</font><br />
+                                                            <div>
+                                                                <%                                                         
                                                         int nStar = 5;
                                                         for (int i = 0; i < nStar; i++)
                                                         {
                                                             if (i != nStar-1)%>
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
-                                                    <% else %>
-                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled'
-                                                        checked='checked' />
-                                                    <%}%>
-                                                </div>
-                                            </td>
-                                            <td valign="top" width="30%">
-                                                <%--<input id="bt1" type="button" value="Đặt món" onclick="DatMon('<%# Eval("MaMonAn")%>', '<%# Eval("TenMonAn")%>', '<%# Eval("Gia")%>')" />--%>
-                                                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                                                    <ContentTemplate>
-                                                        <font class="fontblack">Số lượng món/bàn:</font>&nbsp;&nbsp;&nbsp;
-                                                        <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
-                                                        <%--<input id="sl0<%# Eval("MaMonAn")%>" type="text" value="1" size="3" />--%>
-                                                        <br />
-                                                        <asp:Button ID="Button1" runat="server" Text="Đặt món" OnClick="Button1_Click" />
-                                                        <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaMonAn") %>'/>                                                        
-                                                    </ContentTemplate>
-                                                </asp:UpdatePanel>
+                                                                <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
+                                                                <% else %>
+                                                                <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled'
+                                                                    checked='checked' />
+                                                                <%}%>
+                                                            </div>
+                                                        </td>
+                                                        <td valign="top" width="30%">
+                                                            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                                                <ContentTemplate>
+                                                                    <font class="fontblack">Số lượng món/bàn:</font>&nbsp;&nbsp;&nbsp;
+                                                                    <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ButtonGiam_Click" ImageUrl="~/images/ArrowDown.png"
+                                                                        AlternateText="v" Width="16px" Height="16px" />
+                                                                    <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
+                                                                    <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ButtonTang_Click" ImageUrl="~/images/ArrowUp.png"
+                                                                        AlternateText="^" Width="16px" Height="16px" />
+                                                                    <br />
+                                                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Đặt món"
+                                                                        OnClick="Button1_Click" />
+                                                                    <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaMonAn") %>' />
+                                                                </ContentTemplate>
+                                                            </asp:UpdatePanel>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </td>
                                         </tr>
                                     </ItemTemplate>
                                     <FooterTemplate>
-                                        </ul>
                                     </FooterTemplate>
                                 </asp:Repeater>
                             </table>
@@ -121,50 +151,54 @@
                         <td valign="top">
                             <table width="100%" height="100%">
                                 <tr>
-                                    <td colspan="3">
-                                        <hr />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
+                                    <td align="center" class="borderRound">
                                         <font class="fontred">Phiếu đặt món</font>
-                                        <hr />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
-                                                <asp:HyperLink ID="hpHoanTatDatMon" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink><br />
-                                                <font class="fontblack">Tổng tiền một bàn: <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label> VND</font><br />
+                                                <%--<asp:HyperLink ID="hpHoanTatDatMon" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink>--%>
+                                                <asp:Button ID="hpHoanTatDatMon" runat="server" Text="Hoàn tất đặt món" CssClass="btn btn-success"
+                                                    OnClick="DatBan_Click" />
+                                                <br />
+                                                <font class="fontblack">Tổng tiền một bàn:
+                                                    <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label>
+                                                    VND</font><br />
                                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True"
                                                     OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit"
-                                                    OnRowDeleting="GridView1_RowDeleting">
+                                                    OnRowDeleting="GridView1_RowDeleting" CssClass="borderRound">
                                                     <Columns>
                                                         <asp:TemplateField HeaderText="STT">
                                                             <ItemTemplate>
-                                                                <%# Container.DataItemIndex + 1 %>
+                                                                <font class="fontblack">
+                                                                    <%# Container.DataItemIndex + 1 %></font>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                         <asp:TemplateField HeaderText="Tên món">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label>
+                                                                <font class="fontblack">
+                                                                    <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label></font>
                                                             </ItemTemplate>
                                                             <ControlStyle Width="120px" />
                                                         </asp:TemplateField>
                                                         <asp:TemplateField HeaderText="Số<br/> lượng">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label>
+                                                                <font class="fontblack">
+                                                                    <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label></font>
                                                             </ItemTemplate>
                                                             <EditItemTemplate>
-                                                                <asp:TextBox ID="tbSoLuong" runat="server" Width="30" style="text-align:center;" ForeColor="Red" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
+                                                                <asp:TextBox ID="tbSoLuong" runat="server" Width="30" Style="text-align: center;"
+                                                                    ForeColor="Red" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
                                                             </EditItemTemplate>
                                                             <ControlStyle Width="30" />
                                                             <ItemStyle HorizontalAlign="Center" />
                                                         </asp:TemplateField>
                                                         <asp:TemplateField HeaderText="Giá">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label>
+                                                                <font class="fontblack">
+                                                                    <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label></font>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                         <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
@@ -181,8 +215,6 @@
                         </td>
                     </tr>
                 </table>
-            </td>
-            <td>
             </td>
         </tr>
     </table>
