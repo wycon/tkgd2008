@@ -13,8 +13,7 @@ p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bot
 /* demo styles */
 
 #container{
-  width:800px;
-  padding:30px 0;
+  width:620px;
   margin:0 auto;
   overflow:hidden;
   float:left;
@@ -54,8 +53,8 @@ a.bjqs-next{
 }
 
  ol.bjqs-markers{
-  position:absolute;
   bottom:-50px;
+  padding-left: 250px;
 }
 
  ol.bjqs-markers li{

@@ -28,7 +28,7 @@
                 // The duration in ms of the transition between slides
                 animationDuration: 450,
                 // Automatically rotate through the slides
-				automatic: true,
+				automatic: false,
 				// Delay in ms between auto rotation of the slides
                 rotationSpeed: 4000,
 				// Pause the slider when any elements receive a hover event
