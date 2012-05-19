@@ -13,11 +13,5 @@ namespace WARM
         {
 
         }
-
-        protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
-        {
-            string url = ((DropDownList)Wizard1.WizardSteps[0].FindControl("ddl_chonchedo")).SelectedItem.Value + ((DropDownList)Wizard1.WizardSteps[1].FindControl("ddl_chontang")).SelectedItem.Value;
-            Response.Redirect(url);
-        }
     }
 }
