@@ -45,81 +45,7 @@ Replace the href targets in the anchor (<a >) for your URLS to have it working
 as a menu.
  -->
 <div style="width:800px;">
-<div style="width:70%; float:left;">
-<asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
-<br clear="all"/>
-<div style="float:left; width:27%;">
-<table cellpadding="0" border="0" cellspacing="0">
-  <tr>
-    <td><a href="Sanh1.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/struct/slice_0_0.jpg" style="width: 73px; height: 150px; border-width: 0px" 
-name="0_0" 
-/></a></td>
-
-    <td><a href="Sanh2.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/struct/slice_0_1.jpg" style="width: 77px; height: 150px; border-width: 0px" 
-name="0_1" 
-/></a></td>
-
-</tr>
-
-</table>
-</div>
-
-<div style="float:left; width:25%;">
-<table cellpadding="0" border="0" cellspacing="0">
-<tr>
-    <td>
-	<ul>
-    <h4 style="color:Black; font-weight:bold; margin-right:20px"> TẦNG TRỆT</h4>
-	<li style="color:Black">1: Sảnh 1</li>
-	<li><a  style="text-decoration:none" href="Sanh2.aspx">2: Sảnh 2</a></li>
-	</ul>
-    </td>
-</tr>
-</table>
-</div>
-
-<div style="float:left; width:33%;">
-<table cellpadding="0" border="0" cellspacing="0">
-  <tr>
-    <td><a><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/navigate/slice_0_0.jpg" style="width: 82px; height: 116px; border-width: 0px" 
-name="0_0" 
-/></a></td>
-
-    <td><a href="Sanh2.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/navigate/slice_0_1.jpg" style="width: 110px; height: 116px; border-width: 0px" 
-name="0_1" 
-/></a></td>
-
-</tr>
-
-</table>
-</div>
-
-</div>
-<div style="width:30%; float:left;">
-<asp:Label ID="lblOption" runat="server" Text="Tùy Chọn"></asp:Label>
-<br clear="all"/>
-<div style="float:left;">
-<asp:Menu ID="mnuTang" runat="server" CssClass="menu" EnableViewState="false" 
-        IncludeStyleBlock="false">
-    <Items>
-        <asp:MenuItem NavigateUrl="../Tang2/Sanh1.aspx" Text="Tầng 2"/>
-        <asp:MenuItem NavigateUrl="../Tang1/Sanh1.aspx" Text="Tầng 1"/>
-        <asp:MenuItem NavigateUrl="../TangTret/Sanh1.aspx" Text="Tầng Trệt"/>
-    </Items>
-</asp:Menu>
-</div>
-<div style="float:left;">
-<asp:Menu ID="mnuCheDo" runat="server" CssClass="menu" EnableViewState="false" 
-        IncludeStyleBlock="false">
-    <Items>
-        <asp:MenuItem NavigateUrl="../TangTret/Sanh1.aspx" Text="2D"/>
-        <asp:MenuItem NavigateUrl="../3D/TangTret/Sanh1.aspx" Text="3D"/>
-    </Items>
-</asp:Menu>
-</div>
-</div>
-
- <div id="container">
+ <div id="container" style="float: left;">
   
       <!--  Outer wrapper for presentation only, this can be anything you like -->
       <div id="banner">
@@ -149,6 +75,29 @@ name="0_1"
 
         });
     </script>
+
+<div style="width:150px; float:left;">
+<asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
+<br clear="all"/>
+<div style="float:left; width:27%;">
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><a href="Sanh1.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/struct/slice_0_0.jpg" style="width: 73px; height: 150px; border-width: 0px" 
+name="0_0" 
+/></a></td>
+
+    <td><a href="Sanh2.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/struct/slice_0_1.jpg" style="width: 77px; height: 150px; border-width: 0px" 
+name="0_1" 
+/></a></td>
+
+</tr>
+
+</table>
+</div>
+
+</div>
+
+
 </div>
 
 <!--
