@@ -6,8 +6,8 @@
 .panorama .info{right:10px;bottom:10px;}
 
 /* style */
-.panorama-view{cursor:url(../images/openhand.cur),default;}
-.panorama-view.grab{cursor:url(../images/closedhand.cur),default;}
+.panorama-view{cursor:url(../img/openhand.cur),default;}
+.panorama-view.grab{cursor:url(../img/closedhand.cur),default;}
 .panorama .info{padding:6px;opacity:0.4;filter:alpha(opacity=40);background-color:#000;color:#fff;font:bold 11px Arial,sans-serif;text-decoration:none;}
 .panorama .info:hover{opacity:0.6;filter:alpha(opacity=60);}
 .panorama-view .area{opacity:0.2;filter:alpha(opacity=20);background-color:#000;cursor:pointer;overflow:hidden;text-indent:-9999px;}

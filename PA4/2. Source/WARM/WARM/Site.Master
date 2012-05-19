@@ -111,6 +111,40 @@
                        </td>                       
                     
                  </tr>
+                 <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.20/themes/base/jquery-ui.css" type="text/css" media="all" />
+			     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+			     <script src="http://code.jquery.com/ui/1.8.20/jquery-ui.min.js" type="text/javascript"></script>
+	             <script>
+	                $(function () {
+	                    var availableTags = [
+			            "ActionScript",
+			            "AppleScript",
+			            "Asp",
+			            "BASIC",
+			            "C",
+			            "C++",
+			            "Clojure",
+			            "COBOL",
+			            "ColdFusion",
+			            "Erlang",
+			            "Fortran",
+			            "Groovy",
+			            "Haskell",
+			            "Java",
+			            "JavaScript",
+			            "Lisp",
+			            "Perl",
+			            "PHP",
+			            "Python",
+			            "Ruby",
+			            "Scala",
+			            "Scheme"
+		            ];
+	                    $("#<% = textTim.ClientID %>").autocomplete({
+	                        source: availableTags
+	                    });
+	                });
+	             </script>
             </div>
         </div>
         <div class="main">
