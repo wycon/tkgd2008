@@ -58,9 +58,13 @@
     <Content Include="ChiTietMonAn.aspx" />
     <Content Include="DangKy.aspx" />
     <Content Include="DatBan.aspx" />
+    <Content Include="images\ArrowDown.png" />
+    <Content Include="images\ArrowUp.png" />
     <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
     <Content Include="images\en.png" />
+    <Content Include="images\glyphicons-halflings-white.png" />
+    <Content Include="images\glyphicons-halflings.png" />
     <Content Include="images\openhand.cur" />
     <Content Include="images\remove.gif" />
     <Content Include="images\ThamQuan\3D\Tang1\Sanh1\BOCA_restaurant_panorama2.jpg" />
@@ -169,6 +173,8 @@
     <Content Include="images\vi.png" />
     <Content Include="Scripts\basic-jquery-slider.js" />
     <Content Include="Scripts\basic-jquery-slider.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\cvi_text_lib.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
     <Content Include="Scripts\jquery.advanced-panorama360.js" />
@@ -177,6 +183,10 @@
     <Content Include="Scripts\jquery.mousewheel.min.js" />
     <Content Include="Scripts\jquery.panorama360.js" />
     <Content Include="Styles\basic-jquery-slider.css" />
+    <Content Include="Styles\bootstrap-responsive.css" />
+    <Content Include="Styles\bootstrap-responsive.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\ChiTietMonAn.css" />
     <Content Include="Styles\fancy\fancybox-x.png" />
     <Content Include="Styles\fancy\fancybox-y.png" />
