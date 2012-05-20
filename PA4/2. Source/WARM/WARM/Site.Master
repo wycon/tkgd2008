@@ -147,7 +147,8 @@
         </div>
         <div class="main">
             <div class="main-left">
-                <%--<asp:Menu ID="Menu1" runat="server">
+                <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false"
+                        IncludeStyleBlock="false" Orientation="Vertical">
                     <Items>                    
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Lẩu" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=2" Text="Món mướng" />
@@ -160,8 +161,8 @@
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=9" Text="Kem" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=10" Text="Cocktail" />
                     </Items>
-                </asp:Menu>--%>
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DatMon.aspx?id=1">Lẩu</asp:HyperLink><br />
+                </asp:Menu>
+                <%--<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DatMon.aspx?id=1">Lẩu</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DatMon.aspx?id=2">Món mướng</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DatMon.aspx?id=3">Món chay</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/DatMon.aspx?id=4">Món mặn</asp:HyperLink><br />
@@ -170,7 +171,7 @@
                 <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/DatMon.aspx?id=7">Bia</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/DatMon.aspx?id=8">Rượu</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/DatMon.aspx?id=9">Kem</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/DatMon.aspx?id=10">Cocktail</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/DatMon.aspx?id=10">Cocktail</asp:HyperLink><br />--%>
             </div>
             <div class="main-right">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
