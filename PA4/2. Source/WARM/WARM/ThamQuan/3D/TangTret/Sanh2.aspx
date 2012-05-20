@@ -81,6 +81,7 @@
 			</div>
 		</div>
 		<a class="info round" href="http://commons.wikimedia.org/wiki/File:View_from_Sky_Tower_Akl.jpg">Sky Tower Akl</a>
+        <ul class="bjqs-controls"><li><a class="bjqs-next" href="#" style="top: 184px;">Tới</a></li><li><a class="bjqs-prev" href="#" style="top: 184px;">Lùi</a></li></ul>
 	</div>
 
 <div style="float:left;">
