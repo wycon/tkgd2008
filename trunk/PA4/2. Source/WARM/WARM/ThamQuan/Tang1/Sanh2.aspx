@@ -28,6 +28,13 @@
 	</ul>
 		<div class="clear"></div>
 	</li>
+	<li><a href="../Tang1/Sanh2.aspx" class="arrow">Sảnh 2</a>
+	<ul>
+		<li><a href="../Tang1/Sanh1.aspx" class="sub">Sảnh 1</a></li>
+		<li><a href="../Tang1/Sanh3.aspx" class="sub">Sảnh 3</a></li>
+	</ul>
+		<div class="clear"></div>
+	</li>
 	<li><a class="arrow current">2D</a>
 	<ul>
 		<li><a href="../3D/Tang1/Sanh2.aspx" class="sub">3D</a></li>

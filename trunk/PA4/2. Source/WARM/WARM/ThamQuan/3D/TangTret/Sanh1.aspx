@@ -55,6 +55,12 @@
 	</ul>
 		<div class="clear"></div>
 	</li>
+	<li><a href="../TangTret/Sanh1.aspx" class="arrow">Sảnh 1</a>
+	<ul>
+		<li><a href="../TangTret/Sanh2.aspx" class="sub">Sảnh 2</a></li>
+	</ul>
+		<div class="clear"></div>
+	</li>
 	<li><a class="arrow current">3D</a>
 	<ul>
 		<li><a href="../../TangTret/Sanh1.aspx" class="sub">2D</a></li>
