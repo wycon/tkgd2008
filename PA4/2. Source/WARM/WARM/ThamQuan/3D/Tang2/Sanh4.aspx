@@ -48,10 +48,18 @@
 		</ul>
 		<div class="clear"></div>
 	</li>
-	<li><a href="../Tang1/Sanh1.aspx" class="arrow">Tầng 1</a>
+	<li><a href="../Tang2/Sanh1.aspx" class="arrow">Tầng 2</a>
 	<ul>
 		<li><a href="../TangTret/Sanh1.aspx" class="sub">Tầng Trệt</a></li>
-		<li><a href="../Tang2/Sanh1.aspx" class="sub">Tầng 2</a></li>
+		<li><a href="../Tang1/Sanh1.aspx" class="sub">Tầng 1</a></li>
+	</ul>
+		<div class="clear"></div>
+	</li>
+	<li><a href="../Tang2/Sanh4.aspx" class="arrow">Sảnh 4</a>
+	<ul>
+		<li><a href="../Tang2/Sanh1.aspx" class="sub">Sảnh 1</a></li>
+		<li><a href="../Tang2/Sanh2.aspx" class="sub">Sảnh 2</a></li>
+		<li><a href="../Tang2/Sanh3.aspx" class="sub">Sảnh 3</a></li>
 	</ul>
 		<div class="clear"></div>
 	</li>
