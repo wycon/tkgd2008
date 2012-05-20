@@ -91,10 +91,9 @@
                         <Items>
                             <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ" />
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu" />
-                            <asp:MenuItem NavigateUrl="~/DatBan.aspx" Text="Bàn Ăn" />
-                            <asp:MenuItem NavigateUrl="~/DangKy.aspx" Text="Đăng Ký" />
-                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao" />
                             <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan" />
+                            <asp:MenuItem NavigateUrl="~/DatMon.aspx" Text="Đặt Món" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao" />
                         </Items>
                     </asp:Menu>
                 </div>
