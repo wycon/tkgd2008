@@ -180,6 +180,9 @@
         </div>
     </div>
     <div class="footer">
+        <div id="back-to-top">
+            <a href="#">Lên đầu trang</a>
+        </div>
         [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved.
     </div>
     </form>

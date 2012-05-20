@@ -200,6 +200,11 @@ first child of the left and right table columns */
     line-height: normal;
 }
 
+#back-to-top {
+    background: url("images/sprite.png") no-repeat scroll -10px -179px transparent;
+    text-transform: uppercase;
+}
+
 
 /* TAB MENU   
 ----------------------------------------------------------*/
