@@ -83,13 +83,13 @@ as a menu.
 <div style="float:left;">
 <table cellpadding="0" border="0" cellspacing="0">
   <tr>
-    <td><a href="Sanh3.aspx"><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_0_0.jpg"  style="width: 72px; height: 78px; border-width: 0px;"/></a></td>
+    <td><a><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_0_0.jpg"  style="width: 72px; height: 78px; border-width: 0px;"/></a></td>
     <td><a href="Sanh2.aspx"><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_0_1.jpg"  style="width: 78px; height: 78px; border-width: 0px;"/></a></td>
 </tr>
 
   <tr>
-    <td><a><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_1_0.jpg"  style="width: 72px; height: 72px; border-width: 0px;"/></a></td>
-    <td><a><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_1_1.jpg"  style="width: 78px; height: 72px; border-width: 0px;"/></a></td>
+    <td><a href="Sanh1.aspx"><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_1_0.jpg"  style="width: 72px; height: 72px; border-width: 0px;"/></a></td>
+    <td><a href="Sanh1.aspx"><img alt=" " src="../../images/ThamQuan/Tang1/Sanh3/struct/slice_1_1.jpg"  style="width: 78px; height: 72px; border-width: 0px;"/></a></td>
 </tr>
 
 </table>
