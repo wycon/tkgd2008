@@ -9,14 +9,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <ul id="nav">
-	<li><a href="..">Trang Chủ > </a></li>
+	<li><a href="../Default.aspx">Trang Chủ > </a></li>
 	<li><a href="#" class="arrow">Tham Quan > </a>
 		<ul>
-			<li><a href="#" class="sub">Đăng Ký</a></li>
-			<li><a href="#" class="sub">Đặt Bàn</a></li>
-			<li><a href="#" class="sub">Đặt Món</a></li>
-			<li><a href="#" class="sub">Chi Tiết Món</a></li>
-			<li><a href="#" class="sub">About</a></li>
+			<li><a href="../DangKy.aspx" class="sub">Đăng Ký</a></li>
+			<li><a href="../DatBan.aspx" class="sub">Đặt Bàn</a></li>
+			<li><a href="../DatMon.aspx" class="sub">Đặt Món</a></li>
+			<li><a href="../ChiTietMonAn.aspx" class="sub">Chi Tiết Món</a></li>
+			<li><a href="../TimKiem.aspx" class="sub">Tìm Kiếm</a></li>
+			<li><a href="../About.aspx" class="sub">About</a></li>
 		</ul>
 		<div class="clear"></div>
 	</li>
@@ -95,8 +96,9 @@ as a menu.
 
 </div>
 
-    <div style="width:15%; height: 300px; float:left;">
-    <h1>Kiến Trúc</h1>
+    <div style="float:left;">
+<asp:Label ID="lblNavigation" runat="server" Text="Kiến Trúc Tầng"></asp:Label>
+<br clear="all"/>
     <table cellpadding="0" border="0" cellspacing="0">
     <tr>
         <td id="struct_image" style="background-image: url(../images/ThamQuan/ChonTang/struct.jpg); width:100px; height:100px;"></td>
