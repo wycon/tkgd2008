@@ -128,36 +128,6 @@ first child of the left and right table columns */
 
 /* END LOGO */
 
-/* LOGIN */
-
-.loginDisplay
-{
-    float: right;
-    width:26%;
-    font-size: 1.1em;
-    display: block;
-    text-align: right;
-    padding-top:5px;
-    color: White;
-}
-
-.loginDisplay a:link
-{
-    color: white;
-}
-
-.loginDisplay a:visited
-{
-    color: white;
-}
-
-.loginDisplay a:hover
-{
-    color: white;
-}
-
-/* END LOGIN */
-
 /* END HEADER */
 
 /* MAIN */
