@@ -12,11 +12,12 @@
 	<li><a href="../..">Trang Chủ > </a></li>
 	<li><a href="../ChonTang.aspx" class="arrow">Tham Quan > </a>
 		<ul>
-			<li><a href="#" class="sub">Đăng Ký</a></li>
-			<li><a href="#" class="sub">Đặt Bàn</a></li>
-			<li><a href="#" class="sub">Đặt Món</a></li>
-			<li><a href="#" class="sub">Chi Tiết Món</a></li>
-			<li><a href="#" class="sub">About</a></li>
+			<li><a href="../../DangKy.aspx" class="sub">Đăng Ký</a></li>
+			<li><a href="../../DatBan.aspx" class="sub">Đặt Bàn</a></li>
+			<li><a href="../../DatMon.aspx" class="sub">Đặt Món</a></li>
+			<li><a href="../../ChiTietMonAn.aspx" class="sub">Chi Tiết Món</a></li>
+			<li><a href="../../TimKiem.aspx" class="sub">Tìm Kiếm</a></li>
+			<li><a href="../../About.aspx" class="sub">About</a></li>
 		</ul>
 		<div class="clear"></div>
 	</li>
@@ -45,93 +46,24 @@ Replace the href targets in the anchor (<a >) for your URLS to have it working
 as a menu.
  -->
 <div style="width:800px;">
-<div style="width:70%; float:left;">
-<asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
-<br clear="all"/>
-<div style="float:left; width:27%;">
-<table cellpadding="0" border="0" cellspacing="0">
-  <tr>
-    <td><a href="Sanh1.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh2/struct/slice_0_0.jpg" style="width: 73px; height: 150px; border-width: 0px" 
-name="0_0" 
-/></a></td>
-
-    <td><a href="Sanh2.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh2/struct/slice_0_1.jpg" style="width: 77px; height: 150px; border-width: 0px" 
-name="0_1" 
-/></a></td>
-
-</tr>
-
-</table>
-</div>
-
-<div style="float:left; width:25%;">
-<table cellpadding="0" border="0" cellspacing="0">
-<tr>
-    <td>
-	<ul>
-    <h4 style="color:Black; font-weight:bold; margin-right:20px"> TẦNG TRỆT</h4>
-	<li><a  style="text-decoration:none" href="Sanh1.aspx">1: Sảnh 1</a></li>
-	<li style="color:Black">2: Sảnh 2</li>
-	</ul>
-    </td>
-</tr>
-</table>
-</div>
-
-<div style="float:left; width:33%;">
-<table cellpadding="0" border="0" cellspacing="0">
-  <tr>
-    <td><a href="Sanh1.aspx"><img alt=" " src="../../images/ThamQuan/TangTret/Sanh2/navigate/slice_0_0.jpg"  style="width: 110px; height: 119px; border-width: 0px;"/></a></td>
-    <td><a><img alt=" " src="../../images/ThamQuan/TangTret/Sanh2/navigate/slice_0_1.jpg"  style="width: 79px; height: 119px; border-width: 0px;"/></a></td>
-</tr>
-
-</table>
-</div>
-
-</div>
-<div style="width:30%; float:left;">
-<asp:Label ID="lblOption" runat="server" Text="Tùy Chọn"></asp:Label>
-<br clear="all"/>
-<div style="float:left;">
-<asp:Menu ID="mnuTang" runat="server" CssClass="menu" EnableViewState="false" 
-        IncludeStyleBlock="false">
-    <Items>
-        <asp:MenuItem NavigateUrl="../Tang2/Sanh1.aspx" Text="Tầng 2"/>
-        <asp:MenuItem NavigateUrl="../Tang1/Sanh1.aspx" Text="Tầng 1"/>
-        <asp:MenuItem NavigateUrl="../TangTret/Sanh1.aspx" Text="Tầng Trệt"/>
-    </Items>
-</asp:Menu>
-</div>
-<div style="float:left;">
-<asp:Menu ID="mnuCheDo" runat="server" CssClass="menu" EnableViewState="false" 
-        IncludeStyleBlock="false">
-    <Items>
-        <asp:MenuItem NavigateUrl="../TangTret/Sanh2.aspx" Text="2D"/>
-        <asp:MenuItem NavigateUrl="../3D/TangTret/Sanh2.aspx" Text="3D"/>
-    </Items>
-</asp:Menu>
-</div>
-</div>
-
- <div id="container">
+ <div id="container" style="float: left;">
   
       <!--  Outer wrapper for presentation only, this can be anything you like -->
       <div id="banner">
         <!-- start Basic Jquery Slider -->
         <ul class="bjqs">
-          <li><img src="../../images/ThamQuan/TangTret/Sanh2/img/banner01.jpg" title="Automatically generated caption"/></li>
-          <li><img src="../../images/ThamQuan/TangTret/Sanh2/img/banner02.jpg" title="Automatically generated caption"/></li>
-          <li><img src="../../images/ThamQuan/TangTret/Sanh2/img/banner03.jpg" title="Automatically generated caption"/></li>
+          <li><img src="../../images/ThamQuan/TangTret/Sanh2/img/banner01.jpg"/></li>
+          <li><img src="../../images/ThamQuan/TangTret/Sanh2/img/banner02.jpg"/></li>
+          <li><img src="../../images/ThamQuan/TangTret/Sanh2/img/banner03.jpg"/></li>
         </ul>
         <!-- end Basic jQuery Slider -->
       </div>
       <!-- End outer wrapper -->
       
     </div>
-  
-    <!-- Load jQuery and the plug-in -->
+
     <script type="text/javascript" src="../../Scripts/basic-jquery-slider.js"></script>
-    
+
     <!--  Attach the plug-in to the slider parent element and adjust the settings as required -->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -144,6 +76,35 @@ name="0_1"
 
         });
     </script>
+
+<div style="float:left;">
+<asp:Label ID="lblNavigation" runat="server" Text="Kiến trúc tầng trệt"></asp:Label>
+<br clear="all"/>
+<div style="float:left;">
+<table cellpadding="0" border="0" cellspacing="0">
+  <tr>
+    <td><a href="Sanh1.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh2/struct/slice_0_0.jpg" style="width: 73px; height: 150px; border-width: 0px" 
+name="0_0" 
+/></a></td>
+
+    <td><a><img alt="" src="../../images/ThamQuan/TangTret/Sanh2/struct/slice_0_1.jpg" style="width: 77px; height: 150px; border-width: 0px" 
+name="0_1" 
+/></a></td>
+
+</tr>
+
+</table>
+
+<ul>
+
+	<li><a href="Sanh1.aspx">1: Sảnh 1</a></li>
+	<li><a>2: Sảnh 2</a></li>
+</ul>
+
+</div>
+
+</div>
+
 </div>
 
 <!--

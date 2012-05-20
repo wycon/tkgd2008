@@ -12,11 +12,12 @@
 	<li><a href="../..">Trang Chủ > </a></li>
 	<li><a href="../ChonTang.aspx" class="arrow">Tham Quan > </a>
 		<ul>
-			<li><a href="#" class="sub">Đăng Ký</a></li>
-			<li><a href="#" class="sub">Đặt Bàn</a></li>
-			<li><a href="#" class="sub">Đặt Món</a></li>
-			<li><a href="#" class="sub">Chi Tiết Món</a></li>
-			<li><a href="#" class="sub">About</a></li>
+			<li><a href="../../DangKy.aspx" class="sub">Đăng Ký</a></li>
+			<li><a href="../../DatBan.aspx" class="sub">Đặt Bàn</a></li>
+			<li><a href="../../DatMon.aspx" class="sub">Đặt Món</a></li>
+			<li><a href="../../ChiTietMonAn.aspx" class="sub">Chi Tiết Món</a></li>
+			<li><a href="../../TimKiem.aspx" class="sub">Tìm Kiếm</a></li>
+			<li><a href="../../About.aspx" class="sub">About</a></li>
 		</ul>
 		<div class="clear"></div>
 	</li>
@@ -76,13 +77,13 @@ as a menu.
         });
     </script>
 
-<div style="width:150px; float:left;">
-<asp:Label ID="lblNavigation" runat="server" Text="Định Hướng"></asp:Label>
+<div style="float:left;">
+<asp:Label ID="lblNavigation" runat="server" Text="Kiến trúc tầng trệt"></asp:Label>
 <br clear="all"/>
-<div style="float:left; width:27%;">
+<div style="float:left;">
 <table cellpadding="0" border="0" cellspacing="0">
   <tr>
-    <td><a href="Sanh1.aspx"><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/struct/slice_0_0.jpg" style="width: 73px; height: 150px; border-width: 0px" 
+    <td><a><img alt="" src="../../images/ThamQuan/TangTret/Sanh1/struct/slice_0_0.jpg" style="width: 73px; height: 150px; border-width: 0px" 
 name="0_0" 
 /></a></td>
 
@@ -93,6 +94,13 @@ name="0_1"
 </tr>
 
 </table>
+
+<ul>
+
+	<li><a>1: Sảnh 1</a></li>
+	<li><a href="Sanh2.aspx">2: Sảnh 2</a></li>
+</ul>
+
 </div>
 
 </div>
