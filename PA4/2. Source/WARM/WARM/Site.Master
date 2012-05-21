@@ -17,6 +17,8 @@
     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
 	<link type="text/css" rel="stylesheet" href="~/Styles/breadcrumbs.css" />
 
+	<link type="text/css" rel="stylesheet" href="~/Styles/language.css" />
+
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -68,12 +70,12 @@
             <table style="width: 27%; color: White;">
                 <tr>
                     <td>
-                        <a title="Tiếng Việt" href="#" style="color: Red;">
-                        <img alt="" src="images/vi.png" />Tiếng Việt</a>
+                        <div class="vietnamese" ></div>
+                        <div class="vietnamese_title"><a title="Tiếng Việt" href="#" style="color: Red;">Tiếng Việt</a></div>
                     </td>
                     <td>
-                        <a title="English" href="#" style="color: Red;">
-                        <img alt="" src="images/en.png" />English</a>
+                        <div class="english" ></div>
+                        <div class="english_title"><a title="English" href="#" style="color: Red;">English</a></div>
                     </td>
                 </tr>
             </table>
@@ -93,7 +95,7 @@
                 <table style="width: 44%;">
                     <tr>
                         <td>
-                            <asp:TextBox ID="textTim" runat="server" Width="380px" Height="30px"></asp:TextBox>
+                            <asp:TextBox ID="textTim" runat="server" Width="380px" Height="30px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
                         </td>
                         <td>
                             <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" 

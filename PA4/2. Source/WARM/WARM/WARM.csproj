@@ -64,7 +64,6 @@
     <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
     <Content Include="images\Coffee.jpg" />
-    <Content Include="images\en.png" />
     <Content Include="images\glyphicons-halflings-white.png" />
     <Content Include="images\glyphicons-halflings.png" />
     <Content Include="images\Logo\2.png" />
@@ -180,7 +179,6 @@
     <Content Include="images\TrangChu\giaithuong3.jpg" />
     <Content Include="images\TrangChu\giaithuong4.jpg" />
     <Content Include="images\TrangChu\NhaHang.jpg" />
-    <Content Include="images\vi.png" />
     <Content Include="Scripts\basic-jquery-slider.js" />
     <Content Include="Scripts\basic-jquery-slider.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -202,6 +200,7 @@
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\breadcrumbs.css" />
     <Content Include="Styles\ChiTietMonAn.css" />
+    <Content Include="Styles\images\en.png" />
     <Content Include="Styles\fancy\fancybox-x.png" />
     <Content Include="Styles\fancy\fancybox-y.png" />
     <Content Include="Styles\fancy\fancybox.png" />
@@ -238,8 +237,10 @@
     <Content Include="Styles\jquery-ui.css" />
     <Content Include="Styles\jquery.fancybox-1.3.1.css" />
     <Content Include="Styles\fancy\loadingAnimation.gif" />
+    <Content Include="Styles\language.css" />
     <Content Include="Styles\panorama.css" />
     <Content Include="Styles\panorama360.css" />
+    <Content Include="Styles\images\vi.png" />
     <Content Include="ThamQuan\ChonTang.aspx" />
     <Content Include="images\ThamQuan\ChonTang\1_1_struct.jpg" />
     <Content Include="images\ThamQuan\ChonTang\3_1_struct.jpg" />

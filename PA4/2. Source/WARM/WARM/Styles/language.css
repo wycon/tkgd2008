@@ -1,0 +1,22 @@
+﻿.english 
+{
+    background-image: url('images/en.png');
+    width: 26px;
+    height: 18px;
+    float: left;
+}
+.vietnamese 
+{
+    background-image: url('images/vi.png');
+    width: 26px;
+    height: 18px;
+    float: left;
+}
+.english_title
+{
+    float: left;
+}
+.vietnamese_title
+{
+    float: left;
+}
