@@ -40,19 +40,32 @@
                 <br />
                 <br />
                 <font class="fontblack">
-                    <asp:Label ID="Label9" runat="server" Text="Nhà hàng WARM của chúng tôi với nghệ thuật phục vụ ẩm thực theo các phong cách Á, Âu cùng đội ngũ nhân viên lành nghề sẽ làm hài lòng quí vị. Nhà hàng WARM đã tổ chức hàng trăm lượt tiệc chiêu đãi với nhiều hình thức khác nhau. Nhà hàng WARM đã được phục vụ hàng chục vạn thực khách đến thưởng thức. Ngoài ra, tiệc khách sạn còn có các quầy bar phục vụ quý khách."></asp:Label></font>
+                    <asp:Label ID="Label9" runat="server" Text="Nhà hàng WARM của chúng tôi với nghệ thuật phục vụ ẩm thực theo các phong cách Á, Âu cùng đội ngũ nhân viên lành nghề sẽ làm hài lòng quí vị. Nhà hàng WARM đã tổ chức hàng trăm lượt tiệc chiêu đãi với nhiều hình thức khác nhau. Nhà hàng WARM đã được phục vụ hàng chục vạn thực khách đến thưởng thức. Ngoài ra, tiệc khách sạn còn có các quầy bar phục vụ quý khách."></asp:Label>
+                <br />
+                <asp:HyperLink ID="HyperLink14" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
+                    font-size: large">Giải thưởng nhà hàng:</asp:HyperLink>
+                <br />
+                <asp:Image ID="Image4" runat="server" Height="74px" Width="92px" 
+                    ImageUrl="~/images/TrangChu/giaithuong1.jpg" />
+                <asp:Image ID="Image5" runat="server" Height="74px" Width="92px" 
+                    ImageUrl="~/images/TrangChu/giaithuong2.jpg" />
+                <asp:Image ID="Image6" runat="server" Height="74px" Width="92px" 
+                    ImageUrl="~/images/TrangChu/giaithuong3.jpg" />
+                <asp:Image ID="Image7" runat="server" Height="74px" Width="92px" 
+                    ImageUrl="~/images/TrangChu/giaithuong4.jpg" />
+                </font>
             </td>
         </tr>
         <tr>
             <td align="left" valign="top" colspan="2">
                 <hr />
                 <asp:HyperLink ID="HyperLink12" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
-                    font-size: large">Món Ngon:</asp:HyperLink>
+                    font-size: large">Đặc sản:</asp:HyperLink>
             </td>
             <td style="width: 301px" colspan="2">
                 <hr style="width: 398px" />
                 <asp:HyperLink ID="HyperLink13" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
-                    font-size: large">Bàn Vip:</asp:HyperLink>
+                    font-size: large">Tin tức:</asp:HyperLink>
             </td>
         </tr>
         <tr>
@@ -64,19 +77,20 @@
                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ChiTietMonAn.aspx?id=1">Phở Bắc Hải</asp:HyperLink>
                 <br />
                 <font class="fontblack">
-                    <asp:Label ID="Label6" runat="server" Text="Giá: 30.000 VND"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" Text="Giá: 30,000 VND"></asp:Label>
                     <br />
                     <asp:Label ID="Label7" runat="server" Text="Phở nóng hổi vừa thổi vừa ăn, giá rẻ bất ngờ..."></asp:Label></font>
             </td>
             <td align="left" valign="top">
-                <asp:Image ID="Image3" runat="server" Height="73px" ImageUrl="~/images/DanhMucBan/VipA.jpg"
+                <asp:Image ID="Image3" runat="server" Height="73px" ImageUrl="~/images/Coffee.jpg"
                     Width="95px" />
             </td>
             <td style="width: 301px" align="left" valign="top">
-                <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Default.aspx">Bàn Vip A</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Default.aspx">Không nên uống cafe trước khi chơi thể thao</asp:HyperLink>
                 <br />
                 <font class="fontblack">
-                <asp:Label ID="Label8" runat="server" Text="Bàn có chỗ ngồi thoải mái, góc nhìn rộng rãi, phục vụ bàn chu đáo..."></asp:Label>
+                <asp:Label ID="Label8" runat="server" 
+                    Text="Cà phê có tác dụng kích thích sự hưng phấn của trí não, giảm cảm giác mệt mỏi, kích thích hệ thần kinh.Bởi thế, nhiều người đã nhấm nháp một..."></asp:Label>
                 </font>
             </td>
         </tr>
@@ -106,21 +120,21 @@
         <td align="left" valign="top" colspan="2" rowspan="1">
             <ul>
                 <li class="style3">
-                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Default.aspx">Bàn Vip B</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Default.aspx">Ăn nội tạng động vật không tốt cho sinh lý nam giới</asp:HyperLink>
                     <br />
                 </li>
                 <li class="style3">
-                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Default.aspx">Bàn Vip C</asp:HyperLink>
-                    <br />
-                    <br />
-                </li>
-                <li class="style3">
-                    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Default.aspx">Bàn ngoài trời</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Default.aspx">Khẩu phần ăn ảnh hưởng tới số lượng tinh trùng</asp:HyperLink>
                     <br />
                     <br />
                 </li>
                 <li class="style3">
-                    <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Default.aspx">Bàn thường</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Default.aspx">Ăn táo mỗi ngày để giảm nguy cơ ung thư ruột</asp:HyperLink>
+                    <br />
+                    <br />
+                </li>
+                <li class="style3">
+                    <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Default.aspx">Lễ hội ẩm thực văn hóa &quot;Ngày hội quê tôi&quot;</asp:HyperLink>
                     <br />
                     <br />
                 </li>
