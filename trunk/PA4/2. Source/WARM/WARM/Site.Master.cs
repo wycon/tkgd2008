@@ -16,7 +16,7 @@ namespace WARM
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-
+            Response.Redirect("~/TimKiem.aspx?s=" + textTim.Text);
         }
     }
 }

@@ -22,6 +22,42 @@ namespace WARM {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// hpAName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpAName;
+        
+        /// <summary>
+        /// hpDName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpDName;
+        
+        /// <summary>
+        /// hpAPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpAPrice;
+        
+        /// <summary>
+        /// hpDPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpDPrice;
+        
+        /// <summary>
         /// ddlSoKetQua control.
         /// </summary>
         /// <remarks>

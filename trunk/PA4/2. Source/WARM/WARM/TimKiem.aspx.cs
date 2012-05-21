@@ -12,8 +12,8 @@ namespace WARM
 {
     public partial class TimKiem : System.Web.UI.Page
     {
-        public int yourvar { get; set; }
-
+        public string yourvar { get; set; }
+        public int maDanhMucMonAn = 4;
         public int PageNumber
         {
             get
@@ -37,28 +37,65 @@ namespace WARM
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            string req = string.Empty;
+            if (Request.QueryString["s"] != null)
+                req = Request.QueryString["s"].ToString();
+            yourvar = req;
+            if (req == "aname")
             {
-                string req = string.Empty;
-                if (Request.QueryString["s"] != null)
-                    req = Request.QueryString["s"].ToString();
-                if(req == "aname")
-                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(4, true));
-                else if (req == "dname")
-                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(4, false));
-                else if (req == "aprice")
-                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(4, true));
-                else if (req == "dprice")
-                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(4, false));
-                else
-                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSach(4));
-
-                ddlSoKetQua.SelectedValue = Session["nResult"].ToString();
+                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+                hpAName.Enabled = false;
+                hpAName.ControlStyle.Font.Bold = true;
+                hpDName.Enabled = true;
+                hpAPrice.Enabled = true;
+                hpDPrice.Enabled = true;
             }
+            else if (req == "dname")
+            {
+                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, false));
+                hpAName.Enabled = true;
+                hpDName.Enabled = false;
+                hpDName.ControlStyle.Font.Bold = true;
+                hpAPrice.Enabled = true;
+                hpDPrice.Enabled = true;
+            }
+            else if (req == "aprice")
+            {
+                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, true));
+                hpAName.Enabled = true;
+                hpDName.Enabled = true;
+                hpAPrice.Enabled = false;
+                hpAPrice.ControlStyle.Font.Bold = true;
+                hpDPrice.Enabled = true;
+            }
+            else if (req == "dprice")
+            {
+                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
+                hpAName.Enabled = true;
+                hpDName.Enabled = true;
+                hpAPrice.Enabled = true;
+                hpDPrice.Enabled = false;
+                hpDPrice.ControlStyle.Font.Bold = true;
+            }
+            else
+            {
+                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+                hpAName.Enabled = false;
+                hpAName.ControlStyle.Font.Bold = true;
+                hpDName.Enabled = true;
+                hpAPrice.Enabled = true;
+                hpDPrice.Enabled = true;
+            }
+
+            ddlSoKetQua.SelectedValue = Session["nResult"].ToString();
         }
         private void LoadData(int nResult, List<MONAN> dsMon)
         {
             //List<BINHLUAN> dsBl = new List<BINHLUAN>();
+            for (int i = 0; i < dsMon.Count; i++)
+            {
+                dsMon[i].MoTa = dsMon[i].MoTa.Substring(0, 125) + "...";
+            }
             PagedDataSource pgitems = new PagedDataSource();
             DataView dv = new DataView();
             pgitems.DataSource = dsMon;
@@ -90,7 +127,14 @@ namespace WARM
             PageNumber = 0;
             int nResult = int.Parse(ddlSoKetQua.SelectedItem.Value);
             Session["nResult"] = nResult;
-            LoadData(nResult, MonAnDAO.LayDanhSach(4));
+            if (!hpAName.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+            else if (!hpDName.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, false));
+            else if (!hpAPrice.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, true));
+            else if (!hpDPrice.Enabled)
+                LoadData(nResult, MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
         }
     }
 }

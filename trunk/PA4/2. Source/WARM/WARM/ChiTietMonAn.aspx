@@ -15,9 +15,18 @@
     </asp:ScriptManager>
     <table width="100%">
         <tr>
+        <td>
+            <ul class="breadcrumb">
+                        <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
+                        <li><a href="TimKiem.aspx">Món mặn</a> <span class="divider">&gt;</span> </li>
+                        <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
+                            Chi tiết món ăn</span></li>
+                        </ul>
+        </td>
             <td>
                 <asp:Repeater ID="rptPages" runat="server">
                     <FooterTemplate>
+                        
                         </td> </tr> </table>
                     </FooterTemplate>
                 </asp:Repeater>
@@ -98,7 +107,11 @@
     </td>
     <br />
     <asp:Image ID="Image1" runat="server" Height="21px" ImageUrl="~/images/binhluan.jpg" />
-    <a href="#top">Thêm lời bình</a>
+    <a href="#top">Thêm lời bình</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton 
+        ID="LinkButton1" runat="server" EnableTheming="False" 
+        onclick="LinkButton1_Click">Mới nhất</asp:LinkButton>
+    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" 
+        onclick="LinkButton2_Click">Cũ nhất</asp:LinkButton>
     <table width="100%">
         <tr>
             <td>
@@ -128,7 +141,7 @@
                                             <td valign="top" width="10%">
                                                 <asp:Image ID="Image2" runat="server" Height='80px' ImageUrl="~/images/Avatar.jpg" />
                                             </td>
-                                            <td valign="top" width="65%">
+                                            <td valign="top" width="55%">
                                                 <strong>
                                                     <%# Eval("NguoiBinhLuan") %></strong>
                                                 <br />

@@ -45,13 +45,13 @@
                 <asp:HyperLink ID="HyperLink14" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
                     font-size: large">Giải thưởng nhà hàng:</asp:HyperLink>
                 <br />
-                <asp:Image ID="Image4" runat="server" Height="74px" Width="92px" 
+                <asp:Image ID="Image4" runat="server" Height="77px" Width="90px" 
                     ImageUrl="~/images/TrangChu/giaithuong1.jpg" />
-                <asp:Image ID="Image5" runat="server" Height="74px" Width="92px" 
+                <asp:Image ID="Image5" runat="server" Height="74px" Width="95px" 
                     ImageUrl="~/images/TrangChu/giaithuong2.jpg" />
-                <asp:Image ID="Image6" runat="server" Height="74px" Width="92px" 
+                <asp:Image ID="Image6" runat="server" Height="74px" Width="95px" 
                     ImageUrl="~/images/TrangChu/giaithuong3.jpg" />
-                <asp:Image ID="Image7" runat="server" Height="74px" Width="92px" 
+                <asp:Image ID="Image7" runat="server" Height="74px" Width="95px" 
                     ImageUrl="~/images/TrangChu/giaithuong4.jpg" />
                 </font>
             </td>
@@ -79,7 +79,8 @@
                 <font class="fontblack">
                     <asp:Label ID="Label6" runat="server" Text="Giá: 30,000 VND"></asp:Label>
                     <br />
-                    <asp:Label ID="Label7" runat="server" Text="Phở nóng hổi vừa thổi vừa ăn, giá rẻ bất ngờ..."></asp:Label></font>
+                    <asp:Label ID="Label7" runat="server" 
+                    Text="Phở nóng hổi vừa thổi vừa ăn, giá rẻ bất ngờ. Đa số người Bắc đang sống ở Sài Gòn vẫn tìm đến phở Hà Nội vì..."></asp:Label></font>
             </td>
             <td align="left" valign="top">
                 <asp:Image ID="Image3" runat="server" Height="73px" ImageUrl="~/images/Coffee.jpg"
