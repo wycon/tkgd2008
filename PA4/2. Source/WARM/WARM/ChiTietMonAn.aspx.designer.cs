@@ -49,6 +49,24 @@ namespace WARM {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        
+        /// <summary>
+        /// LinkButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        
+        /// <summary>
         /// rptPages1 control.
         /// </summary>
         /// <remarks>
@@ -76,13 +94,13 @@ namespace WARM {
         protected global::System.Web.UI.WebControls.TextBox textten;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// Literal1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Literal Literal1;
         
         /// <summary>
         /// Literal2 control.
@@ -112,12 +130,12 @@ namespace WARM {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// Literal3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.Literal Literal3;
     }
 }

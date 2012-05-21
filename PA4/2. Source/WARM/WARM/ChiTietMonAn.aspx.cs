@@ -8,17 +8,16 @@ using DAO;
 using System.Data;
 using System.Collections;
 using System.Text;
-
+using System.Drawing;
 namespace WARM
 {
     public partial class ChiTietMonAn : System.Web.UI.Page
     {
         static int req;
         public int yourvar { get; set; }
-
+        static List<BINHLUAN> dsBl = new List<BINHLUAN>();
         protected void Page_Load(object sender, EventArgs e)
         {
-
             MONAN mon = new MONAN();
             if (!Page.IsPostBack)
             {
@@ -26,10 +25,12 @@ namespace WARM
                     req = int.Parse(Request.QueryString["id"]);
                 req = 1;
                 List<MONAN> dsMon = new List<MONAN>();
-                List<BINHLUAN> dsBl = new List<BINHLUAN>();
+                
                 mon = MonAnDAO.TimMon(req);
                 dsMon.Add(mon);
+
                 dsBl = BinhLuanDAO.LayDanhSach(req);
+                //dsBl.Reverse();
                 yourvar = dsBl.Count;
                 Response.Write("dem");
                 PagedDataSource pgitems = new PagedDataSource();
@@ -99,6 +100,43 @@ namespace WARM
 
             //Gán phiếu lại cho session
             Session["ChiTietPhieu"] = ChiTietPhieus;            
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            LinkButton2.Enabled = true;
+            LinkButton2.ForeColor = Color.Blue;
+            dsBl.Reverse();
+            PagedDataSource pgitems = new PagedDataSource();
+            PagedDataSource pgitems1 = new PagedDataSource();
+            DataView dv = new DataView();
+
+            pgitems1.DataSource = dsBl;
+            pgitems1.AllowPaging = true;
+
+            rptItems2.DataSource = pgitems1;
+            rptItems2.DataBind();
+
+            LinkButton1.Enabled = false;
+            LinkButton1.ForeColor = Color.Black;
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            LinkButton1.Enabled = true;
+            LinkButton1.ForeColor = Color.Blue;
+            dsBl.Reverse();
+            PagedDataSource pgitems = new PagedDataSource();
+            PagedDataSource pgitems1 = new PagedDataSource();
+            DataView dv = new DataView();
+            pgitems1.DataSource = dsBl;
+            pgitems1.AllowPaging = true;
+
+            rptItems2.DataSource = pgitems1;
+            rptItems2.DataBind();
+
+            LinkButton2.Enabled = false;
+            LinkButton2.ForeColor = Color.Black;
         }
     }
 }

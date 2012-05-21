@@ -15,43 +15,64 @@
     <table width="100%">
         <tr>
             <td colspan="3">
+            <ul class="breadcrumb">
+                    <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
+                    <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
+                        Tìm kiếm</span></li>
+                </ul>
             </td>
         </tr>
         <tr>
-            <td>
-                <%--Sắp theo tên: <a href="javascript:void(0);" onclick="SapTenTang()">tăng</a>/ <a href="javascript:void(0);"
-                            onclick="SapTenGiam()">giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="javascript:void(0);"
-                                onclick="SapTenTang()">tăng</a>/<a href="javascript:void(0);">giảm</a>--%>
-                Sắp theo tên: <a href="TimKiem.aspx?s=aname">tăng</a> / <a href="TimKiem.aspx?s=dname">
-                    giảm</a>&nbsp;&nbsp;&nbsp; Sắp theo giá: <a href="TimKiem.aspx?s=aprice">tăng</a>
-                / <a href="TimKiem.aspx?s=dprice">giảm</a>
-            </td>
-            <td>
-                <b>Số lượng hiển thị:</b>
-                <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
-                    AutoPostBack="True">                    
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                </asp:DropDownList>
-            </td>
+            <td style="padding-right:30px;">
+                            <font class="fontblack">Sắp theo tên:
+                                <asp:HyperLink ID="hpAName" runat="server" NavigateUrl="TimKiem.aspx?s=aname">A-Z</asp:HyperLink>
+                                /
+                                <asp:HyperLink ID="hpDName" runat="server" NavigateUrl="TimKiem.aspx?s=dname">Z-A</asp:HyperLink>
+                                &nbsp;&nbsp;&nbsp; Sắp theo giá:
+                                <asp:HyperLink ID="hpAPrice" runat="server" NavigateUrl="TimKiem.aspx?s=aprice">tăng</asp:HyperLink>
+                                /
+                                <asp:HyperLink ID="hpDPrice" runat="server" NavigateUrl="TimKiem.aspx?s=dprice">giảm</asp:HyperLink>
+                        </td>
+                        
+                        <td>
+                            <%--<div class="pagination">
+                                <ul>
+                                    <li><a href="#">Đầu</a></li>
+                                    <li class="active"><a href="#">1</a> </li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">Cuối</a></li>
+                                </ul>
+                            </div>--%>
+                        </td>
+                        <td align="right">
+                            </font><b>Số lượng hiển thị:</b>
+                            <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
+                                AutoPostBack="True" Width="50px">
+                                <asp:ListItem>5</asp:ListItem>
+                                <asp:ListItem>10</asp:ListItem>
+                                <asp:ListItem>15</asp:ListItem>
+                                <asp:ListItem>20</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
         </tr>
         <tr>
             <td>
+                Hiển thị từ 1-5 của 12 kết quả với từ khóa "<%= yourvar %>"</b>&nbsp;
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
-                        <table cellpadding="0" cellspacing="0" border="0">
+                        <%--<table cellpadding="0" cellspacing="0" border="0">
                             <tr class="text">
                                 <td>
                                     <b>Trang:</b>&nbsp;
                                 </td>
-                                <td>
+                                <td>--%>
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <asp:LinkButton ID="btnPage" CommandName="Page" CommandArgument="<%#
+                        <%--<asp:LinkButton ID="btnPage" CommandName="Page" CommandArgument="<%#
                          Container.DataItem %>" CssClass="text" runat="server"><%# Container.DataItem %>
-                        </asp:LinkButton>&nbsp;
+                        </asp:LinkButton>&nbsp;--%>
                     </ItemTemplate>
                     <FooterTemplate>
                         </td> </tr> </table>
