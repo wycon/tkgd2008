@@ -94,12 +94,12 @@
                 </div>
                 <table style="width: 44%;">
                     <tr>
-                        <td>
-                            <asp:TextBox ID="textTim" runat="server" Width="380px" Height="30px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
+                        <td style="padding-top:0px">
+                            <asp:TextBox ID="textTim" runat="server"  Width="370px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
                         </td>
-                        <td>
-                            <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" 
-                                   ImageUrl="~/images/timkiem.png" Width="60px"
+                        <td style="padding-top:2px">
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="28px" 
+                                   ImageUrl="~/images/timkiem2.png" Width="65px"
                     onclick="ImageButton1_Click" />
                         </td>
                     </tr>
