@@ -46,7 +46,7 @@ namespace WARM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpHoanTatDatBan;
+        protected global::System.Web.UI.WebControls.Button hpHoanTatDatBan;
         
         /// <summary>
         /// TongTien control.

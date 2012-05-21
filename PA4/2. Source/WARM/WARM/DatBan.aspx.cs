@@ -37,8 +37,8 @@ namespace WARM
         protected void DatBanClick(object sender, EventArgs e)
         {
             //Xử lý khi người đặt bàn
-            TextBox t = (sender as Button).Parent.Controls[1] as TextBox;
-            HiddenField h = (sender as Button).Parent.Controls[5] as HiddenField;
+            TextBox t = (sender as Button).Parent.Controls[3] as TextBox;
+            HiddenField h = (sender as Button).Parent.Controls[9] as HiddenField;
             int SoLuongBan = int.Parse(t.Text);
             if (Session["ChiTietBans"] != null)
             {
@@ -58,15 +58,10 @@ namespace WARM
                     break;
                 }
             //Thêm bàn vào phiếu
-            try
-            {
-                if (bAddNew == true)
+            
+            if (bAddNew == true)
                     ListChiTietBan.Add(new ChiTietBan(h.Value, SoLuongBan));
-            }
-            catch (Exception ex)
-            {
-                //int i = 0;
-            }
+            
             TinhTongTien();
 
             //Gán phiếu lại cho session
@@ -214,6 +209,28 @@ namespace WARM
             ChiTietPhieus.RemoveAt(e.RowIndex);  
             bind2();
             TinhTongTien();
+        }
+        protected void ButtonTang_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong == 99)
+                SoLuong = 98;
+            t.Text = (SoLuong + 1).ToString();
+
+
+        }
+        protected void ButtonGiam_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong < 2)
+                SoLuong = 2;
+            t.Text = (SoLuong - 1).ToString();
+        }
+        protected void HoanTat_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DangKy.aspx");
         }
     }
 
