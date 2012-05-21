@@ -93,9 +93,9 @@
                                                         for (int i = 0; i < nStar; i++)
                                                         {
                                                             if (i != nStar-1)%>
-                                                    <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled' />
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled' />
                                                     <% else %>
-                                                    <input name='star0<%# Eval("DanhGia") %>' type='radio' class='star' disabled='disabled'
+                                                    <input name='star0<%# Eval("MaMonAn") %>' type='radio' class='star' disabled='disabled'
                                                         checked='checked' />
                                                     <%}%>
                                                 </div>

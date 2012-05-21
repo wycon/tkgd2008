@@ -63,6 +63,7 @@
     <Content Include="images\ArrowUp.png" />
     <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
+    <Content Include="images\Coffee.jpg" />
     <Content Include="images\en.png" />
     <Content Include="images\glyphicons-halflings-white.png" />
     <Content Include="images\glyphicons-halflings.png" />
@@ -172,6 +173,13 @@
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_0.jpg" />
     <Content Include="images\ThamQuan\TangTret\Sanh2\struct\slice_0_1.jpg" />
     <Content Include="images\timkiem.png" />
+    <Content Include="images\TrangChu\Banner2.jpg" />
+    <Content Include="images\TrangChu\Coffee.jpg" />
+    <Content Include="images\TrangChu\giaithuong1.jpg" />
+    <Content Include="images\TrangChu\giaithuong2.jpg" />
+    <Content Include="images\TrangChu\giaithuong3.jpg" />
+    <Content Include="images\TrangChu\giaithuong4.jpg" />
+    <Content Include="images\TrangChu\NhaHang.jpg" />
     <Content Include="images\vi.png" />
     <Content Include="Scripts\basic-jquery-slider.js" />
     <Content Include="Scripts\basic-jquery-slider.min.js" />
