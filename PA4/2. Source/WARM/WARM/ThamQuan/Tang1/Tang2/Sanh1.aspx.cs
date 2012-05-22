@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WARM
 {
-    public partial class SiteMaster : System.Web.UI.MasterPage
+    public partial class WebForm4 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("~/TimKiem.aspx?q=" + textTim.Text);
         }
     }
 }

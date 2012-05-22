@@ -23,7 +23,7 @@ namespace WARM
             {
                 if (Request.QueryString["id"] != null)
                     req = int.Parse(Request.QueryString["id"]);
-                req = 1;
+                //req = 1;
                 List<MONAN> dsMon = new List<MONAN>();
                 
                 mon = MonAnDAO.TimMon(req);
@@ -32,7 +32,7 @@ namespace WARM
                 dsBl = BinhLuanDAO.LayDanhSach(req);
                 //dsBl.Reverse();
                 yourvar = dsBl.Count;
-                Response.Write("dem");
+                //Response.Write("dem");
                 PagedDataSource pgitems = new PagedDataSource();
                 PagedDataSource pgitems1 = new PagedDataSource();
                 DataView dv = new DataView();
@@ -137,6 +137,24 @@ namespace WARM
 
             LinkButton2.Enabled = false;
             LinkButton2.ForeColor = Color.Black;
+        }
+        protected void ButtonTang_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong == 99)
+                SoLuong = 98;
+            t.Text = (SoLuong + 1).ToString();
+
+
+        }
+        protected void ButtonGiam_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong < 2)
+                SoLuong = 2;
+            t.Text = (SoLuong - 1).ToString();
         }
     }
 }
