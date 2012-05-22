@@ -16,21 +16,22 @@ namespace WARM
         public static List<CHITIETPHIEU> ChiTietPhieus;
         protected void Page_Load(object sender, EventArgs e)
         {
-            rptItems.DataSource = DanhMucBanAnDAO.LayTatCa();
-            rptItems.DataBind();           
+
             if (!Page.IsPostBack)
-            {               
+            {
                 bind();
                 bind2();
+                rptItems.DataSource = DanhMucBanAnDAO.LayTatCa();
+                rptItems.DataBind();
+                if (Session["ChiTietPhieu"] != null)
+                {
+                    //ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
+                    TinhTongTien1Ban();
+                    TinhTongTien();
+                }
+                if (Session["ChiTietBans"] == null)
+                    hpHoanTatDatBan.Visible = false;
             }
-            if (Session["ChiTietPhieu"] != null)
-            {
-                //ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
-                TinhTongTien1Ban();
-                TinhTongTien();
-            }
-            if (Session["ChiTietBans"] == null)
-                hpHoanTatDatBan.Visible = false;
         }
         //Xu ly phieu dat ban
         public static List<ChiTietBan> ListChiTietBan;
@@ -50,7 +51,7 @@ namespace WARM
             }
             //Tăng số lượng nếu đã có
             bool bAddNew = true;
-            for( int i=0; i<ListChiTietBan.Count;i++)
+            for (int i = 0; i < ListChiTietBan.Count; i++)
                 if (ListChiTietBan[i].Ten == h.Value)
                 {
                     ListChiTietBan[i].Soluong += SoLuongBan;
@@ -58,10 +59,10 @@ namespace WARM
                     break;
                 }
             //Thêm bàn vào phiếu
-            
+
             if (bAddNew == true)
-                    ListChiTietBan.Add(new ChiTietBan(h.Value, SoLuongBan));
-            
+                ListChiTietBan.Add(new ChiTietBan(h.Value, SoLuongBan));
+
             TinhTongTien();
 
             //Gán phiếu lại cho session
@@ -76,12 +77,12 @@ namespace WARM
         }
         private void bind()
         {
-            
+
             GridView1.DataSource = ListChiTietBan;
             GridView1.DataBind();
             Session["ChiTietBans"] = ListChiTietBan;
         }
-       
+
         private void TinhTongTien()
         {
             if (Session["ChiTietBans"] != null)
@@ -95,11 +96,11 @@ namespace WARM
             }
             Label l = GridView1.Parent.Controls[3] as Label;
             double TongTien = 0;
-            int soban=0;
+            int soban = 0;
             for (int i = 0; i < ListChiTietBan.Count; i++)
                 soban += ListChiTietBan[i].Soluong;
             Label l2 = GridView2.Parent.Controls[1] as Label;
-            TongTien = (double) soban * double.Parse(l2.Text);
+            TongTien = (double)soban * double.Parse(l2.Text);
 
             if (TongTien == 0)
                 hpHoanTatDatBan.Visible = false;
@@ -133,26 +134,26 @@ namespace WARM
             Label l = GridView1.Parent.Controls[3] as Label;
             double TongTien = double.Parse(l.Text, NumberStyles.Number);
             Label l2 = GridView2.Parent.Controls[1] as Label;
-            TongTien =TongTien - (double.Parse(l2.Text) * ChiTietPhieus[e.RowIndex].SoLuong.Value);
+            TongTien = TongTien - (double.Parse(l2.Text) * ChiTietPhieus[e.RowIndex].SoLuong.Value);
             if (TongTien < 0)
                 TongTien = 0;
             l.Text = TongTien.ToString("0,000");
             //Session["TongTien"] = l.Text;
             ListChiTietBan.RemoveAt(e.RowIndex);
-            bind();           
+            bind();
             if (TongTien == 0)
                 hpHoanTatDatBan.Visible = false;
             else
                 hpHoanTatDatBan.Visible = true;
         }
 
-       //xu ly phieu dat mon
-        
+        //xu ly phieu dat mon
+
         private void bind2()
         {
             if (Session["ChiTietPhieu"] != null)
             {
-                ChiTietPhieus = (List<CHITIETPHIEU>) Session["ChiTietPhieu"];
+                ChiTietPhieus = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
             }
             GridView2.DataSource = ChiTietPhieus;
             GridView2.DataBind();
@@ -204,9 +205,9 @@ namespace WARM
             //Tính tổng tiền
             Label l = GridView2.Parent.Controls[1] as Label;
             double TongTien = double.Parse(l.Text, NumberStyles.Number);
-            TongTien = TongTien- ChiTietPhieus[e.RowIndex].MONAN.Gia.Value * ChiTietPhieus[e.RowIndex].SoLuong.Value;
-            l.Text = TongTien.ToString("0,000"); 
-            ChiTietPhieus.RemoveAt(e.RowIndex);  
+            TongTien = TongTien - ChiTietPhieus[e.RowIndex].MONAN.Gia.Value * ChiTietPhieus[e.RowIndex].SoLuong.Value;
+            l.Text = TongTien.ToString("0,000");
+            ChiTietPhieus.RemoveAt(e.RowIndex);
             bind2();
             TinhTongTien();
         }
@@ -261,7 +262,7 @@ namespace WARM
         }
         public ChiTietBan(String t, int s)
         {
-            
+
             Ten = t;
             Soluong = s;
         }

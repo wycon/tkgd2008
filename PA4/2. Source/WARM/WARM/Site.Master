@@ -6,69 +6,73 @@
     <title>WARM - nơi món ngon hội tụ</title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Styles/basic-jquery-slider.css" rel="stylesheet" type="text/css" />
-
     <link type="text/css" rel="stylesheet" href="~/Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="~/Styles/bootstrap-responsive.css" />
     <link type="text/css" rel="stylesheet" href="~/Styles/bootstrap-responsive.min.css" />
     <%--<link type="text/css" rel="stylesheet" href="~/Styles/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="~/Styles/bootstrap.min.css" />--%>
-    
     <link type="text/css" rel="stylesheet" href="~/Styles/jquery-ui.css" />
     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
-	<link type="text/css" rel="stylesheet" href="~/Styles/breadcrumbs.css" />
-
-	<link type="text/css" rel="stylesheet" href="~/Styles/language.css" />
-	<link type="text/css" rel="stylesheet" href="~/Styles/area.css" />
-
+    <link type="text/css" rel="stylesheet" href="~/Styles/breadcrumbs.css" />
+    <link type="text/css" rel="stylesheet" href="~/Styles/language.css" />
+    <link type="text/css" rel="stylesheet" href="~/Styles/area.css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
-
-    </head>
+</head>
 <body>
     <form runat="server">
     <input type="hidden" name="dff_view" value="grid" />
-    <div class="page" >
+    <div class="page">
         <div class="header">
             <div class="logo">
                 <a href="/Default.aspx">
                     <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" Height="100%"
                         Width="100%" /></a>
             </div>
-                        <table style="width: 27%; color: White;">
+            <table style="width: 27%; color: White;">
                 <tr>
                     <td>
-                        <div class="vietnamese" ></div>
-                        <div class="vietnamese_title"><a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
+                        <div class="vietnamese">
+                        </div>
+                        <div class="vietnamese_title">
+                            <a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
                     </td>
                     <td>
-                        <div class="english" ></div>
-                        <div class="english_title"><a title="English" href="#" style="color: White;">English</a></div>
+                        <div class="english">
+                        </div>
+                        <div class="english_title">
+                            <a title="English" href="#" style="color: White;">English</a></div>
                     </td>
                 </tr>
             </table>
             <table style="width: 27%; color: White;">
                 <tr>
                     <td>
-                        <label for="edit-name">Tên truy cập:</label>
+                        <label for="edit-name">
+                            Tên truy cập:</label>
                     </td>
                     <td>
-                        <input type="text" value="" size="15" id="edit-name" name="name" maxlength="60"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="edit-pass">Mật khẩu:</label>
-                    </td>
-                    <td>
-                        <input type="password" size="15" maxlength="60"/>
+                        <input type="text" value="" size="15" id="edit-name" name="name" maxlength="60" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="edit-persistent-login" class="option"><input type="checkbox" class="form-checkbox" value="1" id="edit-persistent-login" name="persistent_login"/> Ghi nhớ mật khẩu</label>
+                        <label for="edit-pass">
+                            Mật khẩu:</label>
                     </td>
                     <td>
-                        <input type="submit" class="form-submit" value="Đăng nhập" id="edit-submit" name="op"/>
+                        <input type="password" size="15" maxlength="60" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="edit-persistent-login" class="option">
+                            <input type="checkbox" class="form-checkbox" value="1" id="edit-persistent-login"
+                                name="persistent_login" />
+                            Ghi nhớ mật khẩu</label>
+                    </td>
+                    <td>
+                        <input type="submit" class="form-submit" value="Đăng nhập" id="edit-submit" name="op" />
                     </td>
                 </tr>
                 <tr>
@@ -80,7 +84,6 @@
                     </td>
                 </tr>
             </table>
-
             <div class="clear hideSkiplink" style="height: 35px;">
                 <div style="width: 56%; float: left;">
                     <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
@@ -96,19 +99,18 @@
                 </div>
                 <table style="width: 44%;">
                     <tr>
-                        <td >
-                            <asp:TextBox ID="textTim"  runat="server"  Width="370px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
+                        <td>
+                            <asp:TextBox ID="textTim" runat="server" Width="370px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
                         </td>
-                        <td style="padding-top:2px">
-                            <asp:ImageButton ID="ImageButton1" runat="server" Height="28px" 
-                                   ImageUrl="~/images/timkiem2.png" Width="65px"
-                    onclick="ImageButton1_Click" />
+                        <td style="padding-top: 2px">
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="28px" ImageUrl="~/images/timkiem2.png"
+                                Width="65px" OnClick="ImageButton1_Click" />
                         </td>
                     </tr>
                 </table>
-	             <script type="text/javascript">
-	                 $(function () {
-	                     var availableTags = [
+                <script type="text/javascript">
+                    $(function () {
+                        var availableTags = [
 			            "ActionScript",
 			            "AppleScript",
 			            "Asp",
@@ -132,64 +134,49 @@
 			            "Scala",
 			            "Scheme"
 		            ];
-	                     $("#<% = textTim.ClientID %>").autocomplete({
-	                         source: availableTags
-	                     });
+                        $("#<% = textTim.ClientID %>").autocomplete({
+                            source: availableTags
+                        });
 
-	                     $("#<% = textTim.ClientID %>").attr("placeholder", "Nhập tên món ăn cần tìm");
-	                 });
+                        $("#<% = textTim.ClientID %>").attr("placeholder", "Nhập tên món ăn cần tìm");
+                    });
 	             </script>
             </div>
         </div>
-        <div class="main"  style=" margin: 12px 0px 8px 0px;">
-            <div class="main-left"  style=" width:12.5%">
-
-            <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700 ; 
-                                font-size:20">Danh mục món ăn</asp:HyperLink>
-
-                <asp:Menu ID="Menu1" runat="server"  CssClass="menu" EnableViewState="false"
-                        IncludeStyleBlock="false" Orientation="Vertical">
-                    <Items>                    
+        <div class="main" style="margin: 12px 0px 8px 0px;">
+            <div class="main-left" style="width: 12.5%">
+                <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
+                    font-size: 20">Danh mục món ăn</asp:HyperLink>
+                <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
+                    Orientation="Vertical">
+                    <Items>
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Lẩu" />
-                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=2" Text="Món mướng" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=2" Text="Món nướng" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=3" Text="Món chay" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Món mặn" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=5" Text="Buffer" />
-                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=6" Text="Nước Ngọt" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=6" Text="Nước ngọt" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=7" Text="Bia" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=8" Text="Rượu" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=9" Text="Kem" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=10" Text="Cocktail" />
                     </Items>
                 </asp:Menu>
-                <%--<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DatMon.aspx?id=1">Lẩu</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DatMon.aspx?id=2">Món mướng</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DatMon.aspx?id=3">Món chay</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/DatMon.aspx?id=4">Món mặn</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/DatMon.aspx?id=5">Buffer</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/DatMon.aspx?id=6">Nước</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/DatMon.aspx?id=7">Bia</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/DatMon.aspx?id=8">Rượu</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/DatMon.aspx?id=9">Kem</asp:HyperLink><br />
-                <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/DatMon.aspx?id=10">Cocktail</asp:HyperLink><br />--%>
             </div>
-            <div class="main-right" style=" width:87.5%">
+            <div class="main-right" style="width: 87.5%">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
         </div>
         <div class="clear">
-        
-            <div class="footer"> 
-               
-                    <a href="#">Lên đầu trang</a> </div>
-          <div class="footer"> 
-        [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved. </div>
+            <div class="footer">
+                <a href="#">Lên đầu trang</a>
+            </div>
+            <div class="footer">
+                [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved.
+            </div>
         </div>
-
     </div>
     <div class="footer">
-    
-       
     </div>
     </form>
 </body>

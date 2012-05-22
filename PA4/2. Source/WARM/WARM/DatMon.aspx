@@ -7,7 +7,6 @@
     <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
-
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
@@ -19,11 +18,23 @@
     <table width="100%">
         <tr>
             <td colspan="3">
-                <ul class="breadcrumb">
+                <%--<ul class="breadcrumb">
                     <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
                     <li><a href="DatMon.aspx">Đặt món</a> <span class="divider">&gt;</span> </li>
                     <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
                         Món mặn</span></li>
+                </ul>--%>
+                <ul id="nav">
+                    <li><a href="../Default.aspx">Trang Chủ > </a></li>
+                    <li><a class="arrow current">Đặt món</a>
+                        <ul>
+                            <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>                            
+                            <li><a href="../DatBan.aspx" class="sub">Đặt bàn</a></li>
+                            <li><a href="../ThamQuan/ChonTang.aspx" class="sub">Tham quan</a></li>
+                            <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
+                            <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </td>
         </tr>
@@ -31,7 +42,7 @@
             <td style="padding-left: 5px;" colspan="2" width="100%">
                 <table>
                     <tr>
-                        <td style="padding-right:25px;">
+                        <td style="padding-right: 25px;">
                             <font class="fontblack">Sắp theo tên:
                                 <asp:HyperLink ID="hpAName" runat="server" NavigateUrl="DatMon.aspx?s=aname">A-Z</asp:HyperLink>
                                 /
@@ -39,15 +50,14 @@
                                 &nbsp;&nbsp;&nbsp; Sắp theo giá:
                                 <asp:HyperLink ID="hpAPrice" runat="server" NavigateUrl="DatMon.aspx?s=aprice">tăng</asp:HyperLink>
                                 /
-                                <asp:HyperLink ID="hpDPrice" runat="server" NavigateUrl="DatMon.aspx?s=dprice">giảm</asp:HyperLink>
+                                <asp:HyperLink ID="hpDPrice" runat="server" NavigateUrl="DatMon.aspx?s=dprice">giảm</asp:HyperLink></font>
                         </td>
-                        
                         <td>
                             <div class="pagination">
                                 <ul>
                                     <li><a href="#">Đầu</a></li>
                                     <li class="active"><a href="#">1</a> </li>
-                                    <li><a href="#">2</a></li>                                    
+                                    <li><a href="#">2</a></li>
                                     <li><a href="#">...</a></li>
                                     <li><a href="#">10</a></li>
                                     <li><a href="#">Cuối</a></li>
@@ -55,7 +65,7 @@
                             </div>
                         </td>
                         <td align="right">
-                            </font><b>Số lượng hiển thị:</b>
+                            <b>Số lượng hiển thị:</b>
                             <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
                                 AutoPostBack="True" Width="50px">
                                 <asp:ListItem>5</asp:ListItem>
@@ -169,7 +179,8 @@
                                                 <br />
                                                 <font class="fontblack">Tổng tiền một bàn:
                                                     <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label>
-                                                    VND</font><br /><br />
+                                                    VND</font><br />
+                                                <br />
                                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True"
                                                     OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit"
                                                     OnRowDeleting="GridView1_RowDeleting" CssClass="borderRound">
