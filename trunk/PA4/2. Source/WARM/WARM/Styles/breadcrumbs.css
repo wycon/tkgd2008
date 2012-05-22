@@ -11,8 +11,8 @@
 #nav li {
 	float:left; 
 	display:block; 
-	width:100px; 
-	background:#ccc; 
+	width:110px; 
+	background:white; 
 	position:relative;
 	z-index:500; 
 	margin:0 1px;
@@ -25,18 +25,18 @@
 	font-weight:700;  
 	height:23px; 
 	text-decoration:none; 
-	color:#fff; 
+	color:blue; 
 	text-align:center; 
-	color:#333;
+	/*color:#333;*/
 }
 
 #nav li a.sub:hover {
-	color:#fff;
+	/*color:#fff;*/
 }
 	
 /* you can make a different style for default selected value */
 #nav a.current {
-	color:#fff;
+	color:black;
 }
 	
 /* submenu, it's hidden by default */
@@ -50,7 +50,7 @@
 }
 		
 #nav ul li {
-	width:100px; 
+	width:110px; 
 	float:left; 
 	border-top:1px solid #fff;
 }
@@ -60,7 +60,7 @@
 	display:block;  
 	height:15px;
 	padding: 8px 5px; 
-	color:#666;
+	/*color:#666;*/
 }
 		
 #nav ul a.sub:hover {
