@@ -142,7 +142,7 @@
             </div>
         </div>
         <div class="main"  style=" margin: 12px 0px 8px 0px;">
-            <div class="main-left"  style=" width:12%">
+            <div class="main-left"  style=" width:12.5%">
 
             <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700 ; 
                                 font-size:20">Danh mục món ăn</asp:HyperLink>
@@ -173,7 +173,7 @@
                 <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/DatMon.aspx?id=9">Kem</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/DatMon.aspx?id=10">Cocktail</asp:HyperLink><br />--%>
             </div>
-            <div class="main-right" style=" width:88%">
+            <div class="main-right" style=" width:87.5%">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
         </div>
