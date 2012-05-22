@@ -52,9 +52,8 @@
                                             <td valign="top" width="50%" style="padding-right: 20px">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
-                                                <font class="fontblack">Giá:
-                                                    <%# Eval("Gia", "{0:0,000}")%>
-                                                    VND</font>
+                                                <font class="fontblack">
+                                                    <b>Giá: <%# Eval("Gia", "{0:0,000}")%> VND</b></font>
                                                 <br />
                                                 <font class="fontblackjustify">
                                                     <%# Eval("MoTa") %></font> </a>
@@ -114,8 +113,10 @@
     <br />
     <asp:Image ID="Image1" runat="server" Height="21px" ImageUrl="~/images/binhluan.jpg" />
     <a href="#top">Thêm lời bình</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton
-        ID="LinkButton1" runat="server" EnableTheming="False" OnClick="LinkButton1_Click">Mới nhất</asp:LinkButton>
-    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Cũ nhất</asp:LinkButton>
+        ID="LinkButton1" runat="server" EnableTheming="False" 
+        OnClick="LinkButton1_Click" ForeColor="Blue">Mới nhất</asp:LinkButton>
+    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" 
+        OnClick="LinkButton2_Click" ForeColor="Blue">Cũ nhất</asp:LinkButton>
     <table width="100%">
         <tr>
             <td>
