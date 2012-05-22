@@ -29,6 +29,11 @@
     <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../Scripts/breadcrumbs.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/ddimgtooltip.css" />
+    <script type="text/javascript" src="../Scripts/ddimgtooltip.js">
+    </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <table style="width: 100%;">
@@ -49,10 +54,10 @@
                     <asp:HyperLink ID="HyperLink14" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
                         font-size: large">Giải thưởng nhà hàng:</asp:HyperLink>
                     <br />
-                    <asp:Image ID="Image4" runat="server" Height="77px" Width="90px" ImageUrl="~/images/TrangChu/giaithuong1.jpg" />
-                    <asp:Image ID="Image5" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong2.jpg" />
-                    <asp:Image ID="Image6" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong3.jpg" />
-                    <asp:Image ID="Image7" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong4.jpg" />
+                    <asp:Image ID="Image4" runat="server" Height="77px" Width="90px" ImageUrl="~/images/TrangChu/giaithuong1.jpg" rel="imgtip[0]"/>
+                    <asp:Image ID="Image5" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong2.jpg" rel="imgtip[1]"/>
+                    <asp:Image ID="Image6" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong3.jpg" rel="imgtip[2]"/>
+                    <asp:Image ID="Image7" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong4.jpg" rel="imgtip[3]"/>
                 </font>
             </td>
         </tr>

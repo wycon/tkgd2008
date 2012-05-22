@@ -185,6 +185,12 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\breadcrumbs.js" />
     <Content Include="Scripts\cvi_text_lib.js" />
+    <Content Include="Scripts\ddimgtooltip.js" />
+    <Content Include="Scripts\giaithuong1.jpg" />
+    <Content Include="Scripts\giaithuong2.jpg" />
+    <Content Include="Scripts\giaithuong3.jpg" />
+    <Content Include="Scripts\giaithuong4.jpg" />
+    <Content Include="Styles\ddimgtooltip.css" />
     <Content Include="Styles\images\arrow.png" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.advanced-panorama360.js" />

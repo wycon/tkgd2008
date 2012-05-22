@@ -14,6 +14,7 @@ namespace WARM
     public partial class ChiTietMonAn : System.Web.UI.Page
     {
         static int req;
+        static bool isClick = false;
         public int yourvar { get; set; }
         static List<BINHLUAN> dsBl = new List<BINHLUAN>();
         protected void Page_Load(object sender, EventArgs e)
@@ -30,7 +31,17 @@ namespace WARM
                 dsMon.Add(mon);
 
                 dsBl = BinhLuanDAO.LayDanhSach(req);
-                //dsBl.Reverse();
+                if (isClick == false)
+                {
+                    dsBl.Reverse();
+                    LinkButton1.Enabled = false;
+                    LinkButton1.ForeColor = Color.Black;
+                }
+                else
+                {
+                    LinkButton2.Enabled = false;
+                    LinkButton2.ForeColor = Color.Black;
+                }
                 yourvar = dsBl.Count;
                 //Response.Write("dem");
                 PagedDataSource pgitems = new PagedDataSource();
@@ -123,6 +134,7 @@ namespace WARM
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
+            isClick = true;
             LinkButton1.Enabled = true;
             LinkButton1.ForeColor = Color.Blue;
             dsBl.Reverse();

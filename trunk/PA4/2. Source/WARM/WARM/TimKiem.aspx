@@ -7,7 +7,6 @@
     <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
-
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
@@ -28,7 +27,7 @@
         </tr>
         <tr>
             <td style="padding-right: 30px;">
-                <font class="fontblack">Sắp theo tên:
+                &nbsp;<font class="fontblack">Sắp theo tên:
                     <asp:HyperLink ID="hpAName" runat="server" NavigateUrl="TimKiem.aspx?s=aname">A-Z</asp:HyperLink>
                     /
                     <asp:HyperLink ID="hpDName" runat="server" NavigateUrl="TimKiem.aspx?s=dname">Z-A</asp:HyperLink>
@@ -39,16 +38,16 @@
                 </font>
             </td>
             <td>
-                <%--<div class="pagination">
-                                <ul>
-                                    <li><a href="#">Đầu</a></li>
-                                    <li class="active"><a href="#">1</a> </li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">Cuối</a></li>
-                                </ul>
-                            </div>--%>
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">Đầu</a></li>
+                        <li class="active"><a href="#">1</a> </li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">Cuối</a></li>
+                    </ul>
+                </div>
             </td>
             <td align="right">
                 <b>Số lượng hiển thị:</b>
@@ -63,7 +62,7 @@
         </tr>
         <tr>
             <td>
-                <font class="fontblack">Hiển thị từ 1-<%= nResultVar %> của 12 kết quả với từ khóa "<%= yourvar %>"</font><br />
+                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %>của 12 kết quả với từ khóa "<%= yourvar %>"</font><br />
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
                         <%--<table cellpadding="0" cellspacing="0" border="0">
@@ -79,7 +78,6 @@
                         </asp:LinkButton>&nbsp;--%>
                     </ItemTemplate>
                     <FooterTemplate>
-                       
                     </FooterTemplate>
                 </asp:Repeater>
             </td>
@@ -104,9 +102,8 @@
                                                         <td valign="top" width="65%" style="padding-left: 20px">
                                                             <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                                 <%# Eval("TenMonAn") %></a><br />
-                                                            <font class="fontblack">Giá:
-                                                                <%# Eval("Gia", "{0:0,000}")%>
-                                                                VND<br />
+                                                            <font class="fontblack">
+                                                            <b>Giá: <%# Eval("Gia", "{0:0,000}")%> VND</b><br />
                                                                 <%# Eval("MoTa") %></a></font><br />
                                                         </td>
                                                         <td valign="top" style="padding-left: 20px">
