@@ -27,7 +27,7 @@
 <body>
     <form runat="server">
     <input type="hidden" name="dff_view" value="grid" />
-    <div class="page">
+    <div class="page" >
         <div class="header">
             <div class="logo">
                 <a href="/Default.aspx">
@@ -96,8 +96,8 @@
                 </div>
                 <table style="width: 44%;">
                     <tr>
-                        <td style="padding-left:20px">
-                            <asp:TextBox ID="textTim"  runat="server"  Width="350px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
+                        <td >
+                            <asp:TextBox ID="textTim"  runat="server"  Width="370px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
                         </td>
                         <td style="padding-top:2px">
                             <asp:ImageButton ID="ImageButton1" runat="server" Height="28px" 
@@ -141,8 +141,9 @@
 	             </script>
             </div>
         </div>
-        <div class="main">
-            <div class="main-left">
+        <div class="main"  style=" margin: 12px 0px 8px 0px;">
+            <div class="main-left"  style=" width:12%">
+
             <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700 ; 
                                 font-size:20">Danh mục món ăn</asp:HyperLink>
 
@@ -172,7 +173,7 @@
                 <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/DatMon.aspx?id=9">Kem</asp:HyperLink><br />
                 <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/DatMon.aspx?id=10">Cocktail</asp:HyperLink><br />--%>
             </div>
-            <div class="main-right">
+            <div class="main-right" style=" width:88%">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
         </div>
@@ -181,7 +182,7 @@
             <div class="footer"> 
                
                     <a href="#">Lên đầu trang</a> </div>
-       <div class="footer"> 
+          <div class="footer"> 
         [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved. </div>
         </div>
 
