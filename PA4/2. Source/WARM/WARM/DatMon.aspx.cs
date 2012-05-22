@@ -8,6 +8,7 @@ using DAO;
 using System.Data;
 using System.Collections;
 using System.Globalization;
+using System.Drawing;
 
 namespace WARM
 {
@@ -47,6 +48,7 @@ namespace WARM
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
                     hpAName.Enabled = false;
                     hpAName.ControlStyle.Font.Bold = true;
+                    hpAName.ForeColor = Color.Black;
                     hpDName.Enabled = true;
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = true;
@@ -57,6 +59,7 @@ namespace WARM
                     hpAName.Enabled = true;
                     hpDName.Enabled = false;
                     hpDName.ControlStyle.Font.Bold = true;
+                    hpDName.ForeColor = Color.Black;
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = true;
                 }
@@ -67,6 +70,7 @@ namespace WARM
                     hpDName.Enabled = true;
                     hpAPrice.Enabled = false;
                     hpAPrice.ControlStyle.Font.Bold = true;
+                    hpAPrice.ForeColor = Color.Black;
                     hpDPrice.Enabled = true;
                 }
                 else if (req == "dprice")
@@ -77,12 +81,14 @@ namespace WARM
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = false;
                     hpDPrice.ControlStyle.Font.Bold = true;
+                    hpDPrice.ForeColor = Color.Black;
                 }
                 else
                 {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
                     hpAName.Enabled = false;
                     hpAName.ControlStyle.Font.Bold = true;
+                    hpAName.ForeColor = Color.Black;
                     hpDName.Enabled = true;
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = true;

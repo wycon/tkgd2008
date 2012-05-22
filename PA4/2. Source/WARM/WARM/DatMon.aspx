@@ -31,7 +31,7 @@
             <td style="padding-left: 5px;" colspan="2" width="100%">
                 <table>
                     <tr>
-                        <td style="padding-right:30px;">
+                        <td style="padding-right:25px;">
                             <font class="fontblack">Sắp theo tên:
                                 <asp:HyperLink ID="hpAName" runat="server" NavigateUrl="DatMon.aspx?s=aname">A-Z</asp:HyperLink>
                                 /
@@ -47,9 +47,9 @@
                                 <ul>
                                     <li><a href="#">Đầu</a></li>
                                     <li class="active"><a href="#">1</a> </li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">2</a></li>                                    
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">10</a></li>
                                     <li><a href="#">Cuối</a></li>
                                 </ul>
                             </div>
@@ -169,7 +169,7 @@
                                                 <br />
                                                 <font class="fontblack">Tổng tiền một bàn:
                                                     <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label>
-                                                    VND</font><br />
+                                                    VND</font><br /><br />
                                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True"
                                                     OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit"
                                                     OnRowDeleting="GridView1_RowDeleting" CssClass="borderRound">
@@ -206,7 +206,7 @@
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                         <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
-                                                            UpdateText="Sửa" HeaderText="Sửa" />
+                                                            UpdateText="Lưu" HeaderText="Sửa" />
                                                         <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
                                                             ShowDeleteButton="True" HeaderText="Xóa" />
                                                     </Columns>
