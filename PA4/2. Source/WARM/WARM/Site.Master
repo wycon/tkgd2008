@@ -106,8 +106,8 @@
                     </tr>
                 </table>
 	             <script type="text/javascript">
-	                $(function () {
-	                    var availableTags = [
+	                 $(function () {
+	                     var availableTags = [
 			            "ActionScript",
 			            "AppleScript",
 			            "Asp",
@@ -131,10 +131,12 @@
 			            "Scala",
 			            "Scheme"
 		            ];
-	                    $("#<% = textTim.ClientID %>").autocomplete({
-	                        source: availableTags
-	                    });
-	                });
+	                     $("#<% = textTim.ClientID %>").autocomplete({
+	                         source: availableTags
+	                     });
+
+	                     $("#<% = textTim.ClientID %>").attr("placeholder", "Nhập tên món ăn cần tìm");
+	                 });
 	             </script>
             </div>
         </div>
