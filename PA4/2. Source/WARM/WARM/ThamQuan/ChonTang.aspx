@@ -107,7 +107,7 @@ as a menu.
                 <td style="background-image: url(../images/ThamQuan/ChonTang/slice_5_0.jpg); height: 72px;
                     width: 204px;">
                 </td>
-                <td style="background-image: url(../images/ThamQuan/ChonTang/slice_5_1-new.jpg);
+                <td style="background-image: url(../images/ThamQuan/ChonTang/slice_5_1.jpg);
                     height: 72px; width: 267px;" onmouseover="exchange(this,1);"
                     onmouseout="exchange(this,0);"  onclick="exchange(this,2);"
                     id="5_1">
@@ -201,7 +201,7 @@ as a menu.
 
     images["1_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_1_1-new.jpg)";
     images["3_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_3_1-new.jpg)";
-    images["5_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_5_1-new.jpg)";
+    images["5_1_plain"] = "url(../images/ThamQuan/ChonTang/slice_5_1.jpg)";
 
     images["1_1_hover"] = "url(../images/ThamQuan/ChonTang/slice_1_1_hover.jpg)";
 
