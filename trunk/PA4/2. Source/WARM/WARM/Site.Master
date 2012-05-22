@@ -31,9 +31,21 @@
         <div class="header">
             <div class="logo">
                 <a href="/Default.aspx">
-                    <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/2.png" Height="100%"
+                    <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" Height="100%"
                         Width="100%" /></a>
             </div>
+                        <table style="width: 27%; color: White;">
+                <tr>
+                    <td>
+                        <div class="vietnamese" ></div>
+                        <div class="vietnamese_title"><a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
+                    </td>
+                    <td>
+                        <div class="english" ></div>
+                        <div class="english_title"><a title="English" href="#" style="color: White;">English</a></div>
+                    </td>
+                </tr>
+            </table>
             <table style="width: 27%; color: White;">
                 <tr>
                     <td>
@@ -68,18 +80,7 @@
                     </td>
                 </tr>
             </table>
-            <table style="width: 27%; color: White;">
-                <tr>
-                    <td>
-                        <div class="vietnamese" ></div>
-                        <div class="vietnamese_title"><a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
-                    </td>
-                    <td>
-                        <div class="english" ></div>
-                        <div class="english_title"><a title="English" href="#" style="color: White;">English</a></div>
-                    </td>
-                </tr>
-            </table>
+
             <div class="clear hideSkiplink" style="height: 35px;">
                 <div style="width: 56%; float: left;">
                     <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
@@ -142,8 +143,10 @@
         </div>
         <div class="main">
             <div class="main-left">
-            hgggh
-                <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false"
+            <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700 ; 
+                                font-size:20">Danh mục món ăn</asp:HyperLink>
+
+                <asp:Menu ID="Menu1" runat="server"  CssClass="menu" EnableViewState="false"
                         IncludeStyleBlock="false" Orientation="Vertical">
                     <Items>                    
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Lẩu" />
@@ -174,13 +177,18 @@
             </div>
         </div>
         <div class="clear">
+        
+            <div class="footer"> 
+                <caption style="height: 13px; width: 50px">
+                    <a href="#">Lên đầu trang</a> </div>
+       <div class="footer"> 
+        [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved. </div>
         </div>
+
     </div>
     <div class="footer">
-        <div id="back-to-top">
-            <a href="#">Lên đầu trang</a>
-        </div>
-        [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved.
+    
+       
     </div>
     </form>
 </body>
