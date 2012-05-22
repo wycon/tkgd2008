@@ -96,8 +96,8 @@
                 </div>
                 <table style="width: 44%;">
                     <tr>
-                        <td style="padding-top:0px">
-                            <asp:TextBox ID="textTim" runat="server"  Width="370px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
+                        <td style="padding-left:20px">
+                            <asp:TextBox ID="textTim"  runat="server"  Width="350px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
                         </td>
                         <td style="padding-top:2px">
                             <asp:ImageButton ID="ImageButton1" runat="server" Height="28px" 
@@ -179,7 +179,7 @@
         <div class="clear">
         
             <div class="footer"> 
-                <caption style="height: 13px; width: 50px">
+               
                     <a href="#">Lên đầu trang</a> </div>
        <div class="footer"> 
         [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved. </div>
