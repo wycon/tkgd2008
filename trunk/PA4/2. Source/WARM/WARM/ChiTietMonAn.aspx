@@ -7,7 +7,6 @@
     <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
-
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/ChiTietMonAn.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
@@ -19,12 +18,19 @@
     </asp:ScriptManager>
     <table width="100%">
         <tr>
-            <td>
-                <ul class="breadcrumb">
-                    <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
-                    <li><a href="TimKiem.aspx">Món mặn</a> <span class="divider">&gt;</span> </li>
-                    <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
-                        Chi tiết món ăn</span></li>
+            <td>                
+                <ul id="nav">
+                    <li><a href="../Default.aspx">Trang Chủ > </a></li>
+                    <li><a href="../DatMon.aspx">Món mặn > </a>
+                        <ul>
+                            <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>
+                            <li><a href="../DatMon.aspx" class="sub">Đặt món</a></li>
+                            <li><a href="../DatBan.aspx" class="sub">Đặt bàn</a></li>
+                            <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
+                            <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="current">Chi tiết món</a> </li>
                 </ul>
             </td>
             <td>
@@ -52,8 +58,9 @@
                                             <td valign="top" width="50%" style="padding-right: 20px">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
-                                                <font class="fontblack">
-                                                    <b>Giá: <%# Eval("Gia", "{0:0,000}")%> VND</b></font>
+                                                <font class="fontblack"><b>Giá:
+                                                    <%# Eval("Gia", "{0:0,000}")%>
+                                                    VND</b></font>
                                                 <br />
                                                 <font class="fontblackjustify">
                                                     <%# Eval("MoTa") %></font> </a>
@@ -64,13 +71,13 @@
                                                     <ContentTemplate>
                                                         <font class="fontblack">Số lượng món/bàn:</font>&nbsp;&nbsp;&nbsp;
                                                         <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ButtonGiam_Click" ImageUrl="~/images/ArrowDown.png"
-                                                                        AlternateText="v" Width="16px" Height="16px" />
+                                                            AlternateText="v" Width="16px" Height="16px" />
                                                         <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
                                                         <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ButtonTang_Click" ImageUrl="~/images/ArrowUp.png"
-                                                                        AlternateText="^" Width="16px" Height="16px" />
-                                                        
+                                                            AlternateText="^" Width="16px" Height="16px" />
                                                         <br />
-                                                        <asp:Button ID="btDatMon" runat="server" CssClass="btn btn-primary" Text="Đặt món" OnClick="DatMon_Click" />
+                                                        <asp:Button ID="btDatMon" runat="server" CssClass="btn btn-primary" Text="Đặt món"
+                                                            OnClick="DatMon_Click" />
                                                         <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaMonAn") %>' />
                                                     </ContentTemplate>
                                                 </asp:UpdatePanel>
@@ -113,10 +120,10 @@
     <br />
     <asp:Image ID="Image1" runat="server" Height="21px" ImageUrl="~/images/binhluan.jpg" />
     <a href="#top">Thêm lời bình</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton
-        ID="LinkButton1" runat="server" EnableTheming="False" 
-        OnClick="LinkButton1_Click" ForeColor="Blue">Mới nhất</asp:LinkButton>
-    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" 
-        OnClick="LinkButton2_Click" ForeColor="Blue">Cũ nhất</asp:LinkButton>
+        ID="LinkButton1" runat="server" EnableTheming="False" OnClick="LinkButton1_Click"
+        ForeColor="Blue">Mới nhất</asp:LinkButton>
+    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+        ForeColor="Blue">Cũ nhất</asp:LinkButton>
     <table width="100%">
         <tr>
             <td>
@@ -182,7 +189,6 @@
             </td>
         </tr>
     </table>
-    
     <table width="100%" style="height: 315px">
         <tr>
             <td valign="top" align="left" style="color: #FF0000; font-size: large;" class="style2">
@@ -236,7 +242,8 @@
                 <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" Style="text-align: left"
                     TextMode="MultiLine"></asp:TextBox>
                 &nbsp; &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Đăng lời bình" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Đăng lời bình"
+                    OnClick="Button1_Click" />
             </td>
             <td valign="top" align="left" class="style5">
                 <asp:Literal ID="Literal3" runat="server" Text="Bạn chưa nhập nội dung" Visible="False"></asp:Literal>

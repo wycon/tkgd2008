@@ -10,15 +10,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <ul id="nav">
-        <li><a href="../Default.aspx">Trang Chủ > </a></li>
-        <li><a href="#" class="arrow">Tham Quan > </a>
+        <li><a href="../Default.aspx">Trang chủ > </a></li>
+        <li><a href="#" class="arrow">Tham quan > </a>
             <ul>
-                <li><a href="../DangKy.aspx" class="sub">Đăng Ký</a></li>
-                <li><a href="../DatBan.aspx" class="sub">Đặt Bàn</a></li>
-                <li><a href="../DatMon.aspx" class="sub">Đặt Món</a></li>
-                <li><a href="../ChiTietMonAn.aspx" class="sub">Chi Tiết Món</a></li>
-                <li><a href="../TimKiem.aspx" class="sub">Tìm Kiếm</a></li>
-                <li><a href="../About.aspx" class="sub">About</a></li>
+                <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>
+                <li><a href="../DatMon.aspx" class="sub">Đặt món</a></li>
+                <li><a href="../DatBan.aspx" class="sub">Đặt bàn</a></li>
+                <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
+                <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
             </ul>
             <div class="clear">
             </div>

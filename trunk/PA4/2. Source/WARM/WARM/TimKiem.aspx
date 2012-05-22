@@ -18,15 +18,22 @@
     <table width="100%">
         <tr>
             <td colspan="3">
-                <ul class="breadcrumb">
-                    <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
-                    <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
-                        Tìm kiếm</span></li>
+                <ul id="nav">
+                    <li><a href="../Default.aspx">Trang Chủ > </a></li>
+                    <li><a class="arrow current">Tìm kiếm</a>
+                        <ul>
+                            <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>
+                            <li><a href="../DatMon.aspx" class="sub">Đặt món</a></li>
+                            <li><a href="../DatBan.aspx" class="sub">Đặt bàn</a></li>
+                            <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
+                            <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td style="padding-right: 30px;">
+            <td style="padding-right: 25px;">
                 &nbsp;<font class="fontblack">Sắp theo tên:
                     <asp:HyperLink ID="hpAName" runat="server" NavigateUrl="TimKiem.aspx?s=aname">A-Z</asp:HyperLink>
                     /
@@ -43,8 +50,8 @@
                         <li><a href="#">Đầu</a></li>
                         <li class="active"><a href="#">1</a> </li>
                         <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">10</a></li>
                         <li><a href="#">Cuối</a></li>
                     </ul>
                 </div>
@@ -62,7 +69,8 @@
         </tr>
         <tr>
             <td>
-                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %>của 12 kết quả với từ khóa "<%= yourvar %>"</font><br />
+                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %> của 12 kết quả với từ khóa
+                    "<%= yourvar %>"</font><br />
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
                         <%--<table cellpadding="0" cellspacing="0" border="0">
@@ -102,8 +110,9 @@
                                                         <td valign="top" width="65%" style="padding-left: 20px">
                                                             <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                                 <%# Eval("TenMonAn") %></a><br />
-                                                            <font class="fontblack">
-                                                            <b>Giá: <%# Eval("Gia", "{0:0,000}")%> VND</b><br />
+                                                            <font class="fontblack"><b>Giá:
+                                                                <%# Eval("Gia", "{0:0,000}")%>
+                                                                VND</b><br />
                                                                 <%# Eval("MoTa") %></a></font><br />
                                                         </td>
                                                         <td valign="top" style="padding-left: 20px">
