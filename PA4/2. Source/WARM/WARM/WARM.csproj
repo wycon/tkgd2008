@@ -301,6 +301,10 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Styles\MyStyle.css" />
+    <Content Include="ThamQuan\Tang2\Sanh1.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh2.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh3.aspx" />
+    <Content Include="ThamQuan\Tang2\Sanh4.aspx" />
     <Content Include="TimKiem.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -312,13 +316,9 @@
     <Content Include="DatMon.aspx" />
     <Content Include="ThamQuan\TangTret\Sanh1.aspx" />
     <Content Include="ThamQuan\Tang1\Sanh1.aspx" />
-    <Content Include="ThamQuan\Tang1\Tang2\Sanh1.aspx" />
     <Content Include="ThamQuan\TangTret\Sanh2.aspx" />
     <Content Include="ThamQuan\Tang1\Sanh2.aspx" />
     <Content Include="ThamQuan\Tang1\Sanh3.aspx" />
-    <Content Include="ThamQuan\Tang1\Tang2\Sanh2.aspx" />
-    <Content Include="ThamQuan\Tang1\Tang2\Sanh3.aspx" />
-    <Content Include="ThamQuan\Tang1\Tang2\Sanh4.aspx" />
     <Content Include="ThamQuan\3D\Tang1\Sanh1.aspx" />
     <Content Include="ThamQuan\3D\Tang1\Sanh2.aspx" />
     <Content Include="ThamQuan\3D\TangTret\Sanh1.aspx" />
@@ -418,6 +418,34 @@
     <Compile Include="DatMon.aspx.designer.cs">
       <DependentUpon>DatMon.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh1.aspx.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh1.aspx.designer.cs">
+      <DependentUpon>Sanh1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh2.aspx.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh2.aspx.designer.cs">
+      <DependentUpon>Sanh2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh3.aspx.cs">
+      <DependentUpon>Sanh3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh3.aspx.designer.cs">
+      <DependentUpon>Sanh3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh4.aspx.cs">
+      <DependentUpon>Sanh4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThamQuan\Tang2\Sanh4.aspx.designer.cs">
+      <DependentUpon>Sanh4.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ThamQuan\TangTret\Sanh1.aspx.cs">
       <DependentUpon>Sanh1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -430,13 +458,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ThamQuan\Tang1\Sanh1.aspx.designer.cs">
-      <DependentUpon>Sanh1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh1.aspx.cs">
-      <DependentUpon>Sanh1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh1.aspx.designer.cs">
       <DependentUpon>Sanh1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ThamQuan\TangTret\Sanh2.aspx.cs">
@@ -459,27 +480,6 @@
     </Compile>
     <Compile Include="ThamQuan\Tang1\Sanh3.aspx.designer.cs">
       <DependentUpon>Sanh3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh2.aspx.cs">
-      <DependentUpon>Sanh2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh2.aspx.designer.cs">
-      <DependentUpon>Sanh2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh3.aspx.cs">
-      <DependentUpon>Sanh3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh3.aspx.designer.cs">
-      <DependentUpon>Sanh3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh4.aspx.cs">
-      <DependentUpon>Sanh4.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThamQuan\Tang1\Tang2\Sanh4.aspx.designer.cs">
-      <DependentUpon>Sanh4.aspx</DependentUpon>
     </Compile>
     <Compile Include="ThamQuan\3D\Tang1\Sanh1.aspx.cs">
       <DependentUpon>Sanh1.aspx</DependentUpon>

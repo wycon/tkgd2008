@@ -107,6 +107,12 @@ as a menu.
 	<li><a href="Sanh2.aspx">2: Sảnh 2</a></li>
 	<li><a href="Sanh3.aspx">3: Sảnh 3</a></li>
 </ul>
+<asp:Label ID="Label2" runat="server" Text="Chế độ xem"></asp:Label>
+<ul>
+	<li><a>2D</a></li>
+	<li><a href="../3D/Tang1/Sanh1.aspx">3D</a></li>
+</ul>
+
 
 </div>
 
