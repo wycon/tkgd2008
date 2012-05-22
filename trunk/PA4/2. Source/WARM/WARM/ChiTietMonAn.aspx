@@ -2,31 +2,34 @@
     CodeBehind="ChiTietMonAn.aspx.cs" Inherits="WARM.ChiTietMonAn" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript" src="../../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
+
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/ChiTietMonAn.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
     </asp:ScriptManager>
     <table width="100%">
         <tr>
-        <td>
-            <ul class="breadcrumb">
-                        <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
-                        <li><a href="TimKiem.aspx">Món mặn</a> <span class="divider">&gt;</span> </li>
-                        <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
-                            Chi tiết món ăn</span></li>
-                        </ul>
-        </td>
+            <td>
+                <ul class="breadcrumb">
+                    <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
+                    <li><a href="TimKiem.aspx">Món mặn</a> <span class="divider">&gt;</span> </li>
+                    <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
+                        Chi tiết món ăn</span></li>
+                </ul>
+            </td>
             <td>
                 <asp:Repeater ID="rptPages" runat="server">
                     <FooterTemplate>
-                        
                         </td> </tr> </table>
                     </FooterTemplate>
                 </asp:Repeater>
@@ -40,32 +43,35 @@
                             <table width="100%">
                                 <asp:Repeater ID="rptItems" runat="server">
                                     <HeaderTemplate>
-                                        <ul>
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
-                                            <td style="padding-right: 10px">
+                                            <td style="padding-right: 10px" valign="top">
                                                 <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
                                             </td>
-                                            <td valign="top" width="55%" style="padding-right: 10px">
+                                            <td valign="top" width="50%" style="padding-right: 20px">
                                                 <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                     <%# Eval("TenMonAn") %></a><br />
                                                 <font class="fontblack">Giá:
-                                                <%# Eval("Gia", "{0:0,000}")%>
-                                                VND</font>
+                                                    <%# Eval("Gia", "{0:0,000}")%>
+                                                    VND</font>
                                                 <br />
-                                                <font class="fontblackjustify"><%# Eval("MoTa") %></font>                                                
-                                                </a>
+                                                <font class="fontblackjustify">
+                                                    <%# Eval("MoTa") %></font> </a>
                                                 <br />
                                             </td>
-                                            <td valign="top" width="28%" style="padding-right: 10px">
+                                            <td valign="top" width="30%" style="padding-right: 10px">
                                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                                     <ContentTemplate>
                                                         <font class="fontblack">Số lượng món/bàn:</font>&nbsp;&nbsp;&nbsp;
+                                                        <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ButtonGiam_Click" ImageUrl="~/images/ArrowDown.png"
+                                                                        AlternateText="v" Width="16px" Height="16px" />
                                                         <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
-                                                        <%--<input id="sl0<%# Eval("MaMonAn")%>" type="text" value="1" size="3" />--%>
+                                                        <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ButtonTang_Click" ImageUrl="~/images/ArrowUp.png"
+                                                                        AlternateText="^" Width="16px" Height="16px" />
+                                                        
                                                         <br />
-                                                        <asp:Button ID="btDatMon" runat="server" Text="Đặt món" OnClick="DatMon_Click" />
+                                                        <asp:Button ID="btDatMon" runat="server" CssClass="btn btn-primary" Text="Đặt món" OnClick="DatMon_Click" />
                                                         <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaMonAn") %>' />
                                                     </ContentTemplate>
                                                 </asp:UpdatePanel>
@@ -85,13 +91,13 @@
                                                     <%}%>
                                                 </div>
                                                 <br />
-                                                <font class="fontblack"><%# Eval("DanhGia") %></a> lời bình</font><br />
+                                                <font class="fontblack">
+                                                    <%# Eval("DanhGia") %></a> lời bình</font><br />
                                                 <br />
                                             </td>
                                         </tr>
                                     </ItemTemplate>
                                     <FooterTemplate>
-                                        </ul>
                                     </FooterTemplate>
                                 </asp:Repeater>
                             </table>
@@ -107,11 +113,9 @@
     </td>
     <br />
     <asp:Image ID="Image1" runat="server" Height="21px" ImageUrl="~/images/binhluan.jpg" />
-    <a href="#top">Thêm lời bình</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton 
-        ID="LinkButton1" runat="server" EnableTheming="False" 
-        onclick="LinkButton1_Click">Mới nhất</asp:LinkButton>
-    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" 
-        onclick="LinkButton2_Click">Cũ nhất</asp:LinkButton>
+    <a href="#top">Thêm lời bình</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton
+        ID="LinkButton1" runat="server" EnableTheming="False" OnClick="LinkButton1_Click">Mới nhất</asp:LinkButton>
+    |&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Cũ nhất</asp:LinkButton>
     <table width="100%">
         <tr>
             <td>
@@ -129,46 +133,45 @@
                             <table width="100%">
                                 <asp:Repeater ID="rptItems2" runat="server">
                                     <HeaderTemplate>
-                                        <ul>
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
-                                            <td colspan="3">
-                                                <hr />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" width="10%">
-                                                <asp:Image ID="Image2" runat="server" Height='80px' ImageUrl="~/images/Avatar.jpg" />
-                                            </td>
-                                            <td valign="top" width="55%">
-                                                <strong>
-                                                    <%# Eval("NguoiBinhLuan") %></strong>
-                                                <br />
-                                                <div>
-                                                    <%                                                         
+                                            <td class="borderRound">
+                                                <table>
+                                                    <tr>
+                                                        <td valign="top" width="10%">
+                                                            <asp:Image ID="Image2" runat="server" Height='80px' ImageUrl="~/images/Avatar.jpg" />
+                                                        </td>
+                                                        <td valign="top" width="55%">
+                                                            <strong>
+                                                                <%# Eval("NguoiBinhLuan") %></strong>
+                                                            <br />
+                                                            <div>
+                                                                <%                                                         
                                                         int nStar = 5;
                                                         for (int i = 0; i < nStar; i++)
                                                         {
                                                             if (i != nStar-1)%>
-                                                    <input name='star1<%# Eval("MaBinhLuan") %>' type='radio' class='star' disabled='disabled' />
-                                                    <% else %>
-                                                    <input name='star1<%# Eval("MaBinhLuan") %>' type='radio' class='star' disabled='disabled'
-                                                        checked='checked' />
-                                                    <%}%>
-                                                </div>
-                                                <br />
-                                                <font class="fontblack">
-                                                    <%# Eval("NoiDung") %></font>
-                                            </td>
-                                            <td valign="top" width="25%">
-                                                Đăng lúc
-                                                <%# Eval("ThoiGian") %>
+                                                                <input name='star1<%# Eval("MaBinhLuan") %>' type='radio' class='star' disabled='disabled' />
+                                                                <% else %>
+                                                                <input name='star1<%# Eval("MaBinhLuan") %>' type='radio' class='star' disabled='disabled'
+                                                                    checked='checked' />
+                                                                <%}%>
+                                                            </div>
+                                                            <br />
+                                                            <font class="fontblack">
+                                                                <%# Eval("NoiDung") %></font>
+                                                        </td>
+                                                        <td valign="top" width="25%">
+                                                            Đăng lúc
+                                                            <%# Eval("ThoiGian") %>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </td>
                                         </tr>
                                     </ItemTemplate>
                                     <FooterTemplate>
-                                        </ul>
                                     </FooterTemplate>
                                 </asp:Repeater>
                             </table>
@@ -178,7 +181,7 @@
             </td>
         </tr>
     </table>
-    <hr />
+    
     <table width="100%" style="height: 315px">
         <tr>
             <td valign="top" align="left" style="color: #FF0000; font-size: large;" class="style2">
@@ -232,7 +235,7 @@
                 <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" Style="text-align: left"
                     TextMode="MultiLine"></asp:TextBox>
                 &nbsp; &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Đăng lời bình" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Đăng lời bình" OnClick="Button1_Click" />
             </td>
             <td valign="top" align="left" class="style5">
                 <asp:Literal ID="Literal3" runat="server" Text="Bạn chưa nhập nội dung" Visible="False"></asp:Literal>

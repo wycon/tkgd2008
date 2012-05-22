@@ -1,11 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DatBan.aspx.cs" Inherits="WARM.DatBan"  EnableEventValidation="false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript" src="../../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
+
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">

@@ -13,6 +13,7 @@ namespace WARM
     public partial class TimKiem : System.Web.UI.Page
     {
         public string yourvar { get; set; }
+        public int nResultVar { get; set; }
         public int maDanhMucMonAn = 4;
         public int PageNumber
         {
@@ -34,60 +35,65 @@ namespace WARM
             rptPages.ItemCommand += new RepeaterCommandEventHandler(rptPages_ItemCommand);
             if (Session["nResult"] == null)
                 Session["nResult"] = 5;
+            nResultVar = 5;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            string req = string.Empty;
-            if (Request.QueryString["s"] != null)
-                req = Request.QueryString["s"].ToString();
-            yourvar = req;
-            if (req == "aname")
+            if (!Page.IsPostBack)
             {
-                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
-                hpAName.Enabled = false;
-                hpAName.ControlStyle.Font.Bold = true;
-                hpDName.Enabled = true;
-                hpAPrice.Enabled = true;
-                hpDPrice.Enabled = true;
-            }
-            else if (req == "dname")
-            {
-                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, false));
-                hpAName.Enabled = true;
-                hpDName.Enabled = false;
-                hpDName.ControlStyle.Font.Bold = true;
-                hpAPrice.Enabled = true;
-                hpDPrice.Enabled = true;
-            }
-            else if (req == "aprice")
-            {
-                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, true));
-                hpAName.Enabled = true;
-                hpDName.Enabled = true;
-                hpAPrice.Enabled = false;
-                hpAPrice.ControlStyle.Font.Bold = true;
-                hpDPrice.Enabled = true;
-            }
-            else if (req == "dprice")
-            {
-                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
-                hpAName.Enabled = true;
-                hpDName.Enabled = true;
-                hpAPrice.Enabled = true;
-                hpDPrice.Enabled = false;
-                hpDPrice.ControlStyle.Font.Bold = true;
-            }
-            else
-            {
-                LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
-                hpAName.Enabled = false;
-                hpAName.ControlStyle.Font.Bold = true;
-                hpDName.Enabled = true;
-                hpAPrice.Enabled = true;
-                hpDPrice.Enabled = true;
-            }
+                string req = string.Empty;
+                if (Request.QueryString["s"] != null)
+                    req = Request.QueryString["s"].ToString();
+                if (Request.QueryString["q"] != null)
+                    yourvar = Request.QueryString["q"].ToString();
+                if (req == "aname")
+                {
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+                    hpAName.Enabled = false;
+                    hpAName.ControlStyle.Font.Bold = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = true;
+                }
+                else if (req == "dname")
+                {
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, false));
+                    hpAName.Enabled = true;
+                    hpDName.Enabled = false;
+                    hpDName.ControlStyle.Font.Bold = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = true;
+                }
+                else if (req == "aprice")
+                {
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, true));
+                    hpAName.Enabled = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = false;
+                    hpAPrice.ControlStyle.Font.Bold = true;
+                    hpDPrice.Enabled = true;
+                }
+                else if (req == "dprice")
+                {
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
+                    hpAName.Enabled = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = false;
+                    hpDPrice.ControlStyle.Font.Bold = true;
+                }
+                else
+                {
+                    LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
+                    hpAName.Enabled = false;
+                    hpAName.ControlStyle.Font.Bold = true;
+                    hpDName.Enabled = true;
+                    hpAPrice.Enabled = true;
+                    hpDPrice.Enabled = true;
+                }
 
-            ddlSoKetQua.SelectedValue = Session["nResult"].ToString();
+                ddlSoKetQua.SelectedValue = Session["nResult"].ToString();
+            }
         }
         private void LoadData(int nResult, List<MONAN> dsMon)
         {
@@ -127,6 +133,7 @@ namespace WARM
             PageNumber = 0;
             int nResult = int.Parse(ddlSoKetQua.SelectedItem.Value);
             Session["nResult"] = nResult;
+            nResultVar = nResult;
             if (!hpAName.Enabled)
                 LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
             else if (!hpDName.Enabled)

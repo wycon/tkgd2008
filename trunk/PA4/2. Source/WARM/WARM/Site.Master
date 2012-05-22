@@ -37,7 +37,7 @@
             <table style="width: 27%; color: White;">
                 <tr>
                     <td>
-                        <label for="edit-name">Tên truy cập: *</label>
+                        <label for="edit-name">Tên truy cập:</label>
                     </td>
                     <td>
                         <input type="text" value="" size="15" id="edit-name" name="name" maxlength="60"/>
@@ -45,7 +45,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="edit-pass">Mật khẩu: *</label>
+                        <label for="edit-pass">Mật khẩu:</label>
                     </td>
                     <td>
                         <input type="password" size="15" maxlength="60"/>
@@ -61,10 +61,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <a title="Đăng ký" href="DangKy.aspx" style="color: Red;">Đăng ký</a>
+                        <a title="Đăng ký" href="DangKy.aspx" style="color: White;">Đăng ký</a>
                     </td>
                     <td>
-                        <a title="Quên mật khẩu?" href="QuenMatKhau.aspx" style="color: Red;">Quên mật khẩu?</a>
+                        <a title="Quên mật khẩu?" href="QuenMatKhau.aspx" style="color: White;">Quên mật khẩu?</a>
                     </td>
                 </tr>
             </table>
@@ -72,11 +72,11 @@
                 <tr>
                     <td>
                         <div class="vietnamese" ></div>
-                        <div class="vietnamese_title"><a title="Tiếng Việt" href="#" style="color: Red;">Tiếng Việt</a></div>
+                        <div class="vietnamese_title"><a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
                     </td>
                     <td>
                         <div class="english" ></div>
-                        <div class="english_title"><a title="English" href="#" style="color: Red;">English</a></div>
+                        <div class="english_title"><a title="English" href="#" style="color: White;">English</a></div>
                     </td>
                 </tr>
             </table>
@@ -140,6 +140,7 @@
         </div>
         <div class="main">
             <div class="main-left">
+            hgggh
                 <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false"
                         IncludeStyleBlock="false" Orientation="Vertical">
                     <Items>                    
