@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../../../Styles/panorama360.css" media="all" />
 	<link rel="stylesheet" href="../../../Styles/panorama.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="../../../Styles/jquery.fancybox-1.3.1.css" media="screen" />
-	<script src="../../../Scripts/jquery.mousewheel.min.js" type="text/javascript"></script>
+	<script src="../../../Scripts/jquery.mousewheel.js" type="text/javascript"></script>
 	<script src="../../../Scripts/jquery.panorama360.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	    $(function () {

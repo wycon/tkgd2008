@@ -65,30 +65,39 @@
                 mouseXprev = e.clientX;
                 scrollView(panoramaContainer, elem_width, scrollDelta, settings);
                 return false;
-            })/*.mouseout(function(e){
+            }).bind('mousewheel', function (e, distance) {
+                var delta = Math.ceil(Math.sqrt(Math.abs(distance)));
+                delta = distance < 0 ? -delta : delta;
+                scrollDelta = scrollDelta + delta * 5;
+                scrollView(panoramaContainer, elem_width, delta * settings.mouse_wheel_multiplier, settings);
+                return false;
+            }).bind('contextmenu', stopEvent).bind('touchstart', function (e) {
+                if (isDragged) return false;
+                isDragged = true;
+                mouseXprev = e.originalEvent.touches[0].pageX;
+                scrollOffset = 0;
+            }).bind('touchmove', function (e) {
+                e.preventDefault();
+                if (!isDragged) return false;
+                var touch_x = e.originalEvent.touches[0].pageX;
+                scrollDelta = parseInt((touch_x - mouseXprev));
+                mouseXprev = touch_x;
+                scrollView(panoramaContainer, elem_width, scrollDelta, settings);
+            }).bind('touchend', function (e) {
+                isDragged = false;
+                scrollDelta = scrollDelta * 0.45;
+            }).bind('keydown', function (e) {
+                alert(e.which);
+                if (e.which == 37) {
+                    scrollView(panoramaContainer, elem_width, 30, settings);
+                }
+                return false;
+            }).bind('keydown', function (e) {
+                scrollView(panoramaContainer, elem_width, -30, settings);
+                return false;
+            }); /*.mouseout(function(e){
 				isDragged = false;
-			})*/.bind("mousewheel", function (e, distance) {
-			    var delta = Math.ceil(Math.sqrt(Math.abs(distance)));
-			    delta = distance < 0 ? -delta : delta;
-			    scrollDelta = scrollDelta + delta * 5;
-			    scrollView(panoramaContainer, elem_width, delta * settings.mouse_wheel_multiplier, settings);
-			    return false;
-			}).bind('contextmenu', stopEvent).bind('touchstart', function (e) {
-			    if (isDragged) return false;
-			    isDragged = true;
-			    mouseXprev = e.originalEvent.touches[0].pageX;
-			    scrollOffset = 0;
-			}).bind('touchmove', function (e) {
-			    e.preventDefault();
-			    if (!isDragged) return false;
-			    var touch_x = e.originalEvent.touches[0].pageX;
-			    scrollDelta = parseInt((touch_x - mouseXprev));
-			    mouseXprev = touch_x;
-			    scrollView(panoramaContainer, elem_width, scrollDelta, settings);
-			}).bind('touchend', function (e) {
-			    isDragged = false;
-			    scrollDelta = scrollDelta * 0.45;
-			});
+			})*/
 
             if (settings.bind_resize) {
                 $(window).resize(function () {
@@ -118,12 +127,12 @@
             var prev_button = $('.bjqs-prev');
             // Bind click events to the controllers
             next_button.click(function (e) {
-                scrollView(panoramaContainer, elem_width, -20, settings);
+                scrollView(panoramaContainer, elem_width, -30, settings);
                 return false;
             });
 
             prev_button.click(function (e) {
-                scrollView(panoramaContainer, elem_width, 20, settings);
+                scrollView(panoramaContainer, elem_width, 30, settings);
                 return false;
             });
         });
