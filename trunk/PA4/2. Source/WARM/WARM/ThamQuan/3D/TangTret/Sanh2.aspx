@@ -107,6 +107,11 @@ name="0_1"
 	<li><a href="Sanh1.aspx">1: Sảnh 1</a></li>
 	<li><a>2: Sảnh 2</a></li>
 </ul>
+<asp:Label ID="Label1" runat="server" Text="Chế độ xem"></asp:Label>
+<ul>
+	<li><a href="../../TangTret/Sanh2.aspx">2D</a></li>
+	<li><a>3D</a></li>
+</ul>
 
 </div>
 
