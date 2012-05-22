@@ -46,7 +46,29 @@
 								areaId++;
 								break;
 						case 'circle' :  break;
-						case 'poly' :  break;
+						case 'poly': break;
+						case 'arrow':
+						    var areacoord = $(this).attr("coords");
+						    var areaalt = $(this).attr("alt");
+						    if (areaalt != '') {
+						        areaalt = areaalt.replace("'", "&#146;");
+						        areaalt = areaalt.replace('"', '&quot;');
+
+						    }
+						    var areaclass;
+						    if ($(this).attr("class"))
+						        areaclass = $(this).attr("class");
+						    else
+						        areaclass = '';
+						    if (areaclass != '')
+						        areaclass = " " + areaclass;
+						    var areahref = $(this).attr("href");
+						    var areacoordArray = coords_fill(areacoord);
+						    panoContainer.append("<a class='area-arrow panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + areacoordArray[0] + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'>&nbsp;</a>");
+						    panoContainer.append("<a class='area-arrow panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + (panoImgWidth + parseInt(areacoordArray[0])) + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'>&nbsp;</a>");
+						    panoContainer.append("<a class='area-arrow panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + (parseInt(areacoordArray[0]) - panoImgWidth) + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'>&nbsp;</a>");
+						    areaId++;
+						    break;
 					}
 				}).remove();	
 			/*panoContainer.find('a.panorama-area').bind('click', function(){
