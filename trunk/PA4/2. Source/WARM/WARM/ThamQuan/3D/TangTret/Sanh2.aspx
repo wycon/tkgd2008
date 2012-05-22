@@ -76,7 +76,7 @@
 			<div class="panorama-container">
 				<img src="../../../images/ThamQuan/3D/TangTret/Sanh2/atelier.jpg" data-width="2642" data-height="375" alt="Panorama" usemap="testmap"/>
 				<map id="testmap" name="testmap"> 
-					<area shape="rect" coords="543,105,699,225" href="Sanh1.aspx" alt="vers l'atelier du sculpteur" /> 
+					<area shape="arrow" coords="543,105,699,225" href="Sanh1.aspx" alt="Sảnh 1" /> 
 				</map>
 			</div>
 		</div>

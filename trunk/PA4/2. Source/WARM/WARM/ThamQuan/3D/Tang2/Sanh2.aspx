@@ -77,9 +77,9 @@
 			<div class="panorama-container">
 				<img src="../../../images/ThamQuan/3D/Tang2/Sanh2/1280px-360_Panorama_Saulakopf.jpg" data-width="1905" data-height="375" alt="Panorama" usemap="testmap"/>
 				<map id="testmap" name="testmap"> 
-					<area shape="rect" coords="700,72,1000,255" href="Sanh2.aspx" alt="vers la salle de formation" /> 
-					<area shape="rect" coords="500,114,800,210" href="Sanh3.aspx" alt="statues" />
-                    <area shape="rect" coords="1000,114,1200,210" href="Sanh1.aspx" alt="statues" />
+					<area shape="arrow" coords="700,150,900,255" href="Sanh2.aspx" alt="Sảnh 2" /> 
+					<area shape="arrow" coords="500,100,700,210" href="Sanh3.aspx" alt="Sảnh 3" />
+                    <area shape="arrow" coords="1200,114,1300,200" href="Sanh1.aspx" alt="Sảnh 1" />
 				</map>
 			</div>
 		</div>

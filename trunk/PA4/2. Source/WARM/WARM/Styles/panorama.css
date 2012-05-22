@@ -1,8 +1,9 @@
 .panorama-area {
 	border: 2px solid white;
 	filter: alpha(opacity=20);
-	opacity: .2;
-	background: black;
+	/*opacity: .2;
+	background: black;*/
+	opacity: .6;
 	font-size: 100%;
 	cursor: pointer;
 	text-decoration: none;

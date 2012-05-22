@@ -76,8 +76,8 @@
 			<div class="panorama-container">
 				<img src="../../../images/ThamQuan/3D/Tang1/Sanh2/envImg.jpg" data-width="899" data-height="375" alt="Panorama" usemap="testmap"/>
 				<map id="testmap" name="testmap"> 
-					<area shape="rect" coords="400,72,600,255" href="Sanh1.aspx" alt="vers la salle de formation" /> 
-					<area shape="rect" coords="100,114,300,210" href="Sanh3.aspx" alt="statues" /> 
+					<area shape="arrow" coords="500,72,700,255" href="Sanh1.aspx" alt="Sảnh 1" /> 
+					<area shape="arrow" coords="100,150,250,250" href="Sanh3.aspx" alt="Sảnh 3" /> 
 				</map>
 			</div>
 		</div>

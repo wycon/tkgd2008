@@ -18,6 +18,7 @@
 	<link type="text/css" rel="stylesheet" href="~/Styles/breadcrumbs.css" />
 
 	<link type="text/css" rel="stylesheet" href="~/Styles/language.css" />
+	<link type="text/css" rel="stylesheet" href="~/Styles/area.css" />
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
