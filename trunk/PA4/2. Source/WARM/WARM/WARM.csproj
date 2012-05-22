@@ -190,6 +190,7 @@
     <Content Include="Scripts\giaithuong2.jpg" />
     <Content Include="Scripts\giaithuong3.jpg" />
     <Content Include="Scripts\giaithuong4.jpg" />
+    <Content Include="Scripts\jquery.mousewheel.js" />
     <Content Include="Styles\ddimgtooltip.css" />
     <Content Include="Styles\images\arrow.png" />
     <Content Include="Scripts\jquery-ui.min.js" />
@@ -198,7 +199,6 @@
     <Content Include="Scripts\jquery.flipv.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\jquery.mousewheel.min.js" />
     <Content Include="Scripts\jquery.panorama360.js" />
     <Content Include="Styles\area.css" />
     <Content Include="Styles\basic-jquery-slider.css" />
