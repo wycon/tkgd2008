@@ -77,7 +77,10 @@
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 140px">
-                                <asp:Button ID="btnDangNhap" runat="server" Height="27px"  Text="Đăng nhập" Width="80px" CssClass="btn btn-primary"/>
+                                <asp:Button ID="btnDangNhap" runat="server" Height="27px"  Text="Đăng nhập" 
+                                    Width="80px" CssClass="btn btn-primary" onClientclick="return alert('Bạn đặt bàn thành công. \nNhân viên của chúng tôi sẽ điện thoại cho bạn sớm nhất để xác nhận.',href='../Default.aspx')"/>
+                                
+
                             </dir>
                         </td>
                     </tr>
