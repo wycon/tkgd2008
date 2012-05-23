@@ -20,21 +20,35 @@
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+    </asp:ScriptManager>
     <table width="100%">
         <tr>
             <td colspan="3">
+            <ul id="nav">
+                    <li><a href="../Default.aspx">Trang Chủ > </a></li>
+                    <li><a href="../DatMon.aspx">Đặt món > </a></li>
+                     <li><a href="../DatBan.aspx">Đặt bàn > </a></li>
+                    <li><a class="arrow current">Đăng Ký</a>
+                        <ul>                          
+                            <li><a href="../ThamQuan/ChonTang.aspx" class="sub">Tham quan</a></li>
+                            <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
+                            <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </td>
         </tr>
         <tr>
             <td class="style1">
-                <table width="100%" style="height: 105px">
+                <table width="100%" style="height: 105px" class='borderRound'>
                     <tr>
                         <td colspan="3">
-                            <hr />
+                            
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" height="30">
+                        <td colspan="3" height="30" >
                             <asp:Label ID="Label3" runat="server" Text="Để đặt bàn thành công, bạn vui lòng đăng nhập."
                                 ForeColor="Black" Font-Bold="true"></asp:Label>                            
                         </td>
@@ -63,15 +77,21 @@
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 140px">
-                                <asp:Button ID="btnDangNhap" runat="server" Height="27px" Text="Đăng nhập" Width="80px" />
+                                <asp:Button ID="btnDangNhap" runat="server" Height="27px"  Text="Đăng nhập" Width="80px" CssClass="btn btn-primary"/>
                             </dir>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <hr />
+                            
                         </td>
                     </tr>
+                    
+                    </table>
+       
+                    <br />
+                    
+                    <table width="100%"class='borderRound'>
                     <tr>
                         <td colspan="3" height="30">
                             <asp:Label ID="Label1" runat="server" Text="Nếu bạn chưa có tài khoản, bạn có thể đăng ký tại đây."
@@ -79,7 +99,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td width="30%">
                             <font class="fontblack">Tên đăng nhập (*):</font>
                         </td>
                         <td>
@@ -130,37 +150,145 @@
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 140px">
-                                <asp:Button ID="btnDangKy" runat="server" Height="27px" Text="Đăng ký" Width="89px" />
+                                <asp:Button ID="btnDangKy" runat="server" Height="27px" Text="Đăng ký"  Width="89px" CssClass="btn btn-primary"/>
                             </dir>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <hr />
+                          
                         </td>
                     </tr>
                 </table>
             </td>
             <td valign="top">
-                <table width="100%" border="0">
-                    <tr>
-                        <td colspan="3">
-                            <hr />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center">
-                            <font class="fontred">
-                        Phiếu đặt món</tr>
-                    <tr>
-                        <td>
-                            <div id="Div2">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <hr />
+                <table width="100%" class="borderRound">
+                                <tr>
+                                    <td colspan="3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="borderRound">
+                                        <font class="fontred">Phiếu đặt bàn</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <font class="fontblack">
+                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                                <ContentTemplate>                  
+                                                    <br />
+                                                    <%if (Session["ChiTietBans"] != null)
+                                                      { %>
+                                                    Tổng tiền: 500.000 VND<br />
+                                                    Thời gian đặt bàn: 8 Giờ 00 Phút Ngày 26/05/2012<br />
+                                                    <%
+                                                        } %>
+                                                    
+                                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True">
+                                                       
+                                                        <Columns>
+                                                            <asp:TemplateField HeaderText="STT">
+                                                                <ItemTemplate>
+                                                                    <font class="fontblack">
+                                                                        <%# Container.DataItemIndex + 1 %>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Tên bàn">
+                                                                <ItemTemplate>
+                                                                    <font class="fontblack">
+                                                                        <asp:Label ID="lbTenBan" runat="server" Text='<%# Eval("Ten") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                                <ControlStyle Width="120px" />
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Số<br/> lượng">
+                                                                <ItemTemplate>
+                                                                    <font class="fontblack">
+                                                                        <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("Soluong") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                                <%-- <EditItemTemplate>
+                                                                    <asp:TextBox ID="tbSoLuong" runat="server" Width="30" Style="text-align: center;"
+                                                                        ForeColor="Red" Text='<%# Eval("Soluong") %>'></asp:TextBox>
+                                                                </EditItemTemplate>--%>
+                                                                <ControlStyle Width="30" />
+                                                                <ItemStyle HorizontalAlign="Center" />
+                                                            </asp:TemplateField>
+                                                            <%-- <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
+                                                                UpdateText="Sửa" HeaderText="Sửa" />
+                                                            <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
+                                                                ShowDeleteButton="True" HeaderText="Xóa" />--%>
+                                                        </Columns>
+                                                    </asp:GridView>
+                                                    <br />
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                            </font>
+                                    </td>
+                                </tr>
+                                
+                                </table>
+                                <br />
+                                <table width="100%" class="borderRound">
+                                <tr>
+                                    <td align="center" class="borderRound">
+                                        <font class="fontred">Phiếu đặt món</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <font class="fontblack">
+                                            <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                                <ContentTemplate>
+                                                <br />
+                                                <%if(Session["ChiTietPhieu"]!=null )
+                                                  {%>
+                                                    Tổng tiền một bàn: 50.000
+                        
+                                                    VND<br />
+                                                    <%} %>
+                                                    <br />
+                                                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" AllowSorting="True">
+                                                        
+                                                        <Columns>
+                                                            <asp:TemplateField HeaderText="STT">
+                                                                <ItemTemplate>
+                                                                    <%# Container.DataItemIndex + 1 %>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Tên món">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                                <ControlStyle Width="120px" />
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Số<br/> lượng">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lbSoLuong2" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                                <EditItemTemplate>
+                                                                    <asp:TextBox ID="tbSoLuong2" runat="server" Width="30" Style="text-align: center;"
+                                                                        ForeColor="Red" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
+                                                                </EditItemTemplate>
+                                                                <ControlStyle Width="30" />
+                                                                <ItemStyle HorizontalAlign="Center" />
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Giá">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <%-- <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
+                                                                UpdateText="Sửa" HeaderText="Sửa" />
+                                                            <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
+                                                                ShowDeleteButton="True" HeaderText="Xóa" />--%>
+                                                        </Columns>
+                                                    </asp:GridView>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                            </font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
