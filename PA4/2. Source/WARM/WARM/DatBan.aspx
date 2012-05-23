@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <link type="text/css" rel="stylesheet" href="../Styles/jquery-ui-1.8.20.custom.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
@@ -18,11 +19,23 @@
     <table width="100%">
         <tr>
             <td colspan="3">
-                <ul class="breadcrumb">
+                <%--<ul class="breadcrumb">
                     <li><a href="Default.aspx">Trang chủ</a> <span class="divider">&gt;</span> </li>
                     <li><a href="DatMon.aspx">Đặt món</a> <span class="divider">&gt;</span> </li>
                     <li class="active"><span style="margin-top: -5px; display: inline-block;" class="label label-important">
                         Đặt bàn</span></li>
+                </ul>--%>
+                <ul id="nav">
+                    <li><a href="../Default.aspx">Trang Chủ > </a></li>
+                    <li><a href="../DatMon.aspx">Đặt món > </a></li>
+                    <li><a class="arrow current">Đặt bàn</a>
+                        <ul>
+                            <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>                          
+                            <li><a href="../ThamQuan/ChonTang.aspx" class="sub">Tham quan</a></li>
+                            <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
+                            <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </td>
         </tr>
@@ -86,7 +99,7 @@
                             </table>
                         </td>
                         <td valign="top">
-                            <table width="100%" height="100%">
+                            <table width="100%" class="borderRound">
                                 <tr>
                                     <td colspan="3">
                                     </td>
@@ -143,6 +156,14 @@
                                                             <td>
                                                                 <font class="fontblack">Phút
                                                             </td>
+                                                            <td>
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                            <td>
+                                                            
+                                                            <input id="id_01" class="datepicker" type="text" style="width:100px; display:inline-block;" value="26/05/2012">&nbsp;&nbsp;
+                                                            </td>
                                                         </tr>
                                                     </table>
                                                     <br />
@@ -184,13 +205,13 @@
                                                     <br />
                                                 </ContentTemplate>
                                             </asp:UpdatePanel>
+                                            </font>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <br />
-                                    </td>
-                                </tr>
+                                
+                                </table>
+                                <br />
+                                <table width="100%" class="borderRound">
                                 <tr>
                                     <td align="center" class="borderRound">
                                         <font class="fontred">Phiếu đặt món</font>
@@ -201,6 +222,7 @@
                                         <font class="fontblack">
                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                                                 <ContentTemplate>
+                                                <br />
                                                     Tổng tiền một bàn:
                                                     <asp:Label ID="Label1" runat="server" Text="0,000"></asp:Label>
                                                     VND<br />
@@ -244,6 +266,7 @@
                                                     </asp:GridView>
                                                 </ContentTemplate>
                                             </asp:UpdatePanel>
+                                            </font>
                                     </td>
                                 </tr>
                             </table>

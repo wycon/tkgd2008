@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAO;
 
 namespace WARM
 {
@@ -13,7 +14,16 @@ namespace WARM
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["ChiTietBans"]!=null)
+            {
+                GridView1.DataSource = (List<ChiTietBan>)Session["ChiTietBans"];
+                GridView1.DataBind();
+            }
+            if (Session["ChiTietPhieu"] != null)
+            {
+                GridView2.DataSource = (List<CHITIETPHIEU>)Session["ChiTietPhieu"];
+                GridView2.DataBind();
+            }
         }
 
         protected void TextBox6_TextChanged(object sender, EventArgs e)
