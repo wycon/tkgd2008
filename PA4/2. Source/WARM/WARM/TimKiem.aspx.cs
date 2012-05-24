@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using DAO;
 using System.Data;
 using System.Collections;
+using System.Drawing;
 
 namespace WARM
 {
@@ -45,12 +46,18 @@ namespace WARM
                 if (Request.QueryString["s"] != null)
                     req = Request.QueryString["s"].ToString();
                 if (Request.QueryString["q"] != null)
+                {
                     yourvar = Request.QueryString["q"].ToString();
+                    Session["q"] = yourvar;
+                }
+                else
+                    yourvar = Session["q"].ToString();
                 if (req == "aname")
                 {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
                     hpAName.Enabled = false;
                     hpAName.ControlStyle.Font.Bold = true;
+                    hpAName.ForeColor = Color.Black;
                     hpDName.Enabled = true;
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = true;
@@ -61,6 +68,7 @@ namespace WARM
                     hpAName.Enabled = true;
                     hpDName.Enabled = false;
                     hpDName.ControlStyle.Font.Bold = true;
+                    hpDName.ForeColor = Color.Black;
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = true;
                 }
@@ -71,6 +79,7 @@ namespace WARM
                     hpDName.Enabled = true;
                     hpAPrice.Enabled = false;
                     hpAPrice.ControlStyle.Font.Bold = true;
+                    hpAPrice.ForeColor = Color.Black;
                     hpDPrice.Enabled = true;
                 }
                 else if (req == "dprice")
@@ -81,12 +90,14 @@ namespace WARM
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = false;
                     hpDPrice.ControlStyle.Font.Bold = true;
+                    hpDPrice.ForeColor = Color.Black;
                 }
                 else
                 {
                     LoadData(int.Parse(Session["nResult"].ToString()), MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));
                     hpAName.Enabled = false;
                     hpAName.ControlStyle.Font.Bold = true;
+                    hpAName.ForeColor = Color.Black;
                     hpDName.Enabled = true;
                     hpAPrice.Enabled = true;
                     hpDPrice.Enabled = true;
@@ -133,6 +144,7 @@ namespace WARM
             PageNumber = 0;
             int nResult = int.Parse(ddlSoKetQua.SelectedItem.Value);
             Session["nResult"] = nResult;
+            yourvar = Session["q"].ToString();
             nResultVar = nResult;
             if (!hpAName.Enabled)
                 LoadData(nResult, MonAnDAO.LayDanhSachSapTheoTen(maDanhMucMonAn, true));

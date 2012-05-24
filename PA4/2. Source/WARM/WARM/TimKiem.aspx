@@ -69,8 +69,7 @@
         </tr>
         <tr>
             <td>
-                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %> của 12 kết quả với từ khóa
-                    "<%= yourvar %>"</font><br />
+                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %> của 12 kết quả với từ khóa "<%= yourvar %>"</font><br />
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
                         <%--<table cellpadding="0" cellspacing="0" border="0">
