@@ -6,12 +6,20 @@
     <script type="text/javascript" src="../../Scripts/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
+    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>    
+    <script type="text/javascript" src="../Scripts/MyScript.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>    
+    <script type="text/javascript" src="../Scripts/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.20.custom.min.js" ></script>
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
-    <script type="text/javascript" src="../Scripts/MyScript.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
-    <link type="text/css" rel="stylesheet" href="../Styles/jquery-ui-1.8.20.custom.css" />
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
@@ -162,8 +170,12 @@
                                                             </td>
                                                             <td>
                                                             
-                                                            <input id="id_01" class="datepicker" type="text" style="width:100px; display:inline-block;" value="26/05/2012">&nbsp;&nbsp;
+                                                            <%--<input id="id_01" class="datepicker" type="text" style="width:100px; display:inline-block;" value="26/05/2012">--%>
+                                                            <input id="id_01" class="datepicker" type="text" style="width:100px; display:inline-block;" value="26/05/2012">​
+                                                            
+                                                            
                                                             </td>
+
                                                         </tr>
                                                     </table>
                                                     <br />
