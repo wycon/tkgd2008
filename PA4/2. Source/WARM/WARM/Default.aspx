@@ -4,8 +4,15 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/ddimgtooltip.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Scripts/breadcrumbs.js"></script>
+    <script type="text/javascript" src="../Scripts/ddimgtooltip.js"></script>
     <style type="text/css">
         .style1
         {
@@ -24,13 +31,6 @@
             width: 93px;
         }
     </style>
-    <script type="text/javascript" src="../Scripts/jquery.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../Scripts/breadcrumbs.js"></script>
-    <link rel="stylesheet" type="text/css" href="../Styles/ddimgtooltip.css" />
-    <script type="text/javascript" src="../Scripts/ddimgtooltip.js">
     </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">

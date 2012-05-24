@@ -103,7 +103,7 @@ first child of the left and right table columns */
     /*position: relative;*/
     margin: 0px;
     padding: 0px;
-    background: #4b6c9e;
+    background: #465c71;
     width: 100%;
 }
 
@@ -166,7 +166,7 @@ first child of the left and right table columns */
 .footer
 {
     color: Black;
-    background-color:transparent;
+    background-color:#465c71;
     padding: 8px 0px 0px 0px;
     margin: 0px auto;
     text-align: center;

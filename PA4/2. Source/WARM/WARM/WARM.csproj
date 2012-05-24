@@ -192,6 +192,7 @@
     <Content Include="Scripts\giaithuong2.jpg" />
     <Content Include="Scripts\giaithuong3.jpg" />
     <Content Include="Scripts\giaithuong4.jpg" />
+    <Content Include="Scripts\jquery-ui-1.8.20.custom.min.js" />
     <Content Include="Scripts\jquery.mousewheel.js" />
     <Content Include="Styles\ddimgtooltip.css" />
     <Content Include="Styles\images\arrow.png" />

@@ -7,18 +7,22 @@
     <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
-
+    <script type="text/javascript" src="../Scripts/MyScript.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-modal.js"></script>
+    <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <style type="text/css">
         .style1
         {
             width: 59%;
         }
     </style>
-    <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
-    <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
-    <script type="text/javascript" src="../Scripts/MyScript.js"></script>
-    <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap-modal.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#MessageForm").modal("hide");            
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
@@ -77,9 +81,8 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DangKy.aspx">Quên mật khẩu?</asp:HyperLink>
                         </td>
                         <td>
-                            <dir dir="rtl" style="width: 140px">
-                                <asp:Button ID="btnDangNhap" runat="server" Height="27px"  Text="Đăng nhập" 
-                                    Width="80px" CssClass="btn btn-primary" onClientclick="return alert('Bạn đặt bàn thành công. \nNhân viên của chúng tôi sẽ điện thoại cho bạn sớm nhất để xác nhận.',href='../Default.aspx')"/>                                       
+                            <dir dir="rtl" style="width: 140px">                                
+                                    <a data-toggle="modal" href="#MessageForm" class="btn btn-primary" style="text-decoration:none;color:White">Đăng nhập</a>                                    
                              </dir>
                         </td>
                     </tr>                    
@@ -201,18 +204,11 @@
                                                                 <ItemTemplate>
                                                                     <font class="fontblack">
                                                                         <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("Soluong") %>'></asp:Label>
-                                                                </ItemTemplate>
-                                                                <%-- <EditItemTemplate>
-                                                                    <asp:TextBox ID="tbSoLuong" runat="server" Width="30" Style="text-align: center;"
-                                                                        ForeColor="Red" Text='<%# Eval("Soluong") %>'></asp:TextBox>
-                                                                </EditItemTemplate>--%>
+                                                                </ItemTemplate>                                                             
                                                                 <ControlStyle Width="30" />
                                                                 <ItemStyle HorizontalAlign="Center" />
                                                             </asp:TemplateField>
-                                                            <%-- <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
-                                                                UpdateText="Sửa" HeaderText="Sửa" />
-                                                            <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
-                                                                ShowDeleteButton="True" HeaderText="Xóa" />--%>
+                                                           
                                                         </Columns>
                                                     </asp:GridView>
                                                     <br />
@@ -289,14 +285,19 @@
                     </tr>
                 </table>
             </td>
-        </tr>
-        <tr>
-            <td class="style1">
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
+        </tr>        
     </table>
+    <div class="modal" id="MessageForm">
+    <div class="modal-header">        
+        <b><font class="fontblack">Đặt món thành công</font></b>
+    </div>
+    <div class="modal-body">
+        <font class="fontblack">
+        Bạn đã đặt 5 món và 2 bàn. Tổng số tiền phải trả là 2,000,000 VND.</font><br />
+        <a href="#">In phiếu đặt món</a>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary" style="text-decoration:none;color:White" href="Default.aspx">Quay về trang chủ</a>
+    </div>
+</div>
 </asp:Content>

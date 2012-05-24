@@ -15,7 +15,8 @@
     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
     <link type="text/css" rel="stylesheet" href="~/Styles/breadcrumbs.css" />
     <link type="text/css" rel="stylesheet" href="~/Styles/language.css" />
-    <link type="text/css" rel="stylesheet" href="~/Styles/area.css" />
+    <link type="text/css" rel="stylesheet" href="~/Styles/area.css" />    
+    <link type="text/css" rel="stylesheet" href="~/Styles/jquery-ui-1.8.20.custom.css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -109,28 +110,30 @@
                 <script type="text/javascript">
                     $(function () {
                         var availableTags = [
-			            "ActionScript",
-			            "AppleScript",
-			            "Asp",
-			            "BASIC",
-			            "C",
-			            "C++",
-			            "Clojure",
-			            "COBOL",
-			            "ColdFusion",
-			            "Erlang",
-			            "Fortran",
-			            "Groovy",
-			            "Haskell",
-			            "Java",
-			            "JavaScript",
-			            "Lisp",
-			            "Perl",
-			            "PHP",
-			            "Python",
-			            "Ruby",
-			            "Scala",
-			            "Scheme"
+			            "Bánh nướng sốt thịt",
+			            "Bánh nướng chấm kem",
+                        "Bò kho",
+			            "Bò Nấu Nho - Bánh Mì",
+			            "Bông Cải Xào Hải Sản",
+                        "Bún bò Huế",
+                        "Chả Giò Hải Sản",
+			            "Cơm chiên Dương Châu",
+			            "Cơm hải sản",
+			            "Cơm tấm",
+			            "Chả giò tôm",
+                        "Gỏi Bồn Bồn Tôm Thịt",
+			            "Hủ tiếu",
+			            "Hủ tiếu mì",
+			            "Hủ tiếu Nam Vang",
+                        "Phở Bắc Hải",
+			            "Phở Hà Nội",
+			            "Tàu hủ óc cá",
+			            "Tiết canh vịt",
+                        "Tôm Sú Cuộn Thịt Xông Khói",
+			            "Tôm Sú Rang Muối Hương Cảng",
+                        "Tôm Sú Xốc Bơ Tỏi",
+                        "Thịt nguội xắt lát",
+			            
 		            ];
                         $("#<% = textTim.ClientID %>").autocomplete({
                             source: availableTags
@@ -148,10 +151,16 @@
                 <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
                     Orientation="Vertical">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Lẩu" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Món khai vị" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Món gỏi" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=1" Text="Món súp" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=2" Text="Món nướng" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=3" Text="Món chay" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Món mặn" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Món lẩu" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Món rau" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Hải sản" />
+                        <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=4" Text="Tráng miệng" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=5" Text="Buffer" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=6" Text="Nước ngọt" />
                         <asp:MenuItem NavigateUrl="~/DatMon.aspx?id=7" Text="Bia" />
@@ -170,19 +179,17 @@
             <div class="footer">
                 <table width="100%">
                     <tr>
-                        <td align="center">
+                        <td align="center" style="color:White;">
                             [25] StarFish - Copyright © 2012 warm.com.vn. All rights reserved.
                         </td>
                         <td align="right" width="10%">
-                            <a href="#">Lên đầu trang</a>
+                            <a href="#" style="color:White;">Lên đầu trang</a>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
-    </div>
-    <div class="footer">
-    </div>
+    </div>    
     </form>
 </body>
 </html>
