@@ -99,7 +99,7 @@
                             </table>
                         </td>
                         <td valign="top">
-                            <table width="100%" class="borderRound">
+                            <table width="100%" <%--class="borderRound"--%>>
                                 <tr>
                                     <td colspan="3">
                                     </td>
@@ -211,7 +211,7 @@
                                 
                                 </table>
                                 <br />
-                                <table width="100%" class="borderRound">
+                                <table width="100%" <%--class="borderRound"--%>>
                                 <tr>
                                     <td align="center" class="borderRound">
                                         <font class="fontred">Phiếu đặt món</font>

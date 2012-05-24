@@ -29,23 +29,21 @@
                     <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" Height="100%"
                         Width="100%" /></a>
             </div>
-            <table style="width: 27%; color: White;">
+            <table style="width: 27%; color: White; padding-left:10px;">
                 <tr>
                     <td>
                         <div class="vietnamese">
                         </div>
                         <div class="vietnamese_title">
-                            <a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
+                            &nbsp;<a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
                     </td>
                     <td>
                         <div class="english">
                         </div>
                         <div class="english_title">
-                            <a title="English" href="#" style="color: White;">English</a></div>
+                            &nbsp;<a title="English" href="#" style="color: White;">English</a></div>
                     </td>
                 </tr>
-            </table>
-            <table style="width: 27%; color: White;">
                 <tr>
                     <td>
                         <label for="edit-name">
@@ -72,7 +70,7 @@
                             Ghi nhớ mật khẩu</label>
                     </td>
                     <td>
-                        <input type="submit" class="form-submit" value="Đăng nhập" id="edit-submit" name="op" />
+                        <input type="submit" class="btn" value="Đăng nhập" id="edit-submit" name="op" />
                     </td>
                 </tr>
                 <tr>
@@ -89,15 +87,15 @@
                     <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
                         IncludeStyleBlock="false" Orientation="Horizontal">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang Chủ" />
-                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới Thiệu" />
-                            <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham Quan" />
-                            <asp:MenuItem NavigateUrl="~/DatMon.aspx" Text="Đặt Món" />
-                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm Kiếm Nâng Cao" />
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang chủ"/>
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới thiệu" />
+                            <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham quan" />
+                            <asp:MenuItem NavigateUrl="~/DatMon.aspx" Text="Đặt món" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm kiếm nâng cao" />
                         </Items>
                     </asp:Menu>
                 </div>
-                <table style="width: 44%;">
+                <table>
                     <tr>
                         <td>
                             <asp:TextBox ID="textTim" runat="server" Width="370px" Height="22px" ToolTip="Nhập tên món ăn cần tìm"></asp:TextBox>
@@ -144,7 +142,7 @@
             </div>
         </div>
         <div class="main" style="margin: 12px 0px 8px 0px;">
-            <div class="main-left" style="width: 12.5%">
+            <div class="main-left" style="width: 11.5%">
                 <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
                     font-size: 20">Danh mục món ăn</asp:HyperLink>
                 <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
@@ -163,16 +161,23 @@
                     </Items>
                 </asp:Menu>
             </div>
-            <div class="main-right" style="width: 87.5%">
+            <div class="main-right">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
         </div>
         <div class="clear">
+            <br />
             <div class="footer">
-                <a href="#">Lên đầu trang</a>
-            </div>
-            <div class="footer">
-                [25] StarFish- Copyright © 2012 warm.com.vn. All rights reserved.
+                <table width="100%">
+                    <tr>
+                        <td align="center">
+                            [25] StarFish - Copyright © 2012 warm.com.vn. All rights reserved.
+                        </td>
+                        <td align="right" width="10%">
+                            <a href="#">Lên đầu trang</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

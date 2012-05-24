@@ -29,7 +29,6 @@
     <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../Scripts/breadcrumbs.js"></script>
-
     <link rel="stylesheet" type="text/css" href="../Styles/ddimgtooltip.css" />
     <script type="text/javascript" src="../Scripts/ddimgtooltip.js">
     </script>
@@ -53,10 +52,14 @@
                     <asp:HyperLink ID="HyperLink14" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
                         font-size: large">Giải thưởng nhà hàng:</asp:HyperLink>
                     <br />
-                    <asp:Image ID="Image4" runat="server" Height="77px" Width="90px" ImageUrl="~/images/TrangChu/giaithuong1.jpg" rel="imgtip[0]"/>
-                    <asp:Image ID="Image5" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong2.jpg" rel="imgtip[1]"/>
-                    <asp:Image ID="Image6" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong3.jpg" rel="imgtip[2]"/>
-                    <asp:Image ID="Image7" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong4.jpg" rel="imgtip[3]"/>
+                    <asp:Image ID="Image4" runat="server" Height="77px" Width="90px" ImageUrl="~/images/TrangChu/giaithuong1.jpg"
+                        rel="imgtip[0]" />
+                    <asp:Image ID="Image5" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong2.jpg"
+                        rel="imgtip[1]" />
+                    <asp:Image ID="Image6" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong3.jpg"
+                        rel="imgtip[2]" />
+                    <asp:Image ID="Image7" runat="server" Height="74px" Width="95px" ImageUrl="~/images/TrangChu/giaithuong4.jpg"
+                        rel="imgtip[3]" />
                 </font>
             </td>
         </tr>
@@ -66,7 +69,7 @@
                     <tr>
                         <td colspan="2">
                             <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
-                                font-size: large">Đặc sản:</asp:HyperLink>
+                                font-size: large">Đặc sản</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
@@ -121,7 +124,7 @@
                     <tr>
                         <td colspan="2">
                             <asp:HyperLink ID="HyperLink13" runat="server" ForeColor="#CC0000" Style="font-weight: 700;
-                                font-size: large">Tin tức:</asp:HyperLink>
+                                font-size: large">Tin tức</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>

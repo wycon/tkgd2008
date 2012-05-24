@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DAO;
+using System.Drawing;
 
 namespace WARM
 {
@@ -41,9 +42,15 @@ namespace WARM
         protected void TextBox4_TextChanged(object sender, EventArgs e)
         {
             if (DAO.NguoiDungDAO.KiemTraTenDangNhapTonTai(txtNTen.Text.Trim()))
+            {
                 LabelNTen.Text = " Tên đăng nhập đã tồn tại.";
+                LabelNTen.ForeColor = Color.Red;
+            }
             else
+            {
                 LabelNTen.Text = " Tên đăng nhập có thể sử dụng";
+                LabelNTen.ForeColor = Color.Green;
+            }
         }
 
         protected void btnDangNhap_Click(object sender, EventArgs e)

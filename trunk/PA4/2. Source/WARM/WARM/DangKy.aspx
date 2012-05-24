@@ -18,6 +18,7 @@
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-modal.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
@@ -73,23 +74,15 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DangKy.aspx">Quên mật khẩu</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DangKy.aspx">Quên mật khẩu?</asp:HyperLink>
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 140px">
                                 <asp:Button ID="btnDangNhap" runat="server" Height="27px"  Text="Đăng nhập" 
-                                    Width="80px" CssClass="btn btn-primary" onClientclick="return alert('Bạn đặt bàn thành công. \nNhân viên của chúng tôi sẽ điện thoại cho bạn sớm nhất để xác nhận.',href='../Default.aspx')"/>
-                                
-
-                            </dir>
+                                    Width="80px" CssClass="btn btn-primary" onClientclick="return alert('Bạn đặt bàn thành công. \nNhân viên của chúng tôi sẽ điện thoại cho bạn sớm nhất để xác nhận.',href='../Default.aspx')"/>                                       
+                             </dir>
                         </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            
-                        </td>
-                    </tr>
-                    
+                    </tr>                    
                     </table>
        
                     <br />
@@ -165,7 +158,7 @@
                 </table>
             </td>
             <td valign="top">
-                <table width="100%" class="borderRound">
+                <table width="100%" <%--class="borderRound"--%>>
                                 <tr>
                                     <td colspan="3">
                                     </td>
@@ -231,7 +224,7 @@
                                 
                                 </table>
                                 <br />
-                                <table width="100%" class="borderRound">
+                                <table width="100%" <%--class="borderRound"--%>>
                                 <tr>
                                     <td align="center" class="borderRound">
                                         <font class="fontred">Phiếu đặt món</font>
