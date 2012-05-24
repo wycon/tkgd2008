@@ -215,25 +215,25 @@ as a menu.
     explains = new Array();
 
     explains["1_1"] =
-	"<li><a>1: Sảnh 1</a></li>\
-	<li><a>2: Sảnh 2</a></li>\
-	<li><a>3: Sảnh 3</a></li>\
-	<li><a>4: Sảnh 4</a></li>";
+	"<li><a style='Color:Black'>1: Sảnh 1</a></li>\
+	<li><a style='Color:Black'>2: Sảnh 2</a></li>\
+	<li><a style='Color:Black'>3: Sảnh 3</a></li>\
+	<li><a style='Color:Black'>4: Sảnh 4</a></li>";
     explains["3_1"] =
-	"<li><a>1: Sảnh 1</a></li>\
-	<li><a>2: Sảnh 2</a></li>\
-	<li><a>3: Sảnh 3</a></li>";
+	"<li><a style='Color:Black'>1: Sảnh 1</a></li>\
+	<li><a style='Color:Black'>2: Sảnh 2</a></li>\
+	<li><a style='Color:Black'>3: Sảnh 3</a></li>";
     explains["5_1"] =
-	"<li><a>1: Sảnh 1</a></li>\
-	<li><a>2: Sảnh 2</a></li>";
+	"<li><a style='Color:Black'>1: Sảnh 1</a></li>\
+	<li><a style='Color:Black'>2: Sảnh 2</a></li>";
     explains["empty"] =
 	"";
 
     titles = new Array();
 
-    titles["1_1"] = "<a>Kiến trúc tầng 2</a>";
-    titles["3_1"] = "<a>Kiến trúc tầng 1</a>";
-    titles["5_1"] = "<a>Kiến trúc tầng trệt</a>";
+    titles["1_1"] = "<a style='Color:Black'>Kiến trúc tầng 2</a>";
+    titles["3_1"] = "<a style='Color:Black'>Kiến trúc tầng 1</a>";
+    titles["5_1"] = "<a style='Color:Black'>Kiến trúc tầng trệt</a>";
     titles["empty"] =
 	"";
 
