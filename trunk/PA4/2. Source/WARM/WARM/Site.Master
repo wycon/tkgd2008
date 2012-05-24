@@ -29,7 +29,7 @@
                     <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" Height="100%"
                         Width="100%" /></a>
             </div>
-            <table style="width: 27%; color: White; padding-left:10px;">
+            <table style="width: 27%; padding-left:10px;color:White">
                 <tr>
                     <td>
                         <div class="vietnamese">
