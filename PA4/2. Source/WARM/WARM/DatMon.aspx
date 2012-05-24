@@ -52,28 +52,30 @@
                                 /
                                 <asp:HyperLink ID="hpDPrice" runat="server" NavigateUrl="DatMon.aspx?s=dprice">giảm</asp:HyperLink></font>
                         </td>
-                        <td>
-                            <div class="pagination">
-                                <ul>
-                                    <li><a href="#">Đầu</a></li>
-                                    <li class="active"><a href="#">1</a> </li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">...</a></li>
-                                    <li><a href="#">10</a></li>
-                                    <li><a href="#">Cuối</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                        <td align="right">
-                            <b>Số lượng hiển thị:</b>
+                        <td style="padding-right: 35px;">
+                            <font class="fontblack">Số lượng hiển thị:</font>
                             <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
-                                AutoPostBack="True" Width="50px">
+                                AutoPostBack="True" Width="40px">
                                 <asp:ListItem>5</asp:ListItem>
                                 <asp:ListItem>10</asp:ListItem>
                                 <asp:ListItem>15</asp:ListItem>
                                 <asp:ListItem>20</asp:ListItem>
                             </asp:DropDownList>
                         </td>
+                        <td align="right">
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href="#">Đầu</a></li>
+                                    <li class="active"><a href="#">1</a> </li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">10</a></li>
+                                    <li><a href="#">Cuối</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        
                     </tr>
                 </table>
             </td>
@@ -230,6 +232,20 @@
                         </td>
                     </tr>
                 </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div class="pagination" style="float: right">
+                    <ul>
+                        <li><a href="#">Đầu</a></li>
+                        <li class="active"><a href="#">1</a> </li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">Cuối</a></li>
+                    </ul>
+                </div>
             </td>
         </tr>
     </table>

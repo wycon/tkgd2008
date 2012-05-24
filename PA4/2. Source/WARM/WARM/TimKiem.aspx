@@ -44,6 +44,16 @@
                     <asp:HyperLink ID="hpDPrice" runat="server" NavigateUrl="TimKiem.aspx?s=dprice">giảm</asp:HyperLink>
                 </font>
             </td>
+            <td style="padding-right: 50px;">
+                <b>Số lượng hiển thị:</b>
+                <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
+                    AutoPostBack="True" Width="50px">
+                    <asp:ListItem>5</asp:ListItem>
+                    <asp:ListItem>10</asp:ListItem>
+                    <asp:ListItem>15</asp:ListItem>
+                    <asp:ListItem>20</asp:ListItem>
+                </asp:DropDownList>
+            </td>
             <td>
                 <div class="pagination">
                     <ul>
@@ -56,20 +66,11 @@
                     </ul>
                 </div>
             </td>
-            <td align="right">
-                <b>Số lượng hiển thị:</b>
-                <asp:DropDownList ID="ddlSoKetQua" runat="server" OnSelectedIndexChanged="ddlSoKetQua_SelectedIndexChanged"
-                    AutoPostBack="True" Width="50px">
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>15</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
-                </asp:DropDownList>
-            </td>
         </tr>
         <tr>
             <td>
-                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %> của 12 kết quả với từ khóa "<%= yourvar %>"</font><br />
+                &nbsp;<font class="fontblack">Hiển thị từ 1-<%= nResultVar %>
+                    của 12 kết quả với từ khóa "<%= yourvar %>"</font><br />
                 <asp:Repeater ID="rptPages" runat="server" OnItemCommand="rptPages_ItemCommand">
                     <HeaderTemplate>
                         <%--<table cellpadding="0" cellspacing="0" border="0">
@@ -145,7 +146,19 @@
                     </tr>
                 </table>
             </td>
-            <td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div class="pagination" style="float: right">
+                    <ul>
+                        <li><a href="#">Đầu</a></li>
+                        <li class="active"><a href="#">1</a> </li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">Cuối</a></li>
+                    </ul>
+                </div>
             </td>
         </tr>
     </table>
