@@ -88,7 +88,7 @@
 	</div>
 
 <div style="float:left;">
-<asp:Label ID="lblNavigation" runat="server" Text="Kiến trúc tầng 2"></asp:Label>
+<asp:Label ID="lblNavigation" runat="server" style="color:Black"  Text="Kiến trúc tầng 2"></asp:Label>
 <br clear="all"/>
 <div style="float:left;">
 <table cellpadding="0" border="0" cellspacing="0">
@@ -106,14 +106,14 @@
 <ul>
 
 	<li><a href="Sanh1.aspx">1: Sảnh 1</a></li>
-	<li><a>2: Sảnh 2</a></li>
+	<li><a style="color:Black" >2: Sảnh 2</a></li>
 	<li><a href="Sanh3.aspx">3: Sảnh 3</a></li>
 	<li><a href="Sanh4.aspx">3: Sảnh 4</a></li>
 </ul>
-<asp:Label ID="Label1" runat="server" Text="Chế độ xem"></asp:Label>
+<asp:Label ID="Label1" runat="server" style="color:Black"  Text="Chế độ xem"></asp:Label>
 <ul>
 	<li><a href="../../Tang2/Sanh2.aspx">2D</a></li>
-	<li><a>3D</a></li>
+	<li><a style="color:Black" >3D</a></li>
 </ul>
 
 </div>
