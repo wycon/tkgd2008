@@ -44,6 +44,34 @@ input:focus, textarea:focus
     padding: 7px;
     border-radius: 5px;
 }
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.form-search .hide,
+.form-inline .hide,
+.form-horizontal .hide {
+  display: none;
+}
+.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.15s linear;
+     -moz-transition: opacity 0.15s linear;
+      -ms-transition: opacity 0.15s linear;
+       -o-transition: opacity 0.15s linear;
+          transition: opacity 0.15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
 /*********************/
 /*Các style về button*/
 /*********************/
@@ -571,6 +599,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini
 {
     height: 36px;
     margin: 0px 0;
+
 }
 
 .pagination ul

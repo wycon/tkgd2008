@@ -4,12 +4,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript" src="../../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../../Scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
-    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
     <script type="text/javascript" src="../Scripts/bootstrap-modal.js"></script>
+    <%--<script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>--%>
     <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
     <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <style type="text/css">
@@ -20,7 +20,7 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#MessageForm").modal("hide");            
+            $('#MessageForm').modal('hide');
         });
     </script>
 </asp:Content>
@@ -30,12 +30,12 @@
     <table width="100%">
         <tr>
             <td colspan="3">
-            <ul id="nav">
+                <ul id="nav">
                     <li><a href="../Default.aspx">Trang Chủ > </a></li>
                     <li><a href="../DatMon.aspx">Đặt món > </a></li>
-                     <li><a href="../DatBan.aspx">Đặt bàn > </a></li>
+                    <li><a href="../DatBan.aspx">Đặt bàn > </a></li>
                     <li><a class="arrow current">Đăng Ký</a>
-                        <ul>                          
+                        <ul>
                             <li><a href="../ThamQuan/ChonTang.aspx" class="sub">Tham quan</a></li>
                             <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
                             <li><a href="../About.aspx" class="sub">Giới thiệu</a></li>
@@ -49,13 +49,12 @@
                 <table width="100%" style="height: 105px" class='borderRound'>
                     <tr>
                         <td colspan="3">
-                            
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" height="30" >
+                        <td colspan="3" height="30">
                             <asp:Label ID="Label3" runat="server" Text="Để đặt bàn thành công, bạn vui lòng đăng nhập."
-                                ForeColor="Black" Font-Bold="true"></asp:Label>                            
+                                ForeColor="Black" Font-Bold="true"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -81,16 +80,15 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DangKy.aspx">Quên mật khẩu?</asp:HyperLink>
                         </td>
                         <td>
-                            <dir dir="rtl" style="width: 140px">                                
-                                    <a data-toggle="modal" href="#MessageForm" class="btn btn-primary" style="text-decoration:none;color:White">Đăng nhập</a>                                    
-                             </dir>
+                            <dir dir="rtl" style="width: 140px">
+                                <a data-toggle="modal" href="#MessageForm" class="btn btn-primary" style="text-decoration: none;
+                                    color: White">Đăng nhập</a>
+                            </dir>
                         </td>
-                    </tr>                    
-                    </table>
-       
-                    <br />
-                    
-                    <table width="100%"class='borderRound'>
+                    </tr>
+                </table>
+                <br />
+                <table width="100%" class='borderRound'>
                     <tr>
                         <td colspan="3" height="30">
                             <asp:Label ID="Label1" runat="server" Text="Nếu bạn chưa có tài khoản, bạn có thể đăng ký tại đây."
@@ -149,155 +147,146 @@
                         </td>
                         <td>
                             <dir dir="rtl" style="width: 140px">
-                                <asp:Button ID="btnDangKy" runat="server" Height="27px" Text="Đăng ký"  Width="89px" CssClass="btn btn-primary"/>
+                                <asp:Button ID="btnDangKy" runat="server" Height="27px" Text="Đăng ký" Width="89px"
+                                    CssClass="btn btn-primary" />
                             </dir>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                          
+                        <td>
                         </td>
                     </tr>
                 </table>
             </td>
             <td valign="top">
-                <table width="100%" <%--class="borderRound"--%>>
-                                <tr>
-                                    <td colspan="3">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center" class="borderRound">
-                                        <font class="fontred">Phiếu đặt bàn</font>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <font class="fontblack">
-                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                                                <ContentTemplate>                  
-                                                    <br />
-                                                    <%if (Session["ChiTietBans"] != null)
-                                                      { %>
-                                                    Tổng tiền: 500.000 VND<br />
-                                                    Thời gian đặt bàn: 8 Giờ 00 Phút Ngày 26/05/2012<br />
-                                                    <%
-                                                        } %>
-                                                    
-                                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True">
-                                                       
-                                                        <Columns>
-                                                            <asp:TemplateField HeaderText="STT">
-                                                                <ItemTemplate>
-                                                                    <font class="fontblack">
-                                                                        <%# Container.DataItemIndex + 1 %>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="Tên bàn">
-                                                                <ItemTemplate>
-                                                                    <font class="fontblack">
-                                                                        <asp:Label ID="lbTenBan" runat="server" Text='<%# Eval("Ten") %>'></asp:Label>
-                                                                </ItemTemplate>
-                                                                <ControlStyle Width="120px" />
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="Số<br/> lượng">
-                                                                <ItemTemplate>
-                                                                    <font class="fontblack">
-                                                                        <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("Soluong") %>'></asp:Label>
-                                                                </ItemTemplate>                                                             
-                                                                <ControlStyle Width="30" />
-                                                                <ItemStyle HorizontalAlign="Center" />
-                                                            </asp:TemplateField>
-                                                           
-                                                        </Columns>
-                                                    </asp:GridView>
-                                                    <br />
-                                                </ContentTemplate>
-                                            </asp:UpdatePanel>
-                                            </font>
-                                    </td>
-                                </tr>
-                                
-                                </table>
-                                <br />
-                                <table width="100%" <%--class="borderRound"--%>>
-                                <tr>
-                                    <td align="center" class="borderRound">
-                                        <font class="fontred">Phiếu đặt món</font>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <font class="fontblack">
-                                            <asp:UpdatePanel ID="UpdatePanel3" runat="server">
-                                                <ContentTemplate>
-                                                <br />
-                                                <%if(Session["ChiTietPhieu"]!=null )
-                                                  {%>
-                                                    Tổng tiền một bàn: 50.000
-                        
-                                                    VND<br />
-                                                    <%} %>
-                                                    <br />
-                                                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" AllowSorting="True">
-                                                        
-                                                        <Columns>
-                                                            <asp:TemplateField HeaderText="STT">
-                                                                <ItemTemplate>
-                                                                    <%# Container.DataItemIndex + 1 %>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="Tên món">
-                                                                <ItemTemplate>
-                                                                    <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label>
-                                                                </ItemTemplate>
-                                                                <ControlStyle Width="120px" />
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="Số<br/> lượng">
-                                                                <ItemTemplate>
-                                                                    <asp:Label ID="lbSoLuong2" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label>
-                                                                </ItemTemplate>
-                                                                <EditItemTemplate>
-                                                                    <asp:TextBox ID="tbSoLuong2" runat="server" Width="30" Style="text-align: center;"
-                                                                        ForeColor="Red" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
-                                                                </EditItemTemplate>
-                                                                <ControlStyle Width="30" />
-                                                                <ItemStyle HorizontalAlign="Center" />
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="Giá">
-                                                                <ItemTemplate>
-                                                                    <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <%-- <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
+                <table width="100%">
+                    <tr>
+                        <td colspan="3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="borderRound">
+                            <font class="fontred">Phiếu đặt bàn</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font class="fontblack">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <br />
+                                        <%if (Session["ChiTietBans"] != null)
+                                          { %>
+                                        Tổng tiền: 500.000 VND<br />
+                                        Thời gian đặt bàn: 8 Giờ 00 Phút Ngày 26/05/2012<br />
+                                        <%
+                                            } %>
+                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="STT">
+                                                    <ItemTemplate>
+                                                        <font class="fontblack">
+                                                            <%# Container.DataItemIndex + 1 %>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Tên bàn">
+                                                    <ItemTemplate>
+                                                        <font class="fontblack">
+                                                            <asp:Label ID="lbTenBan" runat="server" Text='<%# Eval("Ten") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                    <ControlStyle Width="120px" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Số<br/> lượng">
+                                                    <ItemTemplate>
+                                                        <font class="fontblack">
+                                                            <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("Soluong") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                    <ControlStyle Width="30" />
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                        <br />
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <table width="100%">
+                    <tr>
+                        <td align="center" class="borderRound">
+                            <font class="fontred">Phiếu đặt món</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font class="fontblack">
+                                <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                    <ContentTemplate>
+                                        <br />
+                                        <%if (Session["ChiTietPhieu"] != null)
+                                          {%>
+                                        Tổng tiền một bàn: 50.000 VND<br />
+                                        <%} %>
+                                        <br />
+                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" AllowSorting="True">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="STT">
+                                                    <ItemTemplate>
+                                                        <%# Container.DataItemIndex + 1 %>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Tên món">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbTenMon" runat="server" Text='<%# Eval("MONAN.TenMonAn") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                    <ControlStyle Width="120px" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Số<br/> lượng">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbSoLuong2" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                    <EditItemTemplate>
+                                                        <asp:TextBox ID="tbSoLuong2" runat="server" Width="30" Style="text-align: center;"
+                                                            ForeColor="Red" Text='<%# Eval("SoLuong") %>'></asp:TextBox>
+                                                    </EditItemTemplate>
+                                                    <ControlStyle Width="30" />
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Giá">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <%-- <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
                                                                 UpdateText="Sửa" HeaderText="Sửa" />
                                                             <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
                                                                 ShowDeleteButton="True" HeaderText="Xóa" />--%>
-                                                        </Columns>
-                                                    </asp:GridView>
-                                                </ContentTemplate>
-                                            </asp:UpdatePanel>
-                                            </font>
-                                    </td>
-                                </tr>
-                            </table>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </font>
                         </td>
                     </tr>
                 </table>
             </td>
-        </tr>        
+        </tr>
     </table>
     <div class="modal" id="MessageForm">
-    <div class="modal-header">        
-        <b><font class="fontblack">Đặt món thành công</font></b>
+        <div class="modal-header">
+            <b><font class="fontblack">Đặt món thành công</font></b>
+        </div>
+        <div class="modal-body">
+            <font class="fontblack">Bạn đã đặt 5 món và 2 bàn. Tổng số tiền phải trả là 2,000,000
+                VND.</font><br />
+            <a href="#">In phiếu đặt món</a>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary" style="text-decoration: none; color: White" href="Default.aspx">
+                Quay về trang chủ</a>
+        </div>
     </div>
-    <div class="modal-body">
-        <font class="fontblack">
-        Bạn đã đặt 5 món và 2 bàn. Tổng số tiền phải trả là 2,000,000 VND.</font><br />
-        <a href="#">In phiếu đặt món</a>
-    </div>
-    <div class="modal-footer">
-        <a class="btn btn-primary" style="text-decoration:none;color:White" href="Default.aspx">Quay về trang chủ</a>
-    </div>
-</div>
 </asp:Content>
