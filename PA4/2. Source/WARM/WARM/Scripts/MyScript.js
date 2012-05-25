@@ -12,26 +12,3 @@ function onClick(id) {
     document.forms["frmManageOrder"].submit();
     //alert(id + "   " + maTinhTrang)
 }
-function DatMon(ma, ten, gia) {
-    var e = document.getElementById("phieudatmon");
-    var monan = document.createElement('a');
-    //monan.setAttribute("id", "DDtemp");
-    monan.setAttribute("href", "ChiTietMonAn.aspx?id=" + ma.toString());
-    monan.setAttribute("name", "myanchor");
-    var _text = document.createTextNode(ten);
-    monan.appendChild(_text);
-    monan.appendChild(document.createElement('br'));    
-    e.appendChild(monan);
-}
-//function SapTenTang() {
-//    
-//}
-//function SapTenGiam() {
-
-//}
-//function SapGiaTang() {
-
-//}
-//function SapGiaGiam() {
-
-//}

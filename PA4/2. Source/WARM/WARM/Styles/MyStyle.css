@@ -1,6 +1,6 @@
-﻿body
-{
-}
+﻿/******************/
+/*Các style chính */
+/******************/
 input:focus, textarea:focus
 {
     border-color: rgba(82, 168, 236, 0.8);
@@ -44,6 +44,13 @@ input:focus, textarea:focus
     padding: 7px;
     border-radius: 5px;
 }
+.logintable
+{
+    width: 27%; padding-left:10px;color:White
+}
+/*****************/
+/*Các style phụ */
+/****************/
 .hide {
   display: none;
 }
