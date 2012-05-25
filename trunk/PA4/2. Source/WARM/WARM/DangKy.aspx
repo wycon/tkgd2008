@@ -275,17 +275,19 @@
             </td>
         </tr>
     </table>
-    <div class="modal" id="MessageForm">
+    <div class="modal hide" id="MessageForm">
         <div class="modal-header">
             <b><font class="fontblack">Đặt món thành công</font></b>
         </div>
         <div class="modal-body">
-            <font class="fontblack">Bạn đã đặt 5 món và 2 bàn. Tổng số tiền phải trả là 2,000,000
-                VND.</font><br />
+            <font class="fontblack">Cảm ơn <b>alice</b>.<br />
+            Bạn đã đặt <b>5</b> món và <b>2</b> bàn cho ngày 26/05/2012 lúc 8:00.<br />
+            Tổng số tiền phải trả là <b>2,000,000 VND</b>.<br />
+            Nhân viên nhà hàng sẽ sớm gọi điện cho bạn để xác nhận việc đặt món.<br /></font>
             <a href="#">In phiếu đặt món</a>
         </div>
         <div class="modal-footer">
-            <a class="btn btn-primary" style="text-decoration: none; color: White" href="Default.aspx">
+            <a class="btn btn-primary" style="text-decoration: none; color: White" href="Default.aspx?state=login&q=clearorder">
                 Quay về trang chủ</a>
         </div>
     </div>

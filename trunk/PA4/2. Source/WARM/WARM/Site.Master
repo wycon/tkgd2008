@@ -15,7 +15,7 @@
     <link rel="SHORTCUT ICON" type="image/x-icon" href="~/images/Icon1.png" />
     <link type="text/css" rel="stylesheet" href="~/Styles/breadcrumbs.css" />
     <link type="text/css" rel="stylesheet" href="~/Styles/language.css" />
-    <link type="text/css" rel="stylesheet" href="~/Styles/area.css" />    
+    <link type="text/css" rel="stylesheet" href="~/Styles/area.css" />
     <link type="text/css" rel="stylesheet" href="~/Styles/jquery-ui-1.8.20.custom.css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
@@ -30,65 +30,95 @@
                     <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/Logo/1.jpg" Height="100%"
                         Width="100%" /></a>
             </div>
-            <table style="width: 27%; padding-left:10px;color:White">
-                <tr>
-                    <td>
-                        <div class="vietnamese">
+            <asp:Panel ID="Panel1" runat="server">
+                <table style="width: 27%; padding-left: 10px; color: White">
+                    <tr>
+                        <td>
+                            <%--<div class="vietnamese">
                         </div>
                         <div class="vietnamese_title">
-                            &nbsp;<a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>
-                    </td>
-                    <td>
-                        <div class="english">
-                        </div>
-                        <div class="english_title">
-                            &nbsp;<a title="English" href="#" style="color: White;">English</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="edit-name">
-                            Tên truy cập:</label>
-                    </td>
-                    <td>
-                        <input type="text" value="" size="15" id="edit-name" name="name" maxlength="60" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="edit-pass">
-                            Mật khẩu:</label>
-                    </td>
-                    <td>
-                        <input type="password" size="15" maxlength="60" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="edit-persistent-login" class="option">
-                            <input type="checkbox" class="form-checkbox" value="1" id="edit-persistent-login"
-                                name="persistent_login" />
-                            Ghi nhớ mật khẩu</label>
-                    </td>
-                    <td>
-                        <input type="submit" class="btn" value="Đăng nhập" id="edit-submit" name="op" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a title="Đăng ký" href="DangKy.aspx" style="color: White;">Đăng ký</a>
-                    </td>
-                    <td>
-                        <a title="Quên mật khẩu?" href="QuenMatKhau.aspx" style="color: White;">Quên mật khẩu?</a>
-                    </td>
-                </tr>
-            </table>
+                            &nbsp;<a title="Tiếng Việt" href="#" style="color: White;">Tiếng Việt</a></div>--%>
+                        </td>
+                        <td>
+                            <div class="english">
+                            </div>
+                            <div class="english_title">
+                                &nbsp;<a title="English" href="#" style="color: White;">English</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="edit-name">
+                                Tên truy cập:</label>
+                        </td>
+                        <td>
+                            <input type="text" value="" size="15" id="edit-name" name="name" maxlength="60" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="edit-pass">
+                                Mật khẩu:</label>
+                        </td>
+                        <td>
+                            <input type="password" size="15" maxlength="60" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="edit-persistent-login" class="option">
+                                <input type="checkbox" class="form-checkbox" value="1" id="edit-persistent-login"
+                                    name="persistent_login" />
+                                Ghi nhớ mật khẩu</label>
+                        </td>
+                        <td>
+                            <a class="btn" href="Default.aspx?state=login" style="color: Black; text-decoration: none">Đăng nhập</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a title="Đăng ký" href="DangKy.aspx" style="color: White;">Đăng ký</a>
+                        </td>
+                        <td>
+                            <a title="Quên mật khẩu?" href="QuenMatKhau.aspx" style="color: White;">Quên mật khẩu?</a>
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server">
+                <table style="width: 30%; padding-left: 10px; color: White">
+                    <tr>
+                        <td>
+                            <b><a href="ThongTinTaiKhoan.aspx" style="color: White;">alice</a></b><br />
+                        </td>
+                        <td>
+                            <div class="english">
+                            </div>
+                            <div class="english_title">
+                                &nbsp;<a title="English" href="#" style="color: White;">English</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/alice.jpg" width="80px" height="80px" /><br />
+                            
+                            <a href="ThongTinTaiKhoan.aspx" style="color: White;">Tài khoản </a>
+                        </td>
+                        <td>
+                            <a href="Default.aspx?state=logout" style="color: White;">Đăng xuất</a><br /><br />
+                            <a href="#" style="color: White;">Phiếu đặt món (0)</a><br />
+                            <a href="#" style="color: White;">Lịch sử đặt món</a><br />
+                            <a href="#" style="color: White;">Món ăn yêu thích</a>
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
             <div class="clear hideSkiplink" style="height: 35px;">
                 <div style="width: 56%; float: left;">
                     <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
                         IncludeStyleBlock="false" Orientation="Horizontal">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang chủ"/>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang chủ" />
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới thiệu" />
                             <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham quan" />
                             <asp:MenuItem NavigateUrl="~/DatMon.aspx" Text="Đặt món" />
@@ -133,7 +163,7 @@
 			            "Tôm Sú Rang Muối Hương Cảng",
                         "Tôm Sú Xốc Bơ Tỏi",
                         "Thịt nguội xắt lát",
-			            
+
 		            ];
                         $("#<% = textTim.ClientID %>").autocomplete({
                             source: availableTags
@@ -179,17 +209,17 @@
             <div class="footer">
                 <table width="100%">
                     <tr>
-                        <td align="center" style="color:White;">
+                        <td align="center" style="color: White;">
                             [25] StarFish - Copyright © 2012 warm.com.vn. All rights reserved.
                         </td>
                         <td align="right" width="10%">
-                            <a href="#" style="color:White;">Lên đầu trang</a>
+                            <a href="#" style="color: White;">Lên đầu trang</a>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
-    </div>    
+    </div>
     </form>
 </body>
 </html>

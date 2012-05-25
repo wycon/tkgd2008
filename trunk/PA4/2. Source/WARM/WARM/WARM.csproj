@@ -58,9 +58,11 @@
     <Content Include="ChiTietMonAn.aspx" />
     <Content Include="DangKy.aspx" />
     <Content Include="DatBan.aspx" />
+    <Content Include="images\alice.jpg" />
     <Content Include="images\arrow.png" />
     <Content Include="images\ArrowDown.png" />
     <Content Include="images\ArrowUp.png" />
+    <Content Include="images\Avatar.jpg" />
     <Content Include="images\binhluan.jpg" />
     <Content Include="images\closedhand.cur" />
     <Content Include="images\Coffee.jpg" />
@@ -195,6 +197,7 @@
     <Content Include="Scripts\jquery-ui-1.8.20.custom.min.js" />
     <Content Include="Scripts\jquery.mousewheel.js" />
     <Content Include="Styles\ddimgtooltip.css" />
+    <Content Include="Styles\delete.gif" />
     <Content Include="Styles\images\arrow.png" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.advanced-panorama360.js" />

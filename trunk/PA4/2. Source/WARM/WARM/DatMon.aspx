@@ -26,7 +26,7 @@
                 </ul>--%>
                 <ul id="nav">
                     <li><a href="../Default.aspx">Trang Chủ > </a></li>
-                    <li><a class="arrow current">Đặt món</a>
+                    <li><a class="arrow current">Món nướng</a>
                         <ul>
                             <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>                            
                             <li><a href="../DatBan.aspx" class="sub">Đặt bàn</a></li>

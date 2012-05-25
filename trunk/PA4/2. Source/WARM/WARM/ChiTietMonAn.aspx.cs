@@ -36,11 +36,14 @@ namespace WARM
                     dsBl.Reverse();
                     LinkButton1.Enabled = false;
                     LinkButton1.ForeColor = Color.Black;
+                    LinkButton1.ControlStyle.Font.Bold = true;
                 }
                 else
                 {
                     LinkButton2.Enabled = false;
                     LinkButton2.ForeColor = Color.Black;
+                    LinkButton2.ControlStyle.Font.Bold = true;
+
                 }
                 yourvar = dsBl.Count;
                 //Response.Write("dem");
@@ -116,7 +119,7 @@ namespace WARM
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             LinkButton2.Enabled = true;
-            LinkButton2.ForeColor = Color.Blue;
+            LinkButton2.ForeColor = Color.Blue;            
             dsBl.Reverse();
             PagedDataSource pgitems = new PagedDataSource();
             PagedDataSource pgitems1 = new PagedDataSource();
@@ -130,6 +133,7 @@ namespace WARM
 
             LinkButton1.Enabled = false;
             LinkButton1.ForeColor = Color.Black;
+            LinkButton1.ControlStyle.Font.Bold = true;
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)
@@ -149,6 +153,7 @@ namespace WARM
 
             LinkButton2.Enabled = false;
             LinkButton2.ForeColor = Color.Black;
+            LinkButton2.ControlStyle.Font.Bold = true;
         }
         protected void ButtonTang_Click(object sender, EventArgs e)
         {

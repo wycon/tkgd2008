@@ -1,24 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="ChiTietMonAn.aspx.cs" Inherits="WARM.ChiTietMonAn" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">    
+    <link type="text/css" rel="stylesheet" href="../Styles/ChiTietMonAn.css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
     <script type="text/javascript" src="../../Scripts/jquery.js"></script>
     <script type="text/javascript" src="../../Scripts/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>
-    <link type="text/css" rel="stylesheet" href="../Styles/MyStyle.css" />
-    <link type="text/css" rel="stylesheet" href="../Styles/ChiTietMonAn.css" />
-    <link type="text/css" rel="stylesheet" href="../Styles/jquery.rating.css" />
+    <script type="text/javascript" src="../../Scripts/breadcrumbs.js"></script>    
     <script type="text/javascript" src="../Scripts/MyScript.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.rating.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-modal.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#MessageForm').modal('hide');
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
     </asp:ScriptManager>
     <table width="100%">
         <tr>
-            <td>                
+            <td>
                 <ul id="nav">
                     <li><a href="../Default.aspx">Trang Chủ > </a></li>
                     <li><a href="../DatMon.aspx">Món mặn > </a>
@@ -76,8 +81,10 @@
                                                         <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ButtonTang_Click" ImageUrl="~/images/ArrowUp.png"
                                                             AlternateText="^" Width="16px" Height="16px" />
                                                         <br />
-                                                        <asp:Button ID="btDatMon" runat="server" CssClass="btn btn-primary" Text="Đặt món"
-                                                            OnClick="DatMon_Click" />
+                                                        <%--<asp:Button ID="btDatMon" runat="server" CssClass="btn btn-primary" Text="Đặt món"
+                                                            OnClick="DatMon_Click" />--%>
+                                                        <a data-toggle="modal" href="#MessageForm" class="btn btn-primary" style="text-decoration: none;
+                                                            color: White">Đặt món</a>
                                                         <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaMonAn") %>' />
                                                     </ContentTemplate>
                                                 </asp:UpdatePanel>
@@ -171,8 +178,7 @@
                                                                 <%# Eval("NoiDung") %></font>
                                                         </td>
                                                         <td valign="top" width="25%">
-                                                            Đăng lúc
-                                                            <%# Eval("ThoiGian") %>
+                                                            <font class="fontblack">Đăng lúc <%# Eval("ThoiGian") %></font>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -205,8 +211,7 @@
             <td valign="top" align="left" style="color: #000000; font-size: small;" class="style2">
                 Họ tên (*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </td>
-            <td valign="top" align="left" class="style7">
-                &nbsp;&nbsp;&nbsp;
+            <td valign="top" align="left" class="style7">                
                 <asp:TextBox ID="textten" runat="server" Width="343px"></asp:TextBox>
             </td>
             <td valign="top" align="left" class="style5">
@@ -238,10 +243,10 @@
                 <br />
             </td>
             <td valign="top" align="left" class="style7">
-                &nbsp;&nbsp;&nbsp;
+                
                 <asp:TextBox ID="textnoidung" runat="server" Height="191px" Width="345px" Style="text-align: left"
                     TextMode="MultiLine"></asp:TextBox>
-                &nbsp; &nbsp;&nbsp;&nbsp;
+                
                 <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Đăng lời bình"
                     OnClick="Button1_Click" />
             </td>
@@ -250,4 +255,16 @@
             </td>
         </tr>
     </table>
+    <div class="modal hide" id="MessageForm">
+        <div class="modal-header">
+            <b><font class="fontblack">Đặt món thành công</font></b>
+        </div>
+        <div class="modal-body">
+            <font class="fontblack">Bạn đã đặt món <b>Phở Bắc Hải</b>, số lượng là <b>1</b> món/bàn.</font><br />
+            <font class="fontblack">Bạn có thể tiếp tục đặt món hoặc chuyển sang </font><a href="DatBan.aspx">đặt bàn</a>.
+        </div>
+        <div class="modal-footer">            
+            <a data-dismiss="modal" class="btn btn-primary close">Tiếp tục</a>
+        </div>
+    </div>
 </asp:Content>
