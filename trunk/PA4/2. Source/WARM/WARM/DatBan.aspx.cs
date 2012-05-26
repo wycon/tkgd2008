@@ -137,7 +137,7 @@ namespace WARM
             TongTien = TongTien - (double.Parse(l2.Text) * ChiTietPhieus[e.RowIndex].SoLuong.Value);
             if (TongTien < 0)
                 TongTien = 0;
-            l.Text = TongTien.ToString("0,000");
+            
             //Session["TongTien"] = l.Text;
             ListChiTietBan.RemoveAt(e.RowIndex);
             bind();
@@ -145,6 +145,8 @@ namespace WARM
                 hpHoanTatDatBan.Visible = false;
             else
                 hpHoanTatDatBan.Visible = true;
+
+            l.Text = TongTien.ToString("0,000");
         }
 
         //xu ly phieu dat mon

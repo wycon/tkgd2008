@@ -28,7 +28,7 @@
                     <li><a href="../Default.aspx">Trang Chủ > </a></li>
                     <li><a class="arrow current">Món nướng</a>
                         <ul>
-                            <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>                            
+                            <li><a href="../DangKy.aspx" class="sub">Đăng ký</a></li>
                             <li><a href="../DatBan.aspx" class="sub">Đặt bàn</a></li>
                             <li><a href="../ThamQuan/ChonTang.aspx" class="sub">Tham quan</a></li>
                             <li><a href="../TimKiemNangCao.aspx" class="sub">Tìm nâng cao</a></li>
@@ -75,7 +75,6 @@
                                 </ul>
                             </div>
                         </td>
-                        
                     </tr>
                 </table>
             </td>
@@ -175,9 +174,10 @@
                                     <td>
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
-                                                <%--<asp:HyperLink ID="hpHoanTatDatMon" runat="server" NavigateUrl="DatBan.aspx">Hoàn tất đặt món</asp:HyperLink>--%>
+                                                <%--<asp:HyperLink ID="hpHoanTatDatMon" runat="server" style="color: White; text-decoration: none" CssClass="btn btn-success" NavigateUrl="DatBan.aspx"><i class="icon-ok icon-white">
+                                                </i>Hoàn tất đặt món</asp:HyperLink>--%>
                                                 <asp:Button ID="hpHoanTatDatMon" runat="server" Text="Hoàn tất đặt món" CssClass="btn btn-success"
-                                                    OnClick="DatBan_Click" />
+                                                    OnClick="DatBan_Click" />                                                
                                                 <br />
                                                 <font class="fontblack">Tổng tiền một bàn:
                                                     <asp:Label ID="TongTien" runat="server" Text="0,000"></asp:Label>
