@@ -283,7 +283,7 @@ input:focus, textarea:focus
     background-image: -webkit-linear-gradient(top, #62c462, #51a351);
     background-image: -o-linear-gradient(top, #62c462, #51a351);
     background-image: -moz-linear-gradient(top, #62c462, #51a351);
-    background-image: linear-gradient(top, #62c462, #51a351);
+    background-image: linear-gradient(top, #62c462, #51a351);  
     background-repeat: repeat-x;
     border-color: #51a351 #51a351 #387038;
 }
@@ -858,4 +858,31 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini
 
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
+}
+/******/
+/*Icon*/
+/******/
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../images/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+[class^="icon-"]:last-child,
+[class*=" icon-"]:last-child {
+  *margin-left: 0;
+}
+
+.icon-white {
+  background-image: url("../images/glyphicons-halflings-white.png");
+}
+.icon-ok {
+  background-position: -288px 0;
 }

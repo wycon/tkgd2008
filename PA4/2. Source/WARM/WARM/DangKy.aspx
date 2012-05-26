@@ -151,19 +151,11 @@
                                     CssClass="btn btn-primary" />
                             </dir>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                    </tr>
+                    </tr>                    
                 </table>
             </td>
             <td valign="top">
-                <table width="100%">
-                    <tr>
-                        <td colspan="3">
-                        </td>
-                    </tr>
+                <table width="100%">                   
                     <tr>
                         <td align="center" class="borderRound">
                             <font class="fontred">Phiếu đặt bàn</font>
@@ -177,8 +169,8 @@
                                         <br />
                                         <%if (Session["ChiTietBans"] != null)
                                           { %>
-                                        Tổng tiền: 500.000 VND<br />
-                                        Thời gian đặt bàn: 8 Giờ 00 Phút Ngày 26/05/2012<br />
+                                        Tổng tiền phải trả: 2,000,000 VND<br />
+                                        Thời gian đặt bàn: 8 giờ 00 phút ngày 26/05/2012<br />
                                         <%
                                             } %>
                                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowSorting="True">
@@ -228,7 +220,7 @@
                                         <br />
                                         <%if (Session["ChiTietPhieu"] != null)
                                           {%>
-                                        Tổng tiền một bàn: 50.000 VND<br />
+                                        Tổng tiền một bàn: 50,000 VND<br />
                                         <%} %>
                                         <br />
                                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" AllowSorting="True">
@@ -259,11 +251,7 @@
                                                     <ItemTemplate>
                                                         <asp:Label ID="lbGia" runat="server" Text='<%# Eval("MONAN.Gia", "{0:0,000}") %>'></asp:Label>
                                                     </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <%-- <asp:CommandField CancelText="Thoát" DeleteText="Xóa" EditText="Sửa" ShowEditButton="True"
-                                                                UpdateText="Sửa" HeaderText="Sửa" />
-                                                            <asp:CommandField ButtonType="Image" DeleteImageUrl="~/images/remove.gif" DeleteText="Xóa"
-                                                                ShowDeleteButton="True" HeaderText="Xóa" />--%>
+                                                </asp:TemplateField>                                                
                                             </Columns>
                                         </asp:GridView>
                                     </ContentTemplate>
