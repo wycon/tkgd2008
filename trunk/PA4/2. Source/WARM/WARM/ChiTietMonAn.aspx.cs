@@ -76,6 +76,7 @@ namespace WARM
                 bl.MaMonAn = req;
                 bl.ThoiGian = DateTime.Now;
                 BinhLuanDAO.ThemLoiBinh(bl);
+                isClick = false;
                 Response.Redirect("~/ChiTietMonAn.aspx");
             }
         }
@@ -119,7 +120,8 @@ namespace WARM
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             LinkButton2.Enabled = true;
-            LinkButton2.ForeColor = Color.Blue;            
+            LinkButton2.ForeColor = Color.Blue;
+            LinkButton2.ControlStyle.Font.Bold = false;
             dsBl.Reverse();
             PagedDataSource pgitems = new PagedDataSource();
             PagedDataSource pgitems1 = new PagedDataSource();
@@ -141,6 +143,7 @@ namespace WARM
             isClick = true;
             LinkButton1.Enabled = true;
             LinkButton1.ForeColor = Color.Blue;
+            LinkButton1.ControlStyle.Font.Bold = false;
             dsBl.Reverse();
             PagedDataSource pgitems = new PagedDataSource();
             PagedDataSource pgitems1 = new PagedDataSource();
