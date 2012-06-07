@@ -104,16 +104,34 @@
                                             <td class="borderRound">
                                                 <table>
                                                     <tr>
-                                                        <td valign="top" width="15%">
+                                                        <td style="padding-right: 10px" valign="top" width="15%">
                                                             <img alt="" src='<%# Eval("Anh") %>' width='120' height='100' />
                                                         </td>
-                                                        <td valign="top" width="65%" style="padding-left: 20px">
+                                                        <td valign="top" width="50%" style="padding-right: 20px">
                                                             <a href="ChiTietMonAn.aspx?id=<%# Eval("MaMonAn") %>">
                                                                 <%# Eval("TenMonAn") %></a><br />
                                                             <font class="fontblack"><b>Giá:
                                                                 <%# Eval("Gia", "{0:0,000}")%>
                                                                 VND</b><br />
                                                                 <%# Eval("MoTa") %></a></font><br />
+                                                        </td>
+                                                        <td valign="top" width="17%" style="padding-right: 10px">
+                                                            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                                                <ContentTemplate>
+                                                                    <font class="fontblack">Số lượng món/bàn:</font>&nbsp;&nbsp;&nbsp;<br />
+                                                                    <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ButtonGiam_Click" ImageUrl="~/images/ArrowDown.png"
+                                                                        AlternateText="v" Width="16px" Height="16px" />
+                                                                    <asp:TextBox ID="tbSoLuong" runat="server" Width="20px" Text="1"></asp:TextBox>
+                                                                    <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ButtonTang_Click" ImageUrl="~/images/ArrowUp.png"
+                                                                        AlternateText="^" Width="16px" Height="16px" />
+                                                                    <br />
+                                                                    <%--<asp:Button ID="btDatMon" runat="server" CssClass="btn btn-primary" Text="Đặt món"
+                                                            OnClick="DatMon_Click" />--%>
+                                                                    <a data-toggle="modal" href="#MessageForm" class="btn btn-primary" style="text-decoration: none;
+                                                                        color: White">Đặt món</a>
+                                                                    <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# "" + Eval("MaMonAn") %>' />
+                                                                </ContentTemplate>
+                                                            </asp:UpdatePanel>
                                                         </td>
                                                         <td valign="top" style="padding-left: 20px">
                                                             <div>

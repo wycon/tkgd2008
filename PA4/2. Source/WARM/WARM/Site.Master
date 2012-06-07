@@ -121,7 +121,7 @@
                             <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Trang chủ" />
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="Giới thiệu" />
                             <asp:MenuItem NavigateUrl="~/ThamQuan/ChonTang.aspx" Text="Tham quan" />
-                            <asp:MenuItem NavigateUrl="~/DatMon.aspx" Text="Đặt món" />
+                            <asp:MenuItem NavigateUrl="~/DatBan.aspx" Text="Đặt bàn" />
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="Tìm kiếm nâng cao" />
                         </Items>
                     </asp:Menu>
