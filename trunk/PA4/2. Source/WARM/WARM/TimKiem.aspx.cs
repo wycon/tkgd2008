@@ -155,5 +155,23 @@ namespace WARM
             else if (!hpDPrice.Enabled)
                 LoadData(nResult, MonAnDAO.LayDanhSachSapTheoGia(maDanhMucMonAn, false));
         }
+        protected void ButtonTang_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong == 99)
+                SoLuong = 98;
+            t.Text = (SoLuong + 1).ToString();
+
+
+        }
+        protected void ButtonGiam_Click(object sender, EventArgs e)
+        {
+            TextBox t = (sender as ImageButton).Parent.Controls[3] as TextBox;
+            int SoLuong = int.Parse(t.Text);
+            if (SoLuong < 2)
+                SoLuong = 2;
+            t.Text = (SoLuong - 1).ToString();
+        }
     }
 }
