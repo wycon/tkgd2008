@@ -1,0 +1,1 @@
+Quyết lấy điếm tối đa môn học.
